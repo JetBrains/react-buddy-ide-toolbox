@@ -1,0 +1,24 @@
+.table-item-wrapper {
+  border-color: rgb(54, 54, 54);
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  padding: 10px;
+  display: flex;
+  &:after {
+    content: "";
+  }
+
+  .table-item, .table-item-control {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .table-item {
+    flex-basis: 22%;
+  }
+
+  .table-item-control {
+    flex-basis: 78%;
+  }
+}

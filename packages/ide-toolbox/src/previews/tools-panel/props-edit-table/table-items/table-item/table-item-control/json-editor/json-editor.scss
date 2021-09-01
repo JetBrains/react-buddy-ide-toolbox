@@ -1,0 +1,14 @@
+.json-editor {
+  flex-direction: column;
+
+  .json-editor-textarea {
+    align-self: start;
+    width: 100%;
+    min-height: 100px;
+    margin: 0 0 10px 0;
+  }
+
+  .json-editor-apply-button {
+    align-self: start;
+  }
+}

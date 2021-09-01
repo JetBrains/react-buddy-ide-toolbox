@@ -1,0 +1,8 @@
+{
+  "name": "root",
+  "private": true,
+  "engines": {
+    "node": ">=13",
+    "npm": ">=7"
+  }
+}

@@ -1,0 +1,21 @@
+.table-header {
+  border-color: rgb(54, 54, 54);
+  border-width: 1px 0;
+  border-style: solid;
+  font-weight: 800;
+  padding: 10px 20px 10px 10px;
+  display: flex;
+  &:after {
+    content: "";
+  }
+
+  .table-header-item {
+    flex-basis: 22%;
+    color: #444;
+  }
+
+  .table-header-item-control {
+    flex-basis: 78%;
+    color: #444;
+  }
+}
