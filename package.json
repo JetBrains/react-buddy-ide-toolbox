@@ -2,7 +2,29 @@
   "name": "root",
   "private": true,
   "engines": {
-    "node": ">=13",
+    "node": ">=14",
     "npm": ">=7"
+  },
+  "scripts": {
+    "commit": "node node_modules/commitizen/bin/git-cz"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "commitizen": "^4.2.4",
+    "cz-lerna-changelog": "^2.0.3",
+    "husky": "^7.0.2",
+    "lerna": "^3.22.1",
+    "semantic-release": "^17.4.7"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
