@@ -1,44 +1,91 @@
-import React, {Fragment} from "react"
+import React, {useLayoutEffect} from "react"
+import {VariantRoute} from "./variant-route";
+import styles from "./palette.module.scss";
 
-export const Palette: React.FC = ({children}) => {
-  return (
-    <Fragment>
-      {children}
-    </Fragment>
-  )
+export type CategoryProps = {
+  name: string;
+  children: JSX.Element | JSX.Element[];
 }
 
 export type ComponentProps = {
-  name?: string;
+  categoryName?: string;
+  name: string;
+  children: JSX.Element | JSX.Element[];
   defaultProps?: {};
 }
 
-export const Component: React.FC<ComponentProps> = ({children}) => {
-  return (
-    <Fragment>
-      {children}
-    </Fragment>
-  )
-}
-
-
-export const Category: React.FC<{name: String }> = ({children}) => {
-  return (
-    <Fragment>
-      {children}
-    </Fragment>
-  )
-}
-
 export type VariantProps = {
-  name?: String,
+  categoryName?: string,
+  componentName?: string,
+  name?: string,
   requiredParams?: Array<string>
 }
 
-export const Variant: React.FC<VariantProps> = ({children}) => {
+export const Category: React.FC<CategoryProps> = ({children, name}) => {
   return (
-    <Fragment>
-      {children}
-    </Fragment>
+    <>
+      {getTransformedCategoryChildren(children, name)}
+    </>
   )
+}
+export const Component: React.FC<ComponentProps> = ({
+  children,
+  categoryName,
+  name
+}) => {
+  return (
+    <>
+      {getTransformedComponentChildren(children, name, categoryName)}
+    </>
+  )
+}
+
+export const Variant: React.FC<VariantProps> = ({
+  children,
+  categoryName,
+  componentName,
+  name
+}) => {
+  return (
+    <VariantRoute
+      categoryName={categoryName}
+      componentName={componentName}
+      variantName={name}
+    >
+      {children}
+    </VariantRoute>
+  )
+}
+
+export const Palette: React.FC = ({children}) => {
+  useLayoutEffect(() => {
+    document.body.classList.add(styles.bodyPaletteStyles);
+    return () => {
+      document.body.classList.remove(styles.bodyPaletteStyles);
+    }
+  }, []);
+  return (
+    <div className={styles.palette}>
+      {children}
+    </div>
+  )
+}
+
+function getTransformedCategoryChildren(
+  children: JSX.Element | JSX.Element[], 
+  categoryName: string
+) {
+  return  React.Children.map(children, (child) => {
+    return React.cloneElement(child, {categoryName})
+  })
+}
+
+function getTransformedComponentChildren(
+  children: JSX.Element | JSX.Element[],
+  componentName: string,
+  categoryName?: string
+) {
+  return  React.Children.map(children, (child) => {
+    return React.cloneElement(child, {categoryName, componentName})
+  })
 }
