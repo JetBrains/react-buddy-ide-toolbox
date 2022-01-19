@@ -1,4 +1,4 @@
-.previews-main {
+.previewsMain {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -6,13 +6,13 @@
   overflow: hidden;
 }
 
-.previews-content {
+.previewsContent {
   flex-basis: 100%;
   flex-grow: 1;
   overflow-y: auto;
 }
 
-.previews-tools-panel {
+.previewsToolsPanel {
   flex-basis: 295px;
   min-height: 100px;
 }
