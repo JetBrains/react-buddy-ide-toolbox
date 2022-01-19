@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0-dev.0 (2022-01-19)
+
+
+### Features
+
+* palette components preview [#1](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/1) ([f0f4804](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/f0f4804a454373cfe3644d9119198e72bbcb6ca8))
+
+
+
+
+
+
 ## [1.0.1-next.0](https://github.com/haulmont/jmix-frontend/tree/master/packages/react-ide-toolbox/compare/@haulmont/react-ide-toolbox@1.0.0...@haulmont/react-ide-toolbox@1.0.1-next.0) (2021-07-20)
 
 
