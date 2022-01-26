@@ -1,4 +1,5 @@
 import {useState, useCallback, useEffect} from "react";
+import {escapeRegExp} from "./utils";
 
 export const PALETTE_PATH='/REACT_BUDDY_PALETTE';
 export const URL_CHANGE_EVENT = "urlchange";
@@ -31,7 +32,7 @@ export const useRoute = (path: string, exact?: boolean) => {
 
 export function isMatchPath(path: string, exact: boolean = false): boolean {
   const currentPath = getCurrentPath();
-  const match = new RegExp(`^${encodeURI(path)}`).exec(currentPath);
+  const match = new RegExp(transformPath(path)).exec(currentPath);
 
   if (match) {
     const [url] = match;
@@ -39,6 +40,10 @@ export function isMatchPath(path: string, exact: boolean = false): boolean {
   }
 
   return false;
+}
+
+function transformPath(path: string): string {
+  return escapeRegExp(encodeURI(path));
 }
 
 function getCurrentPath() {
