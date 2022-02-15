@@ -1,23 +1,25 @@
-import React from "react";
+import React, {Suspense} from "react";
 import { DEV_MODE } from "../config";
-
 
 export interface InitialHookStatus {
   loading: boolean,
   error: boolean
 }
 interface DevBootstrapProps {
-  children: JSX.Element
+  ComponentPreviews: React.FC
 }
 
 interface DevSupportProps {
   children: JSX.Element,
-  ComponentPreviews: JSX.Element,
+  ComponentPreviews: React.FC,
   useInitialHook?: () => InitialHookStatus
 }
 
-const withInitialHook: (useInitialHook: () => InitialHookStatus) => React.FC<DevBootstrapProps> = (useInitialHook) => {
-  const DevBootstrapWrapped: React.FC<DevBootstrapProps> = ({children}) => {
+const withInitialHook: (
+  useInitialHook: () => InitialHookStatus, 
+  ComponentPreviews: React.FC
+) => React.FC = (useInitialHook, ComponentPreviews) => {
+  const DevBootstrapWrapped: React.FC = () => {
     const status: InitialHookStatus = useInitialHook();
 
     if (status.loading) {
@@ -30,25 +32,25 @@ const withInitialHook: (useInitialHook: () => InitialHookStatus) => React.FC<Dev
       </div>;
     }
 
-    return <DevBootstrap>{children}</DevBootstrap> ;
+    return <DevBootstrap ComponentPreviews={ComponentPreviews}/>
   }
   return DevBootstrapWrapped;
 }
 
-const DevBootstrap: React.FC<DevBootstrapProps> = ({children}) => {
-    return <>{children}</>;
+const DevBootstrap: React.FC<DevBootstrapProps> = ({ComponentPreviews}) => {
+    return (
+      <Suspense fallback={<div>Loading sources...</div>}>
+        <ComponentPreviews/>
+      </Suspense>
+    )
 };
 
 export const DevSupport: React.FC<DevSupportProps> = ({ children, ComponentPreviews, useInitialHook }) => {
   if (DEV_MODE) {
     return useInitialHook
-    ? withInitialHook(useInitialHook)({children: ComponentPreviews})
-    : (
-      <DevBootstrap>
-        {ComponentPreviews}
-      </DevBootstrap>
-    )
-  } else {
-    return <>{children}</>;
+    ? withInitialHook(useInitialHook, ComponentPreviews)({})
+    : <DevBootstrap ComponentPreviews={ComponentPreviews}/>
   }
+
+  return <>{children}</>;
 };
