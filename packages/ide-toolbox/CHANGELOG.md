@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-dev.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/compare/@react-buddy/ide-toolbox@1.1.0...@react-buddy/ide-toolbox@2.0.0-dev.0) (2022-02-16)
+
+
+### Features
+
+* detecting devmode by DevSupport property and window flag [#9](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/9) ([b6b9772](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/b6b9772891db8bf2e7362fc9f446ec15bd5ef2a7))
+* lazy loading for previews and palette [#7](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/7) ([03eec95](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/03eec95c079dd0faaba713ef9d33ac1eff27fea2))
+
+
+### BREAKING CHANGES
+
+* detecting devmode by DevSupport property and window.REACT_BUDDY_IDE_DEVMODE flag
+
+
+
+
+
+
 # 1.1.0 (2022-01-27)
 
 
