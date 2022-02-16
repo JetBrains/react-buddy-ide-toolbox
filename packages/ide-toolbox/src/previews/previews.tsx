@@ -1,8 +1,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 import ToolsPanel from "./tools-panel";
 import { ToolsPropsModifier } from "./previews.types"
-import { DEV_MODE } from "../config";
-import { useRoute, PALETTE_PATH } from "../routing/routing";
+import { useRoute, PALETTE_PATH, historyPush } from "../routing/routing";
 import styles from "./previews.module.scss";
 
 interface Props {
@@ -28,14 +27,14 @@ export const Previews: React.FC<Props> = ({ children, palette = null }: Props) =
 
   useEffect(() => {
     (window as any).enableComponentsPropsPanelEditor = (toolsPanelStatus: boolean) => {
-      if (DEV_MODE){
         (window as any).setPropertiesEditPanelStatus
           ? (window as any).setPropertiesEditPanelStatus(toolsPanelStatus)
           : null;
 
         enableToolsPanel(toolsPanelStatus);
-      }
     }
+
+    (window as any).reactBuddyHistoryPush = historyPush;
   }, []);
 
   if(isPalettePath) {
