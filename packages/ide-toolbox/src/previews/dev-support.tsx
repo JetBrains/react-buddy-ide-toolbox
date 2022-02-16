@@ -3,8 +3,9 @@ import { DEV_MODE } from "../config";
 
 export interface InitialHookStatus {
   loading: boolean,
-  error: boolean
+  error: boolean,
 }
+
 interface DevBootstrapProps {
   ComponentPreviews: React.FC
 }
@@ -12,7 +13,8 @@ interface DevBootstrapProps {
 interface DevSupportProps {
   children: JSX.Element,
   ComponentPreviews: React.FC,
-  useInitialHook?: () => InitialHookStatus
+  useInitialHook?: () => InitialHookStatus,
+  devmode?: boolean,
 }
 
 const withInitialHook: (
@@ -27,9 +29,11 @@ const withInitialHook: (
     }
 
     if(status.error) {
-      return <div>
-        Unable to bootstrap dev mode. Probably you need to run backend or enable backend mocking mode.
-      </div>;
+      return (
+        <div>
+          Unable to bootstrap dev mode. Probably you need to run backend or enable backend mocking mode.
+        </div>
+      )
     }
 
     return <DevBootstrap ComponentPreviews={ComponentPreviews}/>
@@ -45,12 +49,23 @@ const DevBootstrap: React.FC<DevBootstrapProps> = ({ComponentPreviews}) => {
     )
 };
 
-export const DevSupport: React.FC<DevSupportProps> = ({ children, ComponentPreviews, useInitialHook }) => {
-  if (DEV_MODE) {
+export const DevSupport: React.FC<DevSupportProps> = ({
+  children, 
+  ComponentPreviews, 
+  useInitialHook,
+  devmode
+}) => {
+  const isDevmode = enabledDevmode(devmode);
+
+  if(isDevmode) {
     return useInitialHook
-    ? withInitialHook(useInitialHook, ComponentPreviews)({})
-    : <DevBootstrap ComponentPreviews={ComponentPreviews}/>
+      ? withInitialHook(useInitialHook, ComponentPreviews)({})
+      : <DevBootstrap  ComponentPreviews={ComponentPreviews}/>
   }
 
   return <>{children}</>;
 };
+
+function enabledDevmode(devmode?: boolean) {
+  return devmode != null ? devmode : DEV_MODE;
+}
