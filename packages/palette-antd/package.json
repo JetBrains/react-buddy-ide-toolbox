@@ -4,7 +4,7 @@
   "description": "React Buddy Ant Design palette",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/palette.d.ts",
   "files": [
     "dist/",
     "palette.tsx"
