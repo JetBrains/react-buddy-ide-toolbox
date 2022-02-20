@@ -1,6 +1,6 @@
 {
   "name": "@react-buddy/palette-mui",
-  "version": "1.0.0-dev.0",
+  "version": "1.0.0-dev.1",
   "description": "React Buddy Material UI palette",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -21,8 +21,8 @@
     "@types/react": "^17.0.3",
     "rollup": "^2.53.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-typescript2": "^0.30.0",
     "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
     "typescript": "~4.2.4"
   },
   "scripts": {
