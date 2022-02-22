@@ -35,6 +35,8 @@ export const Previews: React.FC<Props> = ({ children, palette = null }: Props) =
     }
 
     (window as any).reactBuddyHistoryPush = historyPush;
+
+    (window as any).cefQuery?.({request: "event:react-toolbox-initialized"});
   }, []);
 
   if(isPalettePath) {
