@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-dev.1](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/compare/@react-buddy/ide-toolbox@2.0.0-dev.0...@react-buddy/ide-toolbox@2.0.0-dev.1) (2022-02-22)
+
+
+### Features
+
+* checking env variable to enable devmode [#15](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/15) ([3a0c209](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/3a0c2096ac17ad65e2387c1fab1eabcfce5ee86a))
+* emit event after api initialized [#14](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/14) ([5adbbab](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/5adbbabb078690170adc363317f3058771cfb13b))
+
+
+
+
+
+
 # [2.0.0-dev.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/compare/@react-buddy/ide-toolbox@1.1.0...@react-buddy/ide-toolbox@2.0.0-dev.0) (2022-02-16)
 
 
