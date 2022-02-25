@@ -1,6 +1,6 @@
 {
   "name": "@react-buddy/palette-antd",
-  "version": "1.0.0-dev.1",
+  "version": "1.0.0",
   "description": "React Buddy Ant Design palette",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -32,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mui"
+    "url": "https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd"
   },
   "publishConfig": {
     "access": "public"
