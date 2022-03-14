@@ -1,2 +1,2 @@
-import {JsonEditor} from "./json-editor";
+import {JsonEditor} from './json-editor';
 export default JsonEditor;

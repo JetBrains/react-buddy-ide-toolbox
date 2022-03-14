@@ -1,20 +1,18 @@
-import React from "react";
-import { ToolsPropsModifier } from "../../previews.types";
-import TableHeader from "./table-header/";
-import TableItems from "./table-items"
-import "./props-edit-table.scss";
+import React from 'react';
+import {ToolsPropsModifier} from '@types';
+import TableHeader from './table-header/';
+import TableItems from './table-items';
+import './props-edit-table.scss';
 
 interface Props {
-  toolsPropsToEdit: ToolsPropsModifier
+  toolsPropsToEdit: ToolsPropsModifier;
 }
 
-export const PropsEditTable: React.FC<Props> = ({ toolsPropsToEdit }) => {
+export const PropsEditTable: React.FC<Props> = ({toolsPropsToEdit}) => {
   return (
-    <div className={"props-edit-table"}>
+    <div className={'props-edit-table'}>
       <TableHeader />
-      <TableItems
-        toolsPropsToEdit={toolsPropsToEdit}
-      />
+      <TableItems toolsPropsToEdit={toolsPropsToEdit} />
     </div>
   );
 };

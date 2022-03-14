@@ -1,2 +1,2 @@
-import {TableItems} from "./table-items";
+import {TableItems} from './table-items';
 export default TableItems;

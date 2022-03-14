@@ -1,160 +1,188 @@
-import React, { useCallback, useEffect } from "react";
+import React, {useCallback, useEffect} from 'react';
 import {
   ToolsPropsModifier,
   PropsControlTypes,
-  TableItemControlData
-} from "../../../previews.types";
-import TableItem from "./table-item"
-import "./table-items.scss";
+  TableItemControlData,
+} from '@types';
+import TableItem from './table-item';
+import './table-items.scss';
 
 interface Props {
-  toolsPropsToEdit: ToolsPropsModifier
+  toolsPropsToEdit: ToolsPropsModifier;
 }
 
-export const TableItems: React.FC<Props> = ({ toolsPropsToEdit }) => {
-  const { props = null, initialProps = null, propsEditInfo = null, updateProps } = { ...toolsPropsToEdit };
+export const TableItems: React.FC<Props> = ({toolsPropsToEdit}) => {
+  const {
+    props = null,
+    initialProps = null,
+    propsEditInfo = null,
+    updateProps,
+  } = {...toolsPropsToEdit};
 
   useEffect(() => {
-    let propsValuesFromData = {}
+    let propsValuesFromData = {};
 
     propsEditInfo
       ? Object.entries(propsEditInfo).map(([propName, propEditInfo]) => {
-        const propValue = Array.isArray(propEditInfo.data)
-          ? propEditInfo.data[0]
-          : propEditInfo.data
+          const propValue = Array.isArray(propEditInfo.data)
+            ? propEditInfo.data[0]
+            : propEditInfo.data;
 
-        propsValuesFromData = {
-          ...propsValuesFromData,
-          [propName]: propValue
-        }
-      })
+          propsValuesFromData = {
+            ...propsValuesFromData,
+            [propName]: propValue,
+          };
+        })
       : null;
 
     updateProps?.({
       ...props,
-      ...propsValuesFromData
-    })
-  }, [propsEditInfo])
+      ...propsValuesFromData,
+    });
+  }, [propsEditInfo]);
 
-  const onInputChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
-    const { value: updatedPropValue, id: propName } = event.currentTarget;
-    const updatedProps = {
-      ...props,
-      [propName]: updatedPropValue
-    };
+  const onInputChange = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      const {value: updatedPropValue, id: propName} = event.currentTarget;
 
-    updateProps!(updatedProps);
+      const updatedProps = {
+        ...props,
+        [propName]: updatedPropValue,
+      };
 
-  }, [props]);
+      updateProps!(updatedProps);
+    },
+    [props],
+  );
 
-  const onCheckboxChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
-    const { checked: updatedPropValue, id: propName } = event.currentTarget;
-    const updatedProps = {
-      ...props,
-      [propName]: updatedPropValue
-    };
+  const onCheckboxChange = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      const {checked: updatedPropValue, id: propName} = event.currentTarget;
 
-    updateProps!(updatedProps);
+      const updatedProps = {
+        ...props,
+        [propName]: updatedPropValue,
+      };
 
-  }, [props]);
+      updateProps!(updatedProps);
+    },
+    [props],
+  );
 
-  const onSelectChange = useCallback((event: React.ChangeEvent<HTMLSelectElement>) => {
-    const { value: updatedPropValue, id: propName } = event.currentTarget;
-    const updatedProps = {
-      ...props,
-      [propName]: updatedPropValue
-    };
+  const onSelectChange = useCallback(
+    (event: React.ChangeEvent<HTMLSelectElement>) => {
+      const {value: updatedPropValue, id: propName} = event.currentTarget;
 
-    updateProps!(updatedProps);
+      const updatedProps = {
+        ...props,
+        [propName]: updatedPropValue,
+      };
 
-  }, [props]);
+      updateProps!(updatedProps);
+    },
+    [props],
+  );
 
-  const onRadioChange = useCallback((event: React.ChangeEvent<HTMLSelectElement>) => {
-    const { value: updatedPropValue, name: propName } = event.currentTarget;
-    const updatedProps = {
-      ...props,
-      [propName]: updatedPropValue
-    };
+  const onRadioChange = useCallback(
+    (event: React.ChangeEvent<HTMLSelectElement>) => {
+      const {value: updatedPropValue, name: propName} = event.currentTarget;
 
-    updateProps!(updatedProps);
+      const updatedProps = {
+        ...props,
+        [propName]: updatedPropValue,
+      };
 
-  }, [props]);
+      updateProps!(updatedProps);
+    },
+    [props],
+  );
 
-  const onTextAreaChange = useCallback((event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const { value: updatedPropValue, id: propName } = event.currentTarget;
-    const updatedProps = {
-      ...props,
-      [propName]: updatedPropValue
-    };
+  const onTextAreaChange = useCallback(
+    (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+      const {value: updatedPropValue, id: propName} = event.currentTarget;
 
-    updateProps!(updatedProps);
+      const updatedProps = {
+        ...props,
+        [propName]: updatedPropValue,
+      };
 
-  }, [props]);
+      updateProps!(updatedProps);
+    },
+    [props],
+  );
 
-  const onJsonChange = useCallback((propName: string, propValue: string) => {
-    let updatedPropValue;
+  const onJsonChange = useCallback(
+    (propName: string, propValue: string) => {
+      let updatedPropValue;
 
-    try {
-      updatedPropValue = JSON.parse(propValue);
-    } catch (e) {
-      alert(`Property ${propName} has incorrect value to object parse`);
-      return;
-    }
-    const updatedProps = {
-      ...props,
-      [propName]: updatedPropValue
-    };
+      try {
+        updatedPropValue = JSON.parse(propValue);
+      } catch (e) {
+        alert(`Property ${propName} has incorrect value to object parse`);
+        return;
+      }
+      const updatedProps = {
+        ...props,
+        [propName]: updatedPropValue,
+      };
 
-    updateProps!(updatedProps);
+      updateProps!(updatedProps);
+    },
+    [props],
+  );
 
-  }, [props]);
+  const getChangeHendler = useCallback(
+    (controlType?: PropsControlTypes) => {
+      switch (controlType) {
+        case PropsControlTypes.Input:
+          return onInputChange;
+        case PropsControlTypes.Checkbox:
+          return onCheckboxChange;
+        case PropsControlTypes.Select:
+          return onSelectChange;
+        case PropsControlTypes.Radio:
+          return onRadioChange;
+        case PropsControlTypes.Textarea:
+          return onTextAreaChange;
+        case PropsControlTypes.JsonEditor:
+          return onJsonChange;
+        default:
+          return onInputChange;
+      }
+    },
+    [props],
+  );
 
-  const getChangeHendler = useCallback((controlType?: PropsControlTypes) => {
-    switch (controlType) {
-      case PropsControlTypes.Input:
-        return onInputChange;
-      case PropsControlTypes.Checkbox:
-        return onCheckboxChange;
-      case PropsControlTypes.Select:
-        return onSelectChange;
-      case PropsControlTypes.Radio:
-        return onRadioChange;
-      case PropsControlTypes.Textarea:
-        return onTextAreaChange;
-      case PropsControlTypes.JsonEditor:
-        return onJsonChange;
-      default: return onInputChange;
-    }
-  }, [props])
-
-  const renderTableItems = useCallback((
-  ) => {
+  const renderTableItems = useCallback(() => {
     let items: JSX.Element[] = [];
 
-    const itemsWithoutInfo = props && Object.entries(props)
-      .filter(([propName]) => {
-        return !propsEditInfo?.hasOwnProperty(propName);
-      })
-      .map(([propName, propValue]) => {
-        return (
-          <TableItem
-            key={propName}
-            propName={propName}
-            propValue={propValue}
-            initialPropValue={initialProps?.[propName]}
-            onPropChange={getChangeHendler()}
-          />
-        )
-      })
+    const itemsWithoutInfo =
+      props &&
+      Object.entries(props)
+        .filter(([propName]) => {
+          return !propsEditInfo?.hasOwnProperty(propName);
+        })
+        .map(([propName, propValue]) => {
+          return (
+            <TableItem
+              key={propName}
+              propName={propName}
+              propValue={propValue}
+              initialPropValue={initialProps?.[propName]}
+              onPropChange={getChangeHendler()}
+            />
+          );
+        });
 
     items = itemsWithoutInfo ? [...items, ...itemsWithoutInfo] : items;
 
-    const itemsWithInfo = propsEditInfo && Object.entries(propsEditInfo)
-      .map(([propName, propInfo]) => {
+    const itemsWithInfo =
+      propsEditInfo &&
+      Object.entries(propsEditInfo).map(([propName, propInfo]) => {
         return (
           <TableItem
             key={propName}
-            data={(propInfo.data as TableItemControlData)}
+            data={propInfo.data as TableItemControlData}
             controlType={propInfo.controlType}
             propName={propName}
             propValue={
@@ -165,18 +193,13 @@ export const TableItems: React.FC<Props> = ({ toolsPropsToEdit }) => {
             initialPropValue={initialProps?.[propName]}
             onPropChange={getChangeHendler(propInfo.controlType)}
           />
-        )
-      })
+        );
+      });
 
     items = itemsWithInfo ? [...items, ...itemsWithInfo] : items;
 
     return items;
-  }, [props, propsEditInfo])
+  }, [props, propsEditInfo]);
 
-
-  return (
-    <div className={"table-items"}>
-      {renderTableItems()}
-    </div>
-  );
+  return <div className={'table-items'}>{renderTableItems()}</div>;
 };
