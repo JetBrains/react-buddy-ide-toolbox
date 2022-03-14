@@ -6,15 +6,26 @@
     "npm": ">=7"
   },
   "scripts": {
-    "commit": "node node_modules/commitizen/bin/git-cz"
+    "commit": "node node_modules/commitizen/bin/git-cz",
+    "lint": "eslint packages/ --fix-dry-run",
+    "lint:write": "eslint packages/ --fix",
+    "precommit": "npm run prettier:fix && npm run lint:write && git add .",
+    "prettier:fix": "prettier packages --write"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
     "commitizen": "^4.2.4",
     "cz-lerna-changelog": "^2.0.3",
-    "husky": "^7.0.2",
+    "eslint": "^8.9.0",
+    "eslint-plugin-react": "^7.29.3",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "husky": "^7.0.4",
     "lerna": "^3.22.1",
+    "lint-staged": "^12.3.4",
+    "prettier": "^2.5.1",
     "semantic-release": "^17.4.7"
   },
   "config": {
@@ -24,7 +35,14 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.(ts|tsx)": [
+      "npm run lint:write",
+      "git add"
+    ]
   }
 }

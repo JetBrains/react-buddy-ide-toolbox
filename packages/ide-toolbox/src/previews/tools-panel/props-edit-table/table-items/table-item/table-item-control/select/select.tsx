@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 interface Props extends React.HTMLProps<HTMLSelectElement> {
-  optionsData?: string[] | number[]
+  optionsData?: string[] | number[];
 }
 
 export const Select: React.FC<Props> = ({optionsData, ...restProps}) => {
@@ -9,14 +9,11 @@ export const Select: React.FC<Props> = ({optionsData, ...restProps}) => {
     <select {...restProps}>
       {optionsData?.map((value: string | number) => {
         return (
-          <option
-            value={value}
-            key={value}
-          >
+          <option value={value} key={value}>
             {value}
           </option>
-        )
+        );
       })}
     </select>
-  )
-}
+  );
+};

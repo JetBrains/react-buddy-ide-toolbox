@@ -1,2 +1,2 @@
-import {ToolsPanel} from "./tools-panel";
+import {ToolsPanel} from './tools-panel';
 export default ToolsPanel;

@@ -5,10 +5,11 @@
   padding: 10px;
   display: flex;
   &:after {
-    content: "";
+    content: '';
   }
 
-  .table-item, .table-item-control {
+  .table-item,
+  .table-item-control {
     display: flex;
     align-items: center;
     justify-content: start;
