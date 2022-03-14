@@ -1,10 +1,5 @@
-import React from "react";
-import {
-  Category,
-  Component,
-  Palette,
-  Variant
-} from "@react-buddy/ide-toolbox";
+import React from 'react';
+import {Category, Component, Palette, Variant} from '@react-buddy/ide-toolbox';
 import {
   AndroidOutlined,
   AppleOutlined,
@@ -29,15 +24,15 @@ import {
   SmileOutlined,
   SolutionOutlined,
   UserOutlined,
-  YoutubeOutlined
-} from "@ant-design/icons";
-import Title from "antd/es/typography/Title";
-import Text from "antd/es/typography/Text";
-import Link from "antd/es/typography/Link";
-import Button from "antd/es/button";
-import Sider from "antd/es/layout/Sider";
-import Col from "antd/es/grid/col";
-import Layout, { Content, Footer, Header } from "antd/es/layout/layout";
+  YoutubeOutlined,
+} from '@ant-design/icons';
+import Title from 'antd/es/typography/Title';
+import Text from 'antd/es/typography/Text';
+import Link from 'antd/es/typography/Link';
+import Button from 'antd/es/button';
+import Sider from 'antd/es/layout/Sider';
+import Col from 'antd/es/grid/col';
+import Layout, {Content, Footer, Header} from 'antd/es/layout/layout';
 import {
   Affix,
   AutoComplete,
@@ -81,15 +76,15 @@ import {
   Progress,
   Result,
   Skeleton,
-  Spin
-} from "antd/es";
-import Checkbox from "antd/es/checkbox/Checkbox";
-import Radio, { Group } from "antd/es/radio";
-import SubMenu from "antd/es/menu/SubMenu";
-import { Alert, ConfigProvider } from "antd";
-import Meta from "antd/es/card/Meta";
-import TextArea from "antd/es/input/TextArea";
-import Paragraph from "antd/es/typography/Paragraph";
+  Spin,
+} from 'antd/es';
+import Checkbox from 'antd/es/checkbox/Checkbox';
+import Radio, {Group} from 'antd/es/radio';
+import SubMenu from 'antd/es/menu/SubMenu';
+import {Alert, ConfigProvider} from 'antd';
+import Meta from 'antd/es/card/Meta';
+import TextArea from 'antd/es/input/TextArea';
+import Paragraph from 'antd/es/typography/Paragraph';
 
 const palette = () => (
   <Palette>
@@ -444,7 +439,7 @@ const palette = () => (
             src={
               <Image
                 src="https://joeschmoe.io/api/v1/random"
-                style={{ width: 32 }}
+                style={{width: 32}}
               />
             }
           />
@@ -460,7 +455,7 @@ const palette = () => (
           </Badge>
         </Variant>
         <Variant name="responsive size">
-          <Avatar size={{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }}>
+          <Avatar size={{xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100}}>
             User
           </Avatar>
         </Variant>
@@ -492,7 +487,7 @@ const palette = () => (
           <Badge count={25} />
         </Variant>
         <Variant name="icon">
-          <Badge count={<ClockCircleOutlined style={{ color: "#f5222d" }} />} />
+          <Badge count={<ClockCircleOutlined style={{color: '#f5222d'}} />} />
         </Variant>
         <Variant name="overflow count">
           <Badge count={100} overflowCount={99} />
@@ -518,7 +513,7 @@ const palette = () => (
           </Badge>
         </Variant>
         <Variant name="on avatar - icon">
-          <Badge count={<ClockCircleOutlined style={{ color: "#f5222d" }} />}>
+          <Badge count={<ClockCircleOutlined style={{color: '#f5222d'}} />}>
             <Avatar shape="square" size="large" />
           </Badge>
         </Variant>
@@ -539,7 +534,7 @@ const palette = () => (
         </Variant>
         <Variant name="on icon - dot">
           <Badge dot>
-            <NotificationOutlined style={{ fontSize: 16 }} />
+            <NotificationOutlined style={{fontSize: 16}} />
           </Badge>
         </Variant>
         <Variant name="on link - dot">
@@ -612,7 +607,7 @@ const palette = () => (
             actions={[
               <SettingOutlined key="setting" />,
               <EditOutlined key="edit" />,
-              <EllipsisOutlined key="ellipsis" />
+              <EllipsisOutlined key="ellipsis" />,
             ]}
           >
             Card content
@@ -623,11 +618,7 @@ const palette = () => (
             <Card type="inner" title="Inner Card title">
               Inner Card content
             </Card>
-            <Card
-              type="inner"
-              title="Inner Card title"
-              style={{ marginTop: 16 }}
-            >
+            <Card type="inner" title="Inner Card title" style={{marginTop: 16}}>
               Inner Card content
             </Card>
           </Card>
@@ -674,7 +665,7 @@ const palette = () => (
           </Collapse>
         </Variant>
         <Variant name="default active panel">
-          <Collapse defaultActiveKey={["1"]}>
+          <Collapse defaultActiveKey={['1']}>
             <Collapse.Panel header="This is panel header 1" key="1">
               <p>Panel content 1</p>
             </Collapse.Panel>
@@ -715,7 +706,7 @@ const palette = () => (
         <Variant name="custom expand icon">
           <Collapse
             accordion
-            expandIcon={({ isActive }) => (
+            expandIcon={({isActive}) => (
               <CaretRightOutlined rotate={isActive ? 90 : 0} />
             )}
           >
@@ -808,8 +799,8 @@ const palette = () => (
             dataSource={[
               {
                 actions: [<span key="comment-list-reply-to-0">Reply to</span>],
-                author: "Han Solo",
-                avatar: "https://joeschmoe.io/api/v1/random",
+                author: 'Han Solo',
+                avatar: 'https://joeschmoe.io/api/v1/random',
                 content: (
                   <p>
                     We supply a series of design principles, practical patterns
@@ -818,12 +809,12 @@ const palette = () => (
                     efficiently.
                   </p>
                 ),
-                datetime: <span>2022-01-01</span>
+                datetime: <span>2022-01-01</span>,
               },
               {
                 actions: [<span key="comment-list-reply-to-0">Reply to</span>],
-                author: "Han Solo",
-                avatar: "https://joeschmoe.io/api/v1/random",
+                author: 'Han Solo',
+                avatar: 'https://joeschmoe.io/api/v1/random',
                 content: (
                   <p>
                     We supply a series of design principles, practical patterns
@@ -832,10 +823,10 @@ const palette = () => (
                     efficiently.
                   </p>
                 ),
-                datetime: <span>2022-01-01</span>
-              }
+                datetime: <span>2022-01-01</span>,
+              },
             ]}
-            renderItem={item => (
+            renderItem={(item) => (
               <li>
                 <Comment
                   actions={item.actions}
@@ -887,7 +878,7 @@ const palette = () => (
         <Variant name="responsive size">
           <Descriptions
             title="User Info"
-            column={{ xxl: 4, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }}
+            column={{xxl: 4, xl: 3, lg: 3, md: 3, sm: 2, xs: 1}}
           >
             <Descriptions.Item label="UserName">Jack Smith</Descriptions.Item>
           </Descriptions>
@@ -903,7 +894,7 @@ const palette = () => (
         <Variant name="image source">
           <Empty
             image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
-            imageStyle={{ height: 60 }}
+            imageStyle={{height: 60}}
           />
         </Variant>
         <Variant name="with description">
@@ -920,8 +911,8 @@ const palette = () => (
         <Variant name="provide globally">
           <ConfigProvider
             renderEmpty={() => (
-              <div style={{ textAlign: "center" }}>
-                <SmileOutlined style={{ fontSize: 20 }} />
+              <div style={{textAlign: 'center'}}>
+                <SmileOutlined style={{fontSize: 20}} />
                 <p>Data Not Found</p>
               </div>
             )}
@@ -940,8 +931,7 @@ const palette = () => (
             width={200}
             src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png?x-oss-process=image/blur,r_50,s_50/quality,q_1/resize,m_mfit,h_200,w_200"
             preview={{
-              src:
-                "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+              src: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
             }}
           />
         </Variant>
@@ -971,16 +961,16 @@ const palette = () => (
       <Component name="List">
         <Variant name="basic">
           <List
-            dataSource={["Foo", "Bar"]}
-            renderItem={item => <List.Item>{item}</List.Item>}
+            dataSource={['Foo', 'Bar']}
+            renderItem={(item) => <List.Item>{item}</List.Item>}
           />
         </Variant>
         <Variant name="with footer and header">
           <List
             header={<div>Header</div>}
             footer={<div>Footer</div>}
-            dataSource={["Foo", "Bar"]}
-            renderItem={item => <List.Item>{item}</List.Item>}
+            dataSource={['Foo', 'Bar']}
+            renderItem={(item) => <List.Item>{item}</List.Item>}
           />
         </Variant>
         <Variant name="items with meta and extra img">
@@ -988,25 +978,25 @@ const palette = () => (
             itemLayout="vertical"
             dataSource={[
               {
-                title: "Foo",
-                href: "https://ant.design",
-                avatar: "https://joeschmoe.io/api/v1/random",
+                title: 'Foo',
+                href: 'https://ant.design',
+                avatar: 'https://joeschmoe.io/api/v1/random',
                 description:
-                  "Ant Design, a design language for background applications, is refined by Ant UED Team.",
+                  'Ant Design, a design language for background applications, is refined by Ant UED Team.',
                 content:
-                  "We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently."
+                  'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
               },
               {
-                title: "Bar",
-                href: "https://ant.design",
-                avatar: "https://joeschmoe.io/api/v1/random",
+                title: 'Bar',
+                href: 'https://ant.design',
+                avatar: 'https://joeschmoe.io/api/v1/random',
                 description:
-                  "Ant Design, a design language for background applications, is refined by Ant UED Team.",
+                  'Ant Design, a design language for background applications, is refined by Ant UED Team.',
                 content:
-                  "We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently."
-              }
+                  'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
+              },
             ]}
-            renderItem={item => (
+            renderItem={(item) => (
               <List.Item
                 extra={
                   <img
@@ -1028,13 +1018,13 @@ const palette = () => (
         </Variant>
         <Variant name="grid layout">
           <List
-            grid={{ gutter: 16, column: 4 }}
+            grid={{gutter: 16, column: 4}}
             dataSource={[
-              { title: "Title 1" },
-              { title: "Title 2" },
-              { title: "Title 3" }
+              {title: 'Title 1'},
+              {title: 'Title 2'},
+              {title: 'Title 3'},
             ]}
-            renderItem={item => (
+            renderItem={(item) => (
               <List.Item>
                 <Card title={item.title}>Card content</Card>
               </List.Item>
@@ -1043,13 +1033,13 @@ const palette = () => (
         </Variant>
         <Variant name="responsive grid layout">
           <List
-            grid={{ gutter: 16, xs: 1, sm: 2, md: 4, lg: 4, xl: 6, xxl: 3 }}
+            grid={{gutter: 16, xs: 1, sm: 2, md: 4, lg: 4, xl: 6, xxl: 3}}
             dataSource={[
-              { title: "Title 1" },
-              { title: "Title 2" },
-              { title: "Title 3" }
+              {title: 'Title 1'},
+              {title: 'Title 2'},
+              {title: 'Title 3'},
             ]}
-            renderItem={item => (
+            renderItem={(item) => (
               <List.Item>
                 <Card title={item.title}>Card content</Card>
               </List.Item>
@@ -1133,20 +1123,20 @@ const palette = () => (
         <Variant name="basic">
           <Table
             columns={[
-              { title: "Name", dataIndex: "name" },
-              { title: "Age", dataIndex: "age" }
+              {title: 'Name', dataIndex: 'name'},
+              {title: 'Age', dataIndex: 'age'},
             ]}
             dataSource={[
-              { key: 1, name: "John", age: 30 },
-              { key: 2, name: "Lucy", age: 31 }
+              {key: 1, name: 'John', age: 30},
+              {key: 2, name: 'Lucy', age: 31},
             ]}
           />
         </Variant>
         <Variant name="jsx style">
           <Table
             dataSource={[
-              { key: 1, name: "John", age: 30 },
-              { key: 2, name: "Lucy", age: 31 }
+              {key: 1, name: 'John', age: 30},
+              {key: 2, name: 'Lucy', age: 31},
             ]}
           >
             <Table.Column title="Name" dataIndex="name" key="name" />
@@ -1155,47 +1145,47 @@ const palette = () => (
         </Variant>
         <Variant name="checkbox selection">
           <Table
-            rowSelection={{ type: "checkbox" }}
+            rowSelection={{type: 'checkbox'}}
             columns={[
-              { title: "Name", dataIndex: "name" },
-              { title: "Age", dataIndex: "age" }
+              {title: 'Name', dataIndex: 'name'},
+              {title: 'Age', dataIndex: 'age'},
             ]}
             dataSource={[
-              { key: 1, name: "John", age: 30 },
-              { key: 2, name: "Lucy", age: 31 }
+              {key: 1, name: 'John', age: 30},
+              {key: 2, name: 'Lucy', age: 31},
             ]}
           />
         </Variant>
         <Variant name="radio selection">
           <Table
-            rowSelection={{ type: "radio" }}
+            rowSelection={{type: 'radio'}}
             columns={[
-              { title: "Name", dataIndex: "name" },
-              { title: "Age", dataIndex: "age" }
+              {title: 'Name', dataIndex: 'name'},
+              {title: 'Age', dataIndex: 'age'},
             ]}
             dataSource={[
-              { key: 1, name: "John", age: 30 },
-              { key: 2, name: "Lucy", age: 31 }
+              {key: 1, name: 'John', age: 30},
+              {key: 2, name: 'Lucy', age: 31},
             ]}
           />
         </Variant>
         <Variant name="groups selection">
           <Table
             rowSelection={{
-              type: "checkbox",
+              type: 'checkbox',
               selections: [
                 Table.SELECTION_ALL,
                 Table.SELECTION_INVERT,
-                Table.SELECTION_NONE
-              ]
+                Table.SELECTION_NONE,
+              ],
             }}
             columns={[
-              { title: "Name", dataIndex: "name" },
-              { title: "Age", dataIndex: "age" }
+              {title: 'Name', dataIndex: 'name'},
+              {title: 'Age', dataIndex: 'age'},
             ]}
             dataSource={[
-              { key: 1, name: "John", age: 30 },
-              { key: 2, name: "Lucy", age: 31 }
+              {key: 1, name: 'John', age: 30},
+              {key: 2, name: 'Lucy', age: 31},
             ]}
           />
         </Variant>
@@ -1203,30 +1193,30 @@ const palette = () => (
           <Table
             columns={[
               {
-                title: "Name",
-                dataIndex: "name",
+                title: 'Name',
+                dataIndex: 'name',
                 filters: [
                   {
-                    text: "John",
-                    value: "John"
+                    text: 'John',
+                    value: 'John',
                   },
                   {
-                    text: "Lucy",
-                    value: "Lucy"
-                  }
+                    text: 'Lucy',
+                    value: 'Lucy',
+                  },
                 ],
-                onFilter: (value: any, record) =>
-                  record.name.indexOf(value) === 0
+                onFilter: (value, record) =>
+                  record.name.indexOf(value as string) === 0,
               },
               {
-                title: "Age",
-                dataIndex: "age",
-                sorter: (a, b) => a.age - b.age
-              }
+                title: 'Age',
+                dataIndex: 'age',
+                sorter: (a, b) => a.age - b.age,
+              },
             ]}
             dataSource={[
-              { key: 1, name: "John", age: 30 },
-              { key: 2, name: "Lucy", age: 31 }
+              {key: 1, name: 'John', age: 30},
+              {key: 2, name: 'Lucy', age: 31},
             ]}
           />
         </Variant>
@@ -1234,82 +1224,82 @@ const palette = () => (
           <Table
             size="middle"
             columns={[
-              { title: "Name", dataIndex: "name" },
-              { title: "Age", dataIndex: "age" }
+              {title: 'Name', dataIndex: 'name'},
+              {title: 'Age', dataIndex: 'age'},
             ]}
             dataSource={[
-              { key: 1, name: "John", age: 30 },
-              { key: 2, name: "Lucy", age: 31 }
+              {key: 1, name: 'John', age: 30},
+              {key: 2, name: 'Lucy', age: 31},
             ]}
           />
         </Variant>
         <Variant name="title and footer">
           <Table
-            title={() => "Header"}
-            footer={() => "Footer"}
+            title={() => 'Header'}
+            footer={() => 'Footer'}
             size="middle"
             columns={[
-              { title: "Name", dataIndex: "name" },
-              { title: "Age", dataIndex: "age" }
+              {title: 'Name', dataIndex: 'name'},
+              {title: 'Age', dataIndex: 'age'},
             ]}
             dataSource={[
-              { key: 1, name: "John", age: 30 },
-              { key: 2, name: "Lucy", age: 31 }
+              {key: 1, name: 'John', age: 30},
+              {key: 2, name: 'Lucy', age: 31},
             ]}
           />
         </Variant>
         <Variant name="expandable rows">
           <Table
             columns={[
-              { title: "Name", dataIndex: "name" },
-              { title: "Age", dataIndex: "age" }
+              {title: 'Name', dataIndex: 'name'},
+              {title: 'Age', dataIndex: 'age'},
             ]}
             dataSource={[
               {
                 key: 1,
-                name: "John",
+                name: 'John',
                 age: 30,
-                description: "My name is John Brown, I am 32 years old"
+                description: 'My name is John Brown, I am 32 years old',
               },
-              { key: 2, name: "Lucy", age: 31 }
+              {key: 2, name: 'Lucy', age: 31},
             ]}
             expandable={{
-              expandedRowRender: (record: any) => (
-                <p style={{ margin: 0 }}>{record.description}</p>
+              expandedRowRender: (record) => (
+                <p style={{margin: 0}}>{record.description}</p>
               ),
-              rowExpandable: record => record.name !== "Lucy"
+              rowExpandable: (record) => record.name !== 'Lucy',
             }}
           />
         </Variant>
         <Variant name="row span">
           <Table
             columns={[
-              { title: "Name", dataIndex: "name" },
-              { title: "Age", dataIndex: "age" },
+              {title: 'Name', dataIndex: 'name'},
+              {title: 'Age', dataIndex: 'age'},
               {
-                title: "Phone",
-                dataIndex: "phone",
+                title: 'Phone',
+                dataIndex: 'phone',
                 render: (value, _row, index) => {
                   if (index === 0) {
                     return {
                       children: value,
-                      props: { rowSpan: 2 }
+                      props: {rowSpan: 2},
                     };
                   }
                   if (index === 1) {
                     return {
                       children: value,
-                      props: { rowSpan: 0 }
+                      props: {rowSpan: 0},
                     };
                   }
                   return value;
-                }
-              }
+                },
+              },
             ]}
             dataSource={[
-              { key: 1, name: "John", age: 30, phone: "0575-22098909" },
-              { key: 2, name: "Lucy", age: 31, phone: "0575-22098909" },
-              { key: 3, name: "Joe", age: 25, phone: "0571-22098333" }
+              {key: 1, name: 'John', age: 30, phone: '0575-22098909'},
+              {key: 2, name: 'Lucy', age: 31, phone: '0575-22098909'},
+              {key: 3, name: 'Joe', age: 25, phone: '0571-22098333'},
             ]}
           />
         </Variant>
@@ -1317,40 +1307,40 @@ const palette = () => (
           <Table
             columns={[
               {
-                title: "Name",
-                dataIndex: "name",
+                title: 'Name',
+                dataIndex: 'name',
                 render: (value, _record, index) => {
                   if (index === 2) {
-                    return { children: value, props: { colSpan: 3 } };
+                    return {children: value, props: {colSpan: 3}};
                   }
                   return value;
-                }
+                },
               },
               {
-                title: "Age",
-                dataIndex: "age",
+                title: 'Age',
+                dataIndex: 'age',
                 render: (value, _record, index) => {
                   if (index === 2) {
-                    return { children: value, props: { colSpan: 0 } };
+                    return {children: value, props: {colSpan: 0}};
                   }
                   return value;
-                }
+                },
               },
               {
-                title: "Phone",
-                dataIndex: "phone",
+                title: 'Phone',
+                dataIndex: 'phone',
                 render: (value, _record, index) => {
                   if (index === 2) {
-                    return { children: value, props: { colSpan: 0 } };
+                    return {children: value, props: {colSpan: 0}};
                   }
                   return value;
-                }
-              }
+                },
+              },
             ]}
             dataSource={[
-              { key: 1, name: "John", age: 30, phone: "0575-22098909" },
-              { key: 2, name: "Lucy", age: 31, phone: "0575-22098909" },
-              { key: 3, name: "Joe", age: 25, phone: "0571-22098333" }
+              {key: 1, name: 'John', age: 30, phone: '0575-22098909'},
+              {key: 2, name: 'Lucy', age: 31, phone: '0575-22098909'},
+              {key: 3, name: 'Joe', age: 25, phone: '0571-22098333'},
             ]}
           />
         </Variant>
@@ -1358,86 +1348,86 @@ const palette = () => (
           <Table
             columns={[
               {
-                title: "Name",
-                dataIndex: "name",
-                key: "name"
+                title: 'Name',
+                dataIndex: 'name',
+                key: 'name',
               },
               {
-                title: "Age",
-                dataIndex: "age",
-                key: "age",
-                width: "12%"
+                title: 'Age',
+                dataIndex: 'age',
+                key: 'age',
+                width: '12%',
               },
               {
-                title: "Address",
-                dataIndex: "address",
-                width: "30%",
-                key: "address"
-              }
+                title: 'Address',
+                dataIndex: 'address',
+                width: '30%',
+                key: 'address',
+              },
             ]}
             dataSource={[
               {
                 key: 1,
-                name: "John Brown sr.",
+                name: 'John Brown sr.',
                 age: 60,
-                address: "New York No. 1 Lake Park",
+                address: 'New York No. 1 Lake Park',
                 children: [
                   {
                     key: 11,
-                    name: "John Brown",
+                    name: 'John Brown',
                     age: 42,
-                    address: "New York No. 2 Lake Park"
+                    address: 'New York No. 2 Lake Park',
                   },
                   {
                     key: 12,
-                    name: "John Brown jr.",
+                    name: 'John Brown jr.',
                     age: 30,
-                    address: "New York No. 3 Lake Park",
+                    address: 'New York No. 3 Lake Park',
                     children: [
                       {
                         key: 121,
-                        name: "Jimmy Brown",
+                        name: 'Jimmy Brown',
                         age: 16,
-                        address: "New York No. 3 Lake Park"
-                      }
-                    ]
+                        address: 'New York No. 3 Lake Park',
+                      },
+                    ],
                   },
                   {
                     key: 13,
-                    name: "Jim Green sr.",
+                    name: 'Jim Green sr.',
                     age: 72,
-                    address: "London No. 1 Lake Park",
+                    address: 'London No. 1 Lake Park',
                     children: [
                       {
                         key: 131,
-                        name: "Jim Green",
+                        name: 'Jim Green',
                         age: 42,
-                        address: "London No. 2 Lake Park",
+                        address: 'London No. 2 Lake Park',
                         children: [
                           {
                             key: 1311,
-                            name: "Jim Green jr.",
+                            name: 'Jim Green jr.',
                             age: 25,
-                            address: "London No. 3 Lake Park"
+                            address: 'London No. 3 Lake Park',
                           },
                           {
                             key: 1312,
-                            name: "Jimmy Green sr.",
+                            name: 'Jimmy Green sr.',
                             age: 18,
-                            address: "London No. 4 Lake Park"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
+                            address: 'London No. 4 Lake Park',
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                ],
               },
               {
                 key: 2,
-                name: "Joe Black",
+                name: 'Joe Black',
                 age: 32,
-                address: "Sidney No. 1 Lake Park"
-              }
+                address: 'Sidney No. 1 Lake Park',
+              },
             ]}
           />
         </Variant>
@@ -1447,56 +1437,56 @@ const palette = () => (
               key: index,
               name: `Edward King ${index}`,
               age: 32,
-              address: `London, Park Lane no. ${index}`
+              address: `London, Park Lane no. ${index}`,
             }))}
-            scroll={{ y: 240 }}
+            scroll={{y: 240}}
             columns={[
               {
-                title: "Name",
-                dataIndex: "name",
-                width: 150
+                title: 'Name',
+                dataIndex: 'name',
+                width: 150,
               },
               {
-                title: "Age",
-                dataIndex: "age",
-                width: 150
+                title: 'Age',
+                dataIndex: 'age',
+                width: 150,
               },
               {
-                title: "Address",
-                dataIndex: "address"
-              }
+                title: 'Address',
+                dataIndex: 'address',
+              },
             ]}
           />
         </Variant>
         <Variant name="ellipsis">
           <Table
             columns={[
-              { title: "Name", dataIndex: "name", ellipsis: true },
-              { title: "address", dataIndex: "address", ellipsis: true }
+              {title: 'Name', dataIndex: 'name', ellipsis: true},
+              {title: 'address', dataIndex: 'address', ellipsis: true},
             ]}
             dataSource={[
               {
                 key: 1,
-                name: "John",
-                address: "Long Column Long Column Long Column"
+                name: 'John',
+                address: 'Long Column Long Column Long Column',
               },
               {
                 key: 2,
-                name: "Lucy",
-                address: "Long Column Long Column Long Column"
-              }
+                name: 'Lucy',
+                address: 'Long Column Long Column Long Column',
+              },
             ]}
           />
         </Variant>
         <Variant name="summary">
           <Table
             columns={[
-              { title: "Name", dataIndex: "name" },
-              { title: "Age", dataIndex: "age" }
+              {title: 'Name', dataIndex: 'name'},
+              {title: 'Age', dataIndex: 'age'},
             ]}
             dataSource={[
-              { key: 1, name: "John", age: 30 },
-              { key: 2, name: "Lucy", age: 31 }
+              {key: 1, name: 'John', age: 30},
+              {key: 2, name: 'Lucy', age: 31},
             ]}
             summary={() => (
               <Table.Summary fixed>
@@ -1514,43 +1504,43 @@ const palette = () => (
           <Table
             columns={[
               {
-                title: "Name (all screens)",
-                dataIndex: "name",
-                key: "name",
-                render: text => <a>{text}</a>
+                title: 'Name (all screens)',
+                dataIndex: 'name',
+                key: 'name',
+                render: (text) => <a>{text}</a>,
               },
               {
-                title: "Age (medium screen or bigger)",
-                dataIndex: "age",
-                key: "age",
-                responsive: ["md"]
+                title: 'Age (medium screen or bigger)',
+                dataIndex: 'age',
+                key: 'age',
+                responsive: ['md'],
               },
               {
-                title: "Address (large screen or bigger)",
-                dataIndex: "address",
-                key: "address",
-                responsive: ["lg"]
-              }
+                title: 'Address (large screen or bigger)',
+                dataIndex: 'address',
+                key: 'address',
+                responsive: ['lg'],
+              },
             ]}
             dataSource={[
               {
-                key: "1",
-                name: "John Brown",
+                key: '1',
+                name: 'John Brown',
                 age: 32,
-                address: "New York No. 1 Lake Park"
-              }
+                address: 'New York No. 1 Lake Park',
+              },
             ]}
           />
         </Variant>
         <Variant name="pagination none">
           <Table
             columns={[
-              { title: "Name", dataIndex: "name" },
-              { title: "Age", dataIndex: "age" }
+              {title: 'Name', dataIndex: 'name'},
+              {title: 'Age', dataIndex: 'age'},
             ]}
             dataSource={[
-              { key: 1, name: "John", age: 30 },
-              { key: 2, name: "Lucy", age: 31 }
+              {key: 1, name: 'John', age: 30},
+              {key: 2, name: 'Lucy', age: 31},
             ]}
             pagination={false}
           />
@@ -1558,14 +1548,14 @@ const palette = () => (
         <Variant name="pagination top right">
           <Table
             columns={[
-              { title: "Name", dataIndex: "name" },
-              { title: "Age", dataIndex: "age" }
+              {title: 'Name', dataIndex: 'name'},
+              {title: 'Age', dataIndex: 'age'},
             ]}
             dataSource={[
-              { key: 1, name: "John", age: 30 },
-              { key: 2, name: "Lucy", age: 31 }
+              {key: 1, name: 'John', age: 30},
+              {key: 2, name: 'Lucy', age: 31},
             ]}
-            pagination={{ position: ["topRight", "none" as any] }}
+            pagination={{position: ['topRight']}}
           />
         </Variant>
       </Component>
@@ -1652,15 +1642,11 @@ const palette = () => (
           <Tabs
             tabBarExtraContent={{
               left: (
-                <Button style={{ marginRight: "16px" }}>
-                  Left Extra Action
-                </Button>
+                <Button style={{marginRight: '16px'}}>Left Extra Action</Button>
               ),
               right: (
-                <Button style={{ marginLeft: "16px" }}>
-                  Right Extra Action
-                </Button>
-              )
+                <Button style={{marginLeft: '16px'}}>Right Extra Action</Button>
+              ),
             }}
           >
             <Tabs.TabPane tab="Tab 1" key="1">
@@ -1756,7 +1742,7 @@ const palette = () => (
           <Timeline>
             <Timeline.Item>Step 1</Timeline.Item>
             <Timeline.Item
-              dot={<ClockCircleOutlined style={{ fontSize: "16px" }} />}
+              dot={<ClockCircleOutlined style={{fontSize: '16px'}} />}
               color="red"
             >
               Step 2
@@ -1795,42 +1781,42 @@ const palette = () => (
         <Variant name="basic">
           <Tree
             checkable
-            defaultExpandedKeys={["0-0-0", "0-0-1"]}
-            defaultSelectedKeys={["0-0-0", "0-0-1"]}
-            defaultCheckedKeys={["0-0-0", "0-0-1"]}
+            defaultExpandedKeys={['0-0-0', '0-0-1']}
+            defaultSelectedKeys={['0-0-0', '0-0-1']}
+            defaultCheckedKeys={['0-0-0', '0-0-1']}
             treeData={[
               {
-                title: "parent 1",
-                key: "0-0",
+                title: 'parent 1',
+                key: '0-0',
                 children: [
                   {
-                    title: "parent 1-0",
-                    key: "0-0-0",
+                    title: 'parent 1-0',
+                    key: '0-0-0',
                     disabled: true,
                     children: [
                       {
-                        title: "leaf",
-                        key: "0-0-0-0",
-                        disableCheckbox: true
+                        title: 'leaf',
+                        key: '0-0-0-0',
+                        disableCheckbox: true,
                       },
                       {
-                        title: "leaf",
-                        key: "0-0-0-1"
-                      }
-                    ]
+                        title: 'leaf',
+                        key: '0-0-0-1',
+                      },
+                    ],
                   },
                   {
-                    title: "parent 1-1",
-                    key: "0-0-1",
+                    title: 'parent 1-1',
+                    key: '0-0-1',
                     children: [
                       {
-                        title: <span style={{ color: "#1890ff" }}>sss</span>,
-                        key: "0-0-1-0"
-                      }
-                    ]
-                  }
-                ]
-              }
+                        title: <span style={{color: '#1890ff'}}>sss</span>,
+                        key: '0-0-1-0',
+                      },
+                    ],
+                  },
+                ],
+              },
             ]}
           />
         </Variant>
@@ -1838,21 +1824,21 @@ const palette = () => (
           <Tree.DirectoryTree
             treeData={[
               {
-                title: "parent 0",
-                key: "0-0",
+                title: 'parent 0',
+                key: '0-0',
                 children: [
-                  { title: "leaf 0-0", key: "0-0-0", isLeaf: true },
-                  { title: "leaf 0-1", key: "0-0-1", isLeaf: true }
-                ]
+                  {title: 'leaf 0-0', key: '0-0-0', isLeaf: true},
+                  {title: 'leaf 0-1', key: '0-0-1', isLeaf: true},
+                ],
               },
               {
-                title: "parent 1",
-                key: "0-1",
+                title: 'parent 1',
+                key: '0-1',
                 children: [
-                  { title: "leaf 1-0", key: "0-1-0", isLeaf: true },
-                  { title: "leaf 1-1", key: "0-1-1", isLeaf: true }
-                ]
-              }
+                  {title: 'leaf 1-0', key: '0-1-0', isLeaf: true},
+                  {title: 'leaf 1-1', key: '0-1-1', isLeaf: true},
+                ],
+              },
             ]}
           />
         </Variant>
@@ -1861,19 +1847,19 @@ const palette = () => (
             showLine
             treeData={[
               {
-                title: "parent 0",
-                key: "0-0",
+                title: 'parent 0',
+                key: '0-0',
                 children: [
                   {
-                    title: "leaf 0-0",
-                    key: "0-0-0",
+                    title: 'leaf 0-0',
+                    key: '0-0-0',
                     children: [
-                      { title: "leaf 0-0-1", key: "0-0-0-1", isLeaf: true }
-                    ]
+                      {title: 'leaf 0-0-1', key: '0-0-0-1', isLeaf: true},
+                    ],
                   },
-                  { title: "leaf 0-1", key: "0-0-1", isLeaf: true }
-                ]
-              }
+                  {title: 'leaf 0-1', key: '0-0-1', isLeaf: true},
+                ],
+              },
             ]}
           />
         </Variant>
@@ -1883,23 +1869,23 @@ const palette = () => (
             defaultExpandAll
             treeData={[
               {
-                title: "parent 1",
-                key: "0-0",
+                title: 'parent 1',
+                key: '0-0',
                 icon: <SmileOutlined />,
                 children: [
                   {
-                    title: "leaf",
-                    key: "0-0-0",
-                    icon: <MehOutlined />
+                    title: 'leaf',
+                    key: '0-0-0',
+                    icon: <MehOutlined />,
                   },
                   {
-                    title: "leaf",
-                    key: "0-0-1",
-                    icon: ({ selected }) =>
-                      selected ? <FrownFilled /> : <FrownOutlined />
-                  }
-                ]
-              }
+                    title: 'leaf',
+                    key: '0-0-1',
+                    icon: ({selected}) =>
+                      selected ? <FrownFilled /> : <FrownOutlined />,
+                  },
+                ],
+              },
             ]}
           />
         </Variant>
@@ -1908,15 +1894,15 @@ const palette = () => (
             switcherIcon={<DownOutlined />}
             treeData={[
               {
-                title: "parent 1",
-                key: "0-0",
+                title: 'parent 1',
+                key: '0-0',
                 children: [
                   {
-                    title: "leaf",
-                    key: "0-0-0"
-                  }
-                ]
-              }
+                    title: 'leaf',
+                    key: '0-0-0',
+                  },
+                ],
+              },
             ]}
           />
         </Variant>
@@ -2042,7 +2028,7 @@ const palette = () => (
             }
             placement="bottomCenter"
           >
-            <a onClick={e => e.preventDefault()}>
+            <a onClick={(e) => e.preventDefault()}>
               Hover me <DownOutlined />
             </a>
           </Dropdown>
@@ -2101,7 +2087,7 @@ const palette = () => (
                 </Menu.Item>
               </Menu>
             }
-            trigger={["click"]}
+            trigger={['click']}
           >
             <Button>Click me</Button>
           </Dropdown>
@@ -2115,7 +2101,7 @@ const palette = () => (
                 <Menu.Item key="3">3rd menu item</Menu.Item>
               </Menu>
             }
-            trigger={["contextMenu"]}
+            trigger={['contextMenu']}
           >
             <div>Right Click on here</div>
           </Dropdown>
@@ -2124,8 +2110,8 @@ const palette = () => (
       <Component name="Menu">
         <Variant name="vertical">
           <Menu
-            defaultSelectedKeys={["1"]}
-            defaultOpenKeys={["sub1"]}
+            defaultSelectedKeys={['1']}
+            defaultOpenKeys={['sub1']}
             mode="inline"
           >
             <SubMenu key="sub1" icon={<MailOutlined />} title="Navigation One">
@@ -2164,9 +2150,9 @@ const palette = () => (
         </Variant>
         <Variant name="horizontal">
           <Menu
-            defaultSelectedKeys={["1"]}
-            defaultOpenKeys={["sub1"]}
-            mode={"horizontal"}
+            defaultSelectedKeys={['1']}
+            defaultOpenKeys={['sub1']}
+            mode={'horizontal'}
           >
             <SubMenu key="sub1" icon={<MailOutlined />} title="Navigation One">
               <Menu.ItemGroup key="g1" title="Item 1">
@@ -2221,7 +2207,7 @@ const palette = () => (
               <Button key="2">Operation</Button>,
               <Button key="1" type="primary">
                 Primary
-              </Button>
+              </Button>,
             ]}
           />
         </Variant>
@@ -2231,18 +2217,18 @@ const palette = () => (
             breadcrumb={{
               routes: [
                 {
-                  path: "index",
-                  breadcrumbName: "First-level Menu"
+                  path: 'index',
+                  breadcrumbName: 'First-level Menu',
                 },
                 {
-                  path: "first",
-                  breadcrumbName: "Second-level Menu"
+                  path: 'first',
+                  breadcrumbName: 'Second-level Menu',
                 },
                 {
-                  path: "second",
-                  breadcrumbName: "Third-level Menu"
-                }
-              ]
+                  path: 'second',
+                  breadcrumbName: 'Third-level Menu',
+                },
+              ],
             }}
             subTitle="This is a subtitle"
           />
@@ -2275,10 +2261,10 @@ const palette = () => (
           <Pagination
             total={500}
             itemRender={(_current, type, originalElement) => {
-              if (type === "prev") {
+              if (type === 'prev') {
                 return <a>Previous</a>;
               }
-              if (type === "next") {
+              if (type === 'next') {
                 return <a>Next</a>;
               }
               return originalElement;
@@ -2364,7 +2350,7 @@ const palette = () => (
         <Variant name="custom dot style">
           <Steps
             current={1}
-            progressDot={(dot, { status, index }) => (
+            progressDot={(dot, {status, index}) => (
               <Popover
                 content={
                   <span>
@@ -2522,7 +2508,7 @@ const palette = () => (
               </Button>,
               <Button key="link" href="https://google.com" type="primary">
                 Search on Google
-              </Button>
+              </Button>,
             ]}
           >
             <p>Some contents...</p>
@@ -2557,7 +2543,7 @@ const palette = () => (
           </Modal>
         </Variant>
         <Variant name="top offset">
-          <Modal title="20px to Top" style={{ top: 20 }} visible>
+          <Modal title="20px to Top" style={{top: 20}} visible>
             <p>some contents...</p>
             <p>some contents...</p>
             <p>some contents...</p>
@@ -2567,8 +2553,8 @@ const palette = () => (
           <Modal
             title="Basic Modal"
             visible
-            okButtonProps={{ disabled: true }}
-            cancelButtonProps={{ disabled: true }}
+            okButtonProps={{disabled: true}}
+            cancelButtonProps={{disabled: true}}
           >
             <p>Some contents...</p>
             <p>Some contents...</p>
@@ -2598,7 +2584,7 @@ const palette = () => (
         <Variant name="custom icon">
           <Popconfirm
             title="Are you sure？"
-            icon={<QuestionCircleOutlined style={{ color: "red" }} />}
+            icon={<QuestionCircleOutlined style={{color: 'red'}} />}
           >
             <a href="#">Delete</a>
           </Popconfirm>
@@ -2621,13 +2607,13 @@ const palette = () => (
           <Progress percent={30} size="small" />
         </Variant>
         <Variant name="with success segment">
-          <Progress percent={60} success={{ percent: 30 }} />
+          <Progress percent={60} success={{percent: 30}} />
         </Variant>
         <Variant name="with gradient">
           <Progress
             strokeColor={{
-              "0%": "#108ee9",
-              "100%": "#87d068"
+              '0%': '#108ee9',
+              '100%': '#87d068',
             }}
             percent={99.9}
           />
@@ -2642,14 +2628,14 @@ const palette = () => (
           <Progress
             type="circle"
             strokeColor={{
-              "0%": "#108ee9",
-              "100%": "#87d068"
+              '0%': '#108ee9',
+              '100%': '#87d068',
             }}
             percent={90}
           />
         </Variant>
         <Variant name="circular - with success segment">
-          <Progress percent={60} success={{ percent: 30 }} type="circle" />
+          <Progress percent={60} success={{percent: 30}} type="circle" />
         </Variant>
         <Variant name="circular - small">
           <Progress type="circle" percent={30} width={80} />
@@ -2658,7 +2644,7 @@ const palette = () => (
           <Progress
             type="circle"
             percent={75}
-            format={percent => `${percent} Days`}
+            format={(percent) => `${percent} Days`}
           />
         </Variant>
         <Variant name="circular - square linecaps">
@@ -2695,7 +2681,7 @@ const palette = () => (
               <Button type="primary" key="console">
                 Go Console
               </Button>,
-              <Button key="buy">Buy Again</Button>
+              <Button key="buy">Buy Again</Button>,
             ]}
           />
         </Variant>
@@ -2753,7 +2739,7 @@ const palette = () => (
               <Button type="primary" key="console">
                 Go Console
               </Button>,
-              <Button key="buy">Buy Again</Button>
+              <Button key="buy">Buy Again</Button>,
             ]}
           >
             <div>
@@ -2761,18 +2747,18 @@ const palette = () => (
                 <Text
                   strong
                   style={{
-                    fontSize: 16
+                    fontSize: 16,
                   }}
                 >
                   The content you submitted has the following error:
                 </Text>
               </Paragraph>
               <Paragraph>
-                <CloseCircleOutlined style={{ color: "red" }} /> Your account
-                has been frozen. <a>Thaw immediately &gt;</a>
+                <CloseCircleOutlined style={{color: 'red'}} /> Your account has
+                been frozen. <a>Thaw immediately &gt;</a>
               </Paragraph>
               <Paragraph>
-                <CloseCircleOutlined style={{ color: "red" }} /> Your account is
+                <CloseCircleOutlined style={{color: 'red'}} /> Your account is
                 not yet eligible to apply. <a>Apply Unlock &gt;</a>
               </Paragraph>
             </div>
@@ -2791,7 +2777,7 @@ const palette = () => (
           <Skeleton />
         </Variant>
         <Variant name="with avatar and multiple paragraphs">
-          <Skeleton avatar paragraph={{ rows: 4 }} />
+          <Skeleton avatar paragraph={{rows: 4}} />
         </Variant>
         <Variant name="active animation">
           <Skeleton active />
@@ -2833,10 +2819,10 @@ const palette = () => (
           <Skeleton.Button size="large" />
         </Variant>
         <Variant name="input">
-          <Skeleton.Input style={{ width: 200 }} />
+          <Skeleton.Input style={{width: 200}} />
         </Variant>
         <Variant name="input - large size">
-          <Skeleton.Input style={{ width: 200 }} size="large" />
+          <Skeleton.Input style={{width: 200}} size="large" />
         </Variant>
         <Variant name="image">
           <Skeleton.Image />
@@ -2850,7 +2836,7 @@ const palette = () => (
           <Spin tip="Loading..." />
         </Variant>
         <Variant name="custom spinning indicator">
-          <Spin indicator={<LoadingOutlined style={{ fontSize: 24 }} spin />} />
+          <Spin indicator={<LoadingOutlined style={{fontSize: 24}} spin />} />
         </Variant>
         <Variant name="small size">
           <Spin size="small" />

@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   &:after {
-    content: "";
+    content: '';
   }
   overflow-y: scroll;
 }

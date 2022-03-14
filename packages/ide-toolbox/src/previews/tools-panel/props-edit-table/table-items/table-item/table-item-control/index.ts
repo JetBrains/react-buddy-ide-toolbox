@@ -1,2 +1,2 @@
-import {TableItemControl} from "./table-item-control"
+import {TableItemControl} from './table-item-control';
 export default TableItemControl;

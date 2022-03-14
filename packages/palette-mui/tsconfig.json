@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2017",
-    "lib": [ "es2017", "dom" ],
+    "lib": ["es2017", "dom"],
     "module": "esnext",
     "outDir": "dist",
     "jsx": "react",
@@ -20,11 +20,6 @@
     "inlineSources": true,
     "experimentalDecorators": true
   },
-  "files": [
-    "palette.tsx"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "files": ["palette.tsx"],
+  "exclude": ["node_modules", "dist"]
 }
