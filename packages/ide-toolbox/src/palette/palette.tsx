@@ -1,5 +1,6 @@
 import React, {useLayoutEffect} from 'react';
 import {VariantRoute} from './variant-route';
+import {ErrorBoundary} from '../error-boundary/error-boundary';
 import styles from './palette.module.scss';
 
 export type CategoryProps = {
@@ -44,7 +45,7 @@ export const Variant: React.FC<VariantProps> = ({
       componentName={componentName}
       variantName={name}
     >
-      {children}
+      <ErrorBoundary componentName={componentName}>{children}</ErrorBoundary>
     </VariantRoute>
   );
 };
