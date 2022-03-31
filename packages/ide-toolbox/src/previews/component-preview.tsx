@@ -1,6 +1,7 @@
 import React, {useCallback} from 'react';
 import {RoutePreview} from '../routing/route-preview';
 import {PropsModifier, ToolsPropsModifier, PropsEditInfo} from '@types';
+import {ErrorBoundary} from '../error-boundary/error-boundary';
 
 interface Props {
   path: string;
@@ -27,7 +28,7 @@ export const ComponentPreview: React.FC<Props> = ({
 
   return (
     <RoutePreview path={path} exact={exact} setPropsToEdit={setPropsToEdit!}>
-      {children}
+      <ErrorBoundary>{children}</ErrorBoundary>
     </RoutePreview>
   );
 };
