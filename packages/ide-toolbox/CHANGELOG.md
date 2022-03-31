@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0-dev.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/compare/@react-buddy/ide-toolbox@1.1.0...@react-buddy/ide-toolbox@2.1.0-dev.0) (2022-03-31)
+
+### Features
+* errorBoundary for preview and palette component [#25](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/25) ([d1b347c](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/d1b347c655781aac2fcc15c7b3713e53988bc1a5))
+
 # [2.0.0-dev.2](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/compare/@react-buddy/ide-toolbox@2.0.0-dev.1...@react-buddy/ide-toolbox@2.0.0-dev.2) (2022-02-24)
 
 
