@@ -1,4 +1,4 @@
-import React, {useLayoutEffect} from 'react';
+import React, {ReactElement, useLayoutEffect} from 'react';
 import {VariantRoute} from './variant-route';
 import {ErrorBoundary} from '../error-boundary/error-boundary';
 import styles from './palette.module.scss';
@@ -13,6 +13,7 @@ export type ComponentProps = {
   name: string;
   children: JSX.Element | JSX.Element[];
   defaultProps?: {};
+  subComponents: JSX.Element | JSX.Element[];
 };
 
 export type VariantProps = {
@@ -20,6 +21,8 @@ export type VariantProps = {
   componentName?: string;
   name?: string;
   requiredParams?: Array<string>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  proto: (...args: unknown[]) => ReactElement<any, any> | null | void;
 };
 
 export const Category: React.FC<CategoryProps> = ({children, name}) => {
