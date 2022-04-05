@@ -22,7 +22,7 @@ export type VariantProps = {
   name?: string;
   requiredParams?: Array<string>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  proto?: (...args: unknown[]) => ReactElement<any, any> | null | void;
+  proto?: (...args: any[]) => ReactElement<any, any> | null | void;
 };
 
 export const Category: React.FC<CategoryProps> = ({children, name}) => {
