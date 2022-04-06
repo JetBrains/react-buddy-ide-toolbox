@@ -10,9 +10,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 * access to palette component previews from all URLs [#4](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/4) ([34a41de](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/34a41de6bb44e58d316050eebde7ad71cdb5946c))
 * checking env variable to enable devmode [#15](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/15) ([504c394](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/504c3941ce058fffd85cfe25266b8402a5c87a19))
-* palette prop typings ([ac1f9b9](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/ac1f9b9e16a1d05c85a042364dce0f267e2c0ed9))
-* palette typings ([90e40f4](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/90e40f4ec654c51f56c490356201bd80b517fdc2))
-
+* palette prop typings for upcoming features ([ac1f9b9](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/ac1f9b9e16a1d05c85a042364dce0f267e2c0ed9))
 
 ### Features
 
@@ -29,57 +27,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### BREAKING CHANGES
 
 * detecting devmode by DevSupport property and window.REACT_BUDDY_IDE_DEVMODE flag
-
-
-
-
-
-# [2.1.0-dev.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/compare/@react-buddy/ide-toolbox@1.1.0...@react-buddy/ide-toolbox@2.1.0-dev.0) (2022-03-31)
-
-### Features
-* errorBoundary for preview and palette component [#25](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/25) ([d1b347c](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/d1b347c655781aac2fcc15c7b3713e53988bc1a5))
-
-# [2.0.0-dev.2](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/compare/@react-buddy/ide-toolbox@2.0.0-dev.1...@react-buddy/ide-toolbox@2.0.0-dev.2) (2022-02-24)
-
-
-### Bug Fixes
-
-* checking env variable to enable devmode [#15](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/15) ([5164c41](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/5164c4172469c4817a79ab20d5457fda8ba59a90))
-
-
-
-
-
-# [2.0.0-dev.1](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/compare/@react-buddy/ide-toolbox@2.0.0-dev.0...@react-buddy/ide-toolbox@2.0.0-dev.1) (2022-02-22)
-
-
-### Features
-
-* checking env variable to enable devmode [#15](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/15) ([3a0c209](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/3a0c2096ac17ad65e2387c1fab1eabcfce5ee86a))
-* emit event after api initialized [#14](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/14) ([5adbbab](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/5adbbabb078690170adc363317f3058771cfb13b))
-
-
-
-
-
-
-# [2.0.0-dev.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/compare/@react-buddy/ide-toolbox@1.1.0...@react-buddy/ide-toolbox@2.0.0-dev.0) (2022-02-16)
-
-
-### Features
-
-* detecting devmode by DevSupport property and window flag [#9](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/9) ([b6b9772](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/b6b9772891db8bf2e7362fc9f446ec15bd5ef2a7))
-* lazy loading for previews and palette [#7](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/7) ([03eec95](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/03eec95c079dd0faaba713ef9d33ac1eff27fea2))
-
-
-### BREAKING CHANGES
-
-* detecting devmode by DevSupport property and window.REACT_BUDDY_IDE_DEVMODE flag
-
-
-
-
-
 
 # 1.1.0 (2022-01-27)
 
