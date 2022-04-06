@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2022-04-06)
+
+
+### Bug Fixes
+
+* access to palette component previews from all URLs [#4](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/4) ([34a41de](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/34a41de6bb44e58d316050eebde7ad71cdb5946c))
+* checking env variable to enable devmode [#15](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/15) ([504c394](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/504c3941ce058fffd85cfe25266b8402a5c87a19))
+* palette prop typings ([ac1f9b9](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/ac1f9b9e16a1d05c85a042364dce0f267e2c0ed9))
+* palette typings ([90e40f4](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/90e40f4ec654c51f56c490356201bd80b517fdc2))
+
+
+### Features
+
+* checking env variable to enable devmode [#15](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/15) ([59fbae2](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/59fbae210f8ac6a8dfa15d74d236026a55f726fd))
+* detecting devmode by DevSupport property and window flag [#9](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/9) ([c4c65a5](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/c4c65a5fb0658e1ea3dd079210b82f9f618d93fd))
+* emit event after api initialized [#14](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/14) ([f93e01b](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/f93e01b0676e31677cbcf24211bfa9b9f20ccd2e))
+* errorBoundary for preview and palette component [#25](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/25) ([28c4533](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/28c4533a74d29b06e0ea5209b1e2d29b2a4c28f5))
+* lazy loading for previews and palette [#7](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/7) ([132b105](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/132b1057e0edd872d911094ed3d77b81be7c6bf8))
+* palette components preview [#1](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/1) ([f0f4804](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/f0f4804a454373cfe3644d9119198e72bbcb6ca8))
+* Support React 18 [#27](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/27) ([33ea802](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/33ea8020217dcbaf010a234928df22753c6b8cc5))
+* Support sub-components in palette [#28](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/issues/28) ([f25a9b6](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/commit/f25a9b679b35b5d54092d089e285e724d87f0ab9))
+
+
+### BREAKING CHANGES
+
+* detecting devmode by DevSupport property and window.REACT_BUDDY_IDE_DEVMODE flag
+
+
+
+
+
 # [2.1.0-dev.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox/compare/@react-buddy/ide-toolbox@1.1.0...@react-buddy/ide-toolbox@2.1.0-dev.0) (2022-03-31)
 
 ### Features

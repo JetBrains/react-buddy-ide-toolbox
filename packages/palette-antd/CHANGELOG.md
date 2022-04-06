@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2022-04-06)
+
+
+### Bug Fixes
+
+* @react-buddy/ide-toolbox version in dependecy of pallete packages [#22](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/issues/22) ([25e36ea](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/commit/25e36eac9366ad03d5368139d0f6cf79deaf59d1))
+* types file for palettes [#6](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/issues/6) ([dbcca9f](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/commit/dbcca9fee143e2683d5170192e974239de2513be))
+
+
+### Features
+
+* palette-mui and palette-antd packages [#6](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/issues/6) ([5312978](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/commit/5312978aa6fad34a32c4f829d6d033e6d3e9d469))
+
+
+
+
+
 # 1.1.0 (2022-03-24)
 
 
