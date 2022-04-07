@@ -41,7 +41,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-buddy/ide-toolbox/tree/master/packages/react-ide-toolbox"
+    "url": "https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox"
   },
   "publishConfig": {
     "access": "public"
