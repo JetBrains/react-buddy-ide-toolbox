@@ -1,4 +1,4 @@
-import React, {ReactElement, useLayoutEffect} from 'react';
+import React, {PropsWithChildren, ReactElement, useLayoutEffect} from 'react';
 import {VariantRoute} from './variant-route';
 import {ErrorBoundary} from '../error-boundary/error-boundary';
 import styles from './palette.module.scss';
@@ -36,7 +36,7 @@ export const Component: React.FC<ComponentProps> = ({
   return <>{getTransformedComponentChildren(children, name, categoryName)}</>;
 };
 
-export const Variant: React.FC<VariantProps> = ({
+export const Variant: React.FC<PropsWithChildren<VariantProps>> = ({
   children,
   categoryName,
   componentName,
@@ -53,7 +53,7 @@ export const Variant: React.FC<VariantProps> = ({
   );
 };
 
-export const Palette: React.FC = ({children}) => {
+export const Palette: React.FC<PropsWithChildren<unknown>> = ({children}) => {
   useLayoutEffect(() => {
     document.body.classList.add(styles.bodyPaletteStyles);
 
