@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mui/compare/@react-buddy/palette-mui@1.2.0...@react-buddy/palette-mui@1.2.1) (2022-04-21)
+
+
+### Bug Fixes
+
+* remove React from palettes peerDependencies ([5f243f8](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mui/commit/5f243f85e12debaccab155e2a061d8f4e0ac140b))
+
+
+
+
+
 # 1.2.0 (2022-04-06)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.2](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/compare/@react-buddy/ide-toolbox@2.1.0...@react-buddy/ide-toolbox@2.1.2) (2022-04-21)
+
+
+### Bug Fixes
+
+* React 18 support [#27](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/issues/27) (typings) ([406d50b](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/commit/406d50bf1af134f50533d2abfafcf70053e6f932))
+
+
+
+
+
 # 2.1.0 (2022-04-06)
 
 
