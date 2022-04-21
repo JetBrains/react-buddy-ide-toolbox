@@ -12,8 +12,7 @@
   "peerDependencies": {
     "@mui/icons-material": "^5.0.1",
     "@mui/material": "^5.0.1",
-    "@react-buddy/ide-toolbox": "^2.0.0",
-    "react": "^17.0.0"
+    "@react-buddy/ide-toolbox": "^2.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^20.0.0",
