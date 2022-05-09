@@ -1,6 +1,6 @@
 {
   "name": "@react-buddy/palette-react-intl",
-  "version": "5.0.0",
+  "version": "5.0.1-dev.0",
   "description": "Palette of react-intl components",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -13,8 +13,8 @@
     "@react-buddy/ide-toolbox": "^2.0.0"
   },
   "peerDependencies": {
-    "react-intl": "^5.25.1",
-    "react": "^17.0.0 || ^18.0.0"
+    "react": "^17.0.0 || ^18.0.0",
+    "react-intl": "^5.25.1"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^20.0.0",
