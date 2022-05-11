@@ -10,7 +10,9 @@
     "lint": "eslint packages/ --fix-dry-run",
     "lint:write": "eslint packages/ --fix",
     "precommit": "npm run prettier:fix && npm run lint:write && git add .",
-    "prettier:fix": "prettier packages --write"
+    "prettier:fix": "prettier packages --write",
+    "publish:versions": "lerna version -m 'chore: bump versions' --no-push --conventional-commits --conventional-graduate",
+    "publish:prerelease-versions": "lerna version -m 'chore: bump versions (prerelease)' --no-push --conventional-commits --conventional-prerelease --preid dev"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
