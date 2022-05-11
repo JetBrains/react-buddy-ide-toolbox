@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0-dev.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/compare/@react-buddy/palette-antd@1.2.2-dev.0...@react-buddy/palette-antd@1.3.0-dev.0) (2022-05-11)
+
+
+### Features
+
+* [antd] add more data entry components ([2196f91](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/commit/2196f918e073ae1d138cc792e5f8580491e31b8d))
+* initial antd metadata ([54eee3c](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/commit/54eee3c7a7d65536807d4bf7aec8822aa853ebd5))
+
+
+
+
+
 ## [1.2.2-dev.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/compare/@react-buddy/palette-antd@1.2.1...@react-buddy/palette-antd@1.2.2-dev.0) (2022-05-09)
 
 **Note:** Version bump only for package @react-buddy/palette-antd
