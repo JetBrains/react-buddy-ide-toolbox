@@ -119,6 +119,15 @@
       "outlineProps": [
         "span"
       ]
+    },
+    "Radio": {
+      "importAliases": [
+        "antd",
+        "antd/es/radio"
+      ],
+      "outlineProps": [
+        "children"
+      ]
     }
   }
 }

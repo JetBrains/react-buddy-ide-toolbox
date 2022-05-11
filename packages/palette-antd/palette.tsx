@@ -77,6 +77,8 @@ import {
   Result,
   Skeleton,
   Spin,
+  Select, TimePicker,
+  Slider, Switch
 } from 'antd/es';
 import Checkbox from 'antd/es/checkbox/Checkbox';
 import Radio, {Group} from 'antd/es/radio';
@@ -400,7 +402,6 @@ const palette = () => (
           <Rate />
         </Variant>
       </Component>
-      {/*
       <Component name="Select">
         <Variant>
           <Select defaultValue="lucy">
@@ -412,7 +413,21 @@ const palette = () => (
           </Select>
         </Variant>
       </Component>
-      */}
+      <Component name="Slider">
+        <Variant>
+          <Slider defaultValue={30} />
+        </Variant>
+      </Component>
+      <Component name="Switch">
+        <Variant>
+          <Switch defaultChecked={false}/>
+        </Variant>
+      </Component>
+      <Component name="TimePicker">
+        <Variant>
+          <TimePicker/>
+        </Variant>
+      </Component>
     </Category>
     <Category name="Data Display">
       <Component name="Avatar">
