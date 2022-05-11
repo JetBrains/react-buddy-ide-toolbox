@@ -1,6 +1,6 @@
 {
   "name": "@react-buddy/palette-react-intl",
-  "version": "5.0.1-dev.2",
+  "version": "5.0.1",
   "description": "Palette of react-intl components",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
