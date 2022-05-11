@@ -7,7 +7,8 @@
   "types": "dist/palette.d.ts",
   "files": [
     "dist/",
-    "palette.tsx"
+    "palette.tsx",
+    "rb-metadata.json"
   ],
   "peerDependencies": {
     "@ant-design/icons": "^4.7.0",

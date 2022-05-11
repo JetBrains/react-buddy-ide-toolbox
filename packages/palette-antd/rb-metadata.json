@@ -1,0 +1,124 @@
+{
+  "components": {
+    "Button": {
+      "importAliases": [
+        "antd",
+        "antd/es/button"
+      ],
+      "categories": [
+        "General",
+        "Style"
+      ],
+      "props": {
+        "type": {
+          "category": "General",
+          "weight": -2
+        },
+        "size": {
+          "category": "Style",
+          "weight": -2
+        },
+        "shape": {
+          "category": "Style",
+          "weight": -1
+        }
+      },
+      "outlineProps": [
+        "type",
+        "icon",
+        "children"
+      ]
+    },
+    "Title": {
+      "importAliases": [
+        "antd",
+        "antd/es/typography/Title"
+      ],
+      "outlineProps": [
+        "level",
+        "children"
+      ]
+    },
+    "Input": {
+      "importAliases": [
+        "antd",
+        "antd/es"
+      ],
+      "outlineProps": [
+        "id",
+        "itemId"
+      ]
+    },
+    "Card": {
+      "importAliases": [
+        "antd",
+        "antd/es"
+      ],
+      "outlineProps": [
+        "title"
+      ]
+    },
+    "Table": {
+      "importAliases": [
+        "antd",
+        "antd/es"
+      ],
+      "outlineProps": [
+        "title"
+      ]
+    },
+    "Table.Column": {
+      "importAliases": [
+        "antd",
+        "antd/es"
+      ],
+      "outlineProps": [
+        "title",
+        "dataIndex",
+        "key"
+      ]
+    },
+    "SubMenu": {
+      "importAliases": [
+        "antd",
+        "antd/es/menu/SubMenu"
+      ],
+      "outlineProps": [
+        "key",
+        "title",
+        "children"
+      ]
+    },
+    "Menu.ItemGroup": {
+      "importAliases": [
+        "antd",
+        "antd/es"
+      ],
+      "outlineProps": [
+        "key",
+        "title",
+        "children"
+      ]
+    },
+    "Menu.Item": {
+      "importAliases": [
+        "antd",
+        "antd/es"
+      ],
+      "outlineProps": [
+        "key",
+        "title",
+        "children"
+      ]
+    },
+    "Col": {
+      "importAliases": [
+        "antd",
+        "antd/es/grid/col"
+      ],
+      "outlineProps": [
+        "span"
+      ]
+    }
+  }
+}
