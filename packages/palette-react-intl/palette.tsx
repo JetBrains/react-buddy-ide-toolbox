@@ -20,7 +20,7 @@ import {
   FormattedTimeParts
 } from "react-intl";
 
-export const ReactIntlPalette = () => (
+const ReactIntlPalette = () => (
     <Palette>
       <Category name="Messages">
         <Component name="FormattedMessage">
@@ -209,3 +209,5 @@ export const ReactIntlPalette = () => (
       </Category>
     </Palette>
 );
+
+export default ReactIntlPalette;
