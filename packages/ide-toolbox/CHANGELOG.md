@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/compare/@react-buddy/ide-toolbox@2.1.2...@react-buddy/ide-toolbox@2.2.0) (2022-06-21)
+
+
+### Features
+
+* Add an ability to specify component/variant documentation url [#29](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/issues/29) ([2b6e374](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/commit/2b6e374f8e5bf7132cb20447151312604eec6412))
+
+
+
+
+
 ## [2.1.2](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/compare/@react-buddy/ide-toolbox@2.1.0...@react-buddy/ide-toolbox@2.1.2) (2022-04-21)
 
 
