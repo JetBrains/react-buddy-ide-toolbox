@@ -14,6 +14,7 @@ export type ComponentProps = {
   children: JSX.Element | JSX.Element[];
   defaultProps?: {};
   subComponents?: JSX.Element | JSX.Element[];
+  docURL?: string;
 };
 
 export type VariantProps = {
@@ -23,6 +24,7 @@ export type VariantProps = {
   requiredParams?: Array<string>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   proto?: (...args: any[]) => ReactElement<any, any> | null | void;
+  docURL?: string;
 };
 
 export const Category: React.FC<CategoryProps> = ({children, name}) => {
