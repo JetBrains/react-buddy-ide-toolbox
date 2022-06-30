@@ -1,0 +1,44 @@
+{
+  "name": "@react-buddy/palette-chakra-ui",
+  "version": "2.0.0",
+  "description": "Palette of ChakraUI components",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/palette.d.ts",
+  "files": [
+    "dist/",
+    "palette.tsx"
+  ],
+  "dependencies": {
+    "@react-buddy/ide-toolbox": "^2.0.0"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "@chakra-ui/react": "^2.2.1",
+    "@chakra-ui/icons": "^1.1.7"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@types/react": "^17.0.3",
+    "rollup": "^2.53.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "~4.5.5"
+  },
+  "scripts": {
+    "compile": "npm run clean && rollup -c",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-chakra-ui"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Haulmont <info@haulmont.com>",
+  "license": "Apache-2.0"
+}
