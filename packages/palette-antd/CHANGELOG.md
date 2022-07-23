@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.1](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/compare/@react-buddy/palette-antd@4.1.0...@react-buddy/palette-antd@4.1.1) (2022-07-23)
+
+
+### Bug Fixes
+
+* antd dependency on ide-toolbox ([26a6f3a](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/commit/26a6f3a4a3a56155b5172c74eac9459fb9f61c73))
+
+
+
+
+
 # [4.1.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/compare/@react-buddy/palette-antd@4.0.0...@react-buddy/palette-antd@4.1.0) (2022-07-23)
 
 
