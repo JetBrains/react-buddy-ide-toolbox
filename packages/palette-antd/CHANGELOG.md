@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/compare/@react-buddy/palette-antd@4.0.0...@react-buddy/palette-antd@4.1.0) (2022-07-23)
+
+
+### Features
+
+* icons and Form components in andt palette ([4a7708c](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/commit/4a7708c41fb8da3f7323d0199243a82267a59dd5))
+
+
+
+
+
 # [4.0.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/compare/@react-buddy/palette-antd@1.3.0-dev.0...@react-buddy/palette-antd@4.0.0) (2022-05-11)
 
 **Note:** Version bump only for package @react-buddy/palette-antd
