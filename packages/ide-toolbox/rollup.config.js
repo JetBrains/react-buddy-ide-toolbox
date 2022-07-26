@@ -10,12 +10,12 @@ export default {
   output: [
     {
       file: packageJson.main,
-      format: 'es',
+      format: 'cjs',
       sourcemap: true,
     },
     {
       file: packageJson.module,
-      format: 'commonjs',
+      format: 'esm',
       sourcemap: true,
     },
   ],
