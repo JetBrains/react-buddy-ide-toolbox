@@ -1,6 +1,6 @@
 {
   "name": "@react-buddy/palette-antd",
-  "version": "4.1.1",
+  "version": "4.1.2-dev.0",
   "description": "React Buddy Ant Design palette",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -11,7 +11,7 @@
     "rb-metadata.json"
   ],
   "dependencies": {
-    "@react-buddy/ide-toolbox": "^2.0.0"
+    "@react-buddy/ide-toolbox": "^2.2.1-dev.0"
   },
   "peerDependencies": {
     "@ant-design/icons": "^4.7.0",

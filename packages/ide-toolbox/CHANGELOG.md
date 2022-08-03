@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.1-dev.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/compare/@react-buddy/ide-toolbox@2.2.0...@react-buddy/ide-toolbox@2.2.1-dev.0) (2022-08-03)
+
+
+### Bug Fixes
+
+* browser dependent ide-toolbox [#35](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/issues/35) ([96597ef](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/commit/96597eff1ac492a29e0535337690dbaef2a3b9ab))
+* mangled entrypoints in ide-toolbox [#35](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/issues/35) ([9449fe1](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/commit/9449fe120b133e4b7080bee4e314af6c77e4cecb))
+
+
+
+
+
 # [2.2.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/compare/@react-buddy/ide-toolbox@2.1.2...@react-buddy/ide-toolbox@2.2.0) (2022-06-21)
 
 
