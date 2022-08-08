@@ -878,67 +878,47 @@ const palette = () => (
           <Button ghost>Ghost Default</Button>
         </Variant>
         <Variant name="ghost - primary">
-          <Button type="primary" ghost>
-            Ghost Primary
-          </Button>
+          <Button type="primary" ghost>Ghost Primary</Button>
         </Variant>
         <Variant name="ghost - dashed">
-          <Button type="dashed" ghost>
-            Ghost Dashed
-          </Button>
+          <Button type="dashed" ghost>Ghost Dashed</Button>
         </Variant>
         <Variant name="ghost - link">
-          <Button type="link" ghost>
-            Ghost Link
-          </Button>
+          <Button type="link" ghost>Ghost Link</Button>
         </Variant>
         <Variant name="danger">
           <Button danger>Danger Default</Button>
         </Variant>
         <Variant name="danger - primary">
-          <Button type="primary" danger>
-            Danger Primary
-          </Button>
+          <Button type="primary" danger>Danger Primary</Button>
         </Variant>
         <Variant name="danger - dashed">
-          <Button type="dashed" danger>
-            Danger Dashed
-          </Button>
+          <Button type="dashed" danger>Danger Dashed</Button>
         </Variant>
         <Variant name="danger - text">
-          <Button type="text" danger>
-            Danger Text
-          </Button>
+          <Button type="text" danger>Danger Text</Button>
         </Variant>
         <Variant name="danger - link">
-          <Button type="link" danger>
-            Danger Link
-          </Button>
+          <Button type="link" danger>Danger Link</Button>
         </Variant>
         <Variant name="block" docURL="https://ant.design/components/button/#components-button-demo-block">
           <Button block>Block Default</Button>
         </Variant>
         <Variant name="block - primary">
-          <Button type="primary" block>
-            Block Primary
-          </Button>
+          <Button type="primary" block>Block Primary</Button>
         </Variant>
         <Variant name="block - dashed">
-          <Button type="dashed" block>
-            Block Dashed
-          </Button>
+          <Button type="dashed" block>Block Dashed</Button>
         </Variant>
         <Variant name="block - link">
-          <Button type="link" block>
-            Block Link
-          </Button>
+          <Button type="link" block>Block Link</Button>
         </Variant>
       </Component>
     </Category>
     <Category name="Typography">
       <Component name="Title" docURL="https://ant.design/components/typography/#components-typography-demo-title">
         <Variant name="h1">
-          <Title>h1. Ant Design</Title>
+          <Title level={1}>h1. Ant Design</Title>
         </Variant>
         <Variant name="h2">
           <Title level={2}>h2. Ant Design</Title>
@@ -1051,16 +1031,16 @@ const palette = () => (
       <Component name="App Layout" docURL="https://ant.design/components/layout/">
         <Variant>
           <Layout>
-            <Header>Header</Header>
+            <Header><span style={{'color': '#FFF'}}>Header</span></Header>
             <Content>Content</Content>
             <Footer>Footer</Footer>
           </Layout>
         </Variant>
         <Variant name="left sider">
           <Layout>
-            <Header>Header</Header>
+            <Header><span style={{'color': '#FFF'}}>Header</span></Header>
             <Layout>
-              <Sider>Sider</Sider>
+              <Sider><span style={{'color': '#FFF'}}>Sider</span></Sider>
               <Content>Content</Content>
             </Layout>
             <Footer>Footer</Footer>
@@ -1068,19 +1048,19 @@ const palette = () => (
         </Variant>
         <Variant name="right sider">
           <Layout>
-            <Header>Header</Header>
+            <Header><span style={{'color': '#FFF'}}>Header</span></Header>
             <Layout>
               <Content>Content</Content>
-              <Sider>Sider</Sider>
+              <Sider><span style={{'color': '#FFF'}}>Sider</span></Sider>
             </Layout>
             <Footer>Footer</Footer>
           </Layout>
         </Variant>
         <Variant name="left full sider">
           <Layout>
-            <Sider>Sider</Sider>
+            <Sider><span style={{'color': '#FFF'}}>Sider</span></Sider>
             <Layout>
-              <Header>Header</Header>
+              <Header color={'white'}><span style={{'color': '#FFF'}}>Header</span></Header>
               <Content>Content</Content>
               <Footer>Footer</Footer>
             </Layout>
@@ -1095,7 +1075,7 @@ const palette = () => (
       <Component name="Form.Item" docURL="https://ant.design/components/form/#components-form-demo-dynamic-form-item">
         <Variant name="Input">
           <Form.Item label="Input" name="input">
-            <Input/>
+            <Input />
           </Form.Item>
         </Variant>
         <Variant name="Checkbox">
@@ -1144,25 +1124,25 @@ const palette = () => (
         </Variant>
         <Variant name="InputNumber">
           <Form.Item label="InputNumber" name="inputnumber">
-            <InputNumber/>
+            <InputNumber />
           </Form.Item>
         </Variant>
         <Variant name="TextArea">
           <Form.Item label="TextArea" name="textarea">
-            <TextArea rows={4}/>
+            <TextArea rows={4} />
           </Form.Item>
         </Variant>
         <Variant name="Switch">
           <Form.Item label="Switch" name="switch" valuePropName="checked">
-            <Switch/>
+            <Switch />
           </Form.Item>
         </Variant>
         <Variant name="Upload">
           <Form.Item label="Upload" name="upload" valuePropName="fileList">
             <Upload action="/upload.do" listType="picture-card">
               <div>
-                <PlusOutlined/>
-                <div style={{marginTop: 8}}>Upload</div>
+                <PlusOutlined />
+                <div style={{ marginTop: 8 }}>Upload</div>
               </div>
             </Upload>
           </Form.Item>
@@ -1351,11 +1331,11 @@ const palette = () => (
         <Variant name="count">
           <Badge count={25}/>
         </Variant>
-        <Variant name="icon">
-          <Badge count={<ClockCircleOutlined style={{color: "#f5222d"}}/>}/>
-        </Variant>
         <Variant name="overflow count">
           <Badge count={100} overflowCount={99}/>
+        </Variant>
+        <Variant name="icon">
+          <Badge count={<ClockCircleOutlined style={{color: "#f5222d"}}/>}/>
         </Variant>
         <Variant name="orange color with text">
           <Badge color="orange" text="orange"/>
@@ -1526,10 +1506,10 @@ const palette = () => (
               <p>Panel content 1</p>
             </Collapse.Panel>
             <Collapse.Panel header="This is panel header 2" key="2">
-              <p>Panel content 1</p>
+              <p>Panel content 2</p>
             </Collapse.Panel>
             <Collapse.Panel header="This is panel header 3" key="3">
-              <p>Panel content 1</p>
+              <p>Panel content 3</p>
             </Collapse.Panel>
           </Collapse>
         </Variant>
@@ -1539,10 +1519,10 @@ const palette = () => (
               <p>Panel content 1</p>
             </Collapse.Panel>
             <Collapse.Panel header="This is panel header 2" key="2">
-              <p>Panel content 1</p>
+              <p>Panel content 2</p>
             </Collapse.Panel>
             <Collapse.Panel header="This is panel header 3" key="3">
-              <p>Panel content 1</p>
+              <p>Panel content 3</p>
             </Collapse.Panel>
           </Collapse>
         </Variant>
@@ -1604,14 +1584,14 @@ const palette = () => (
               key="2"
               showArrow={false}
             >
-              <p>Panel content 1</p>
+              <p>Panel content 2</p>
             </Collapse.Panel>
             <Collapse.Panel
               header="This is panel header 3"
               key="3"
               showArrow={false}
             >
-              <p>Panel content 1</p>
+              <p>Panel content 3</p>
             </Collapse.Panel>
           </Collapse>
         </Variant>
@@ -1621,10 +1601,10 @@ const palette = () => (
               <p>Panel content 1</p>
             </Collapse.Panel>
             <Collapse.Panel header="This is panel header 2" key="2">
-              <p>Panel content 1</p>
+              <p>Panel content 2</p>
             </Collapse.Panel>
             <Collapse.Panel header="This is panel header 3" key="3">
-              <p>Panel content 1</p>
+              <p>Panel content 3</p>
             </Collapse.Panel>
           </Collapse>
         </Variant>
@@ -1634,10 +1614,10 @@ const palette = () => (
               <p>Panel content 1</p>
             </Collapse.Panel>
             <Collapse.Panel header="This is panel header 2" key="2">
-              <p>Panel content 1</p>
+              <p>Panel content 2</p>
             </Collapse.Panel>
             <Collapse.Panel header="This is panel header 3" key="3">
-              <p>Panel content 1</p>
+              <p>Panel content 3</p>
             </Collapse.Panel>
           </Collapse>
         </Variant>
@@ -1777,16 +1757,6 @@ const palette = () => (
             <Button type="primary">Create Now</Button>
           </Empty>
         </Variant>
-        <Variant name="provide globally">
-          <ConfigProvider
-            renderEmpty={() => (
-              <div style={{textAlign: "center"}}>
-                <SmileOutlined style={{fontSize: 20}}/>
-                <p>Data Not Found</p>
-              </div>
-            )}
-          ></ConfigProvider>
-        </Variant>
       </Component>
       <Component name="Image" docURL="https://ant.design/components/image/">
         <Variant name="basic">
@@ -1814,8 +1784,7 @@ const palette = () => (
           />
         </Variant>
       </Component>
-      <Component name="Image.PreviewGroup"
-                 docURL="https://ant.design/components/image/#components-image-demo-preview-group-visible">
+      <Component name="Image.PreviewGroup" docURL="https://ant.design/components/image/#components-image-demo-preview-group">
         <Variant>
           <Image.PreviewGroup>
             <Image
@@ -3284,7 +3253,7 @@ const palette = () => (
         </Variant>
         <Variant name="closable">
           <Alert
-            message="Warning Text Warning Text Warning TextW arning Text Warning Text Warning TextWarning Text"
+            message="Warning Text"
             type="warning"
             closable
           />
@@ -3398,12 +3367,12 @@ const palette = () => (
             <p>Some contents...</p>
           </Modal>
         </Variant>
-        <Variant name="ok and close text">
+        <Variant name="ok and cancel text">
           <Modal
             title="Basic Modal"
             visible={true}
             okText="Confirm"
-            cancelText="Close"
+            cancelText="Cancel"
           >
             <p>Some contents...</p>
             <p>Some contents...</p>
@@ -3589,7 +3558,7 @@ const palette = () => (
             extra={<Button type="primary">Back Home</Button>}
           />
         </Variant>
-        <Variant name="page doens't exist">
+        <Variant name="page doesn't exist">
           <Result
             status="404"
             title="404"
@@ -4262,7 +4231,7 @@ const palette = () => (
           <FontColorsOutlined/>
         </Variant>
       </Component>
-      <Component name="FontColorsOutlined">
+      <Component name="FontSizeOutlined">
         <Variant name="outlined">
           <FontSizeOutlined/>
         </Variant>
@@ -4472,7 +4441,7 @@ const palette = () => (
           <AlipayCircleOutlined/>
         </Variant>
       </Component>
-      <Component name="AlipayCircleOutlined">
+      <Component name="TaobaoOutlined">
         <Variant name="outlined">
           <TaobaoOutlined/>
         </Variant>
@@ -4702,7 +4671,7 @@ const palette = () => (
           <BellOutlined/>
         </Variant>
       </Component>
-      <Component name="BellOutlined">
+      <Component name="BlockOutlined">
         <Variant name="outlined">
           <BlockOutlined/>
         </Variant>
@@ -4807,7 +4776,7 @@ const palette = () => (
           <CloudUploadOutlined/>
         </Variant>
       </Component>
-      <Component name="CloudUploadOutlined">
+      <Component name="ClusterOutlined">
         <Variant name="outlined">
           <ClusterOutlined/>
         </Variant>
@@ -4852,7 +4821,7 @@ const palette = () => (
           <ContainerOutlined/>
         </Variant>
       </Component>
-      <Component name="ContainerOutlined">
+      <Component name="ControlOutlined">
         <Variant name="outlined">
           <ControlOutlined/>
         </Variant>
@@ -5127,7 +5096,7 @@ const palette = () => (
           <FolderAddOutlined/>
         </Variant>
       </Component>
-      <Component name="FolderAddOutlined">
+      <Component name="FolderOutlined">
         <Variant name="outlined">
           <FolderOutlined/>
         </Variant>
@@ -5672,7 +5641,7 @@ const palette = () => (
           <TableOutlined/>
         </Variant>
       </Component>
-      <Component name="TableOutlined">
+      <Component name="TabletOutlined">
         <Variant name="outlined">
           <TabletOutlined/>
         </Variant>
@@ -5727,7 +5696,7 @@ const palette = () => (
           <TranslationOutlined/>
         </Variant>
       </Component>
-      <Component name="TranslationOutlined">
+      <Component name="TrophyOutlined">
         <Variant name="outlined">
           <TrophyOutlined/>
         </Variant>
@@ -6294,7 +6263,7 @@ const palette = () => (
           <ContainerFilled/>
         </Variant>
       </Component>
-      <Component name="ContainerFilled">
+      <Component name="ControlFilled">
         <Variant name="filled">
           <ControlFilled/>
         </Variant>
@@ -6936,7 +6905,7 @@ const palette = () => (
           <LeftSquareTwoTone/>
         </Variant>
       </Component>
-      <Component name="LeftSquareTwoTone">
+      <Component name="RightSquareTwoTone">
         <Variant name="two tone">
           <RightSquareTwoTone/>
         </Variant>
@@ -7271,7 +7240,7 @@ const palette = () => (
           <FileExcelTwoTone/>
         </Variant>
       </Component>
-      <Component name="FileExcelTwoTone">
+      <Component name="FileExclamationTwoTone">
         <Variant name="two tone">
           <FileExclamationTwoTone/>
         </Variant>
