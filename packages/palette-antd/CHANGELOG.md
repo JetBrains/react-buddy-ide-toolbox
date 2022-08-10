@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.2](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/compare/@react-buddy/palette-antd@4.1.2-dev.0...@react-buddy/palette-antd@4.1.2) (2022-08-10)
+
+
+### Bug Fixes
+
+* antd palette cosmetic and wording fixes ([3ff2201](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/commit/3ff220155102616b3047c8b2584a8219142230ce))
+
+
+
+
+
 ## [4.1.2-dev.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/compare/@react-buddy/palette-antd@4.1.1...@react-buddy/palette-antd@4.1.2-dev.0) (2022-08-03)
 
 **Note:** Version bump only for package @react-buddy/palette-antd
