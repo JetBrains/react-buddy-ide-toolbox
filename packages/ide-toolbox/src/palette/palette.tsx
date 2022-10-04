@@ -1,4 +1,4 @@
-import React, {PropsWithChildren, ReactElement, useLayoutEffect} from 'react';
+import React, {PropsWithChildren, ReactElement, useLayoutEffect, useState} from 'react';
 import {VariantRoute} from './variant-route';
 import {ErrorBoundary} from '../error-boundary/error-boundary';
 import styles from './palette.module.scss';
@@ -21,6 +21,7 @@ export type VariantProps = {
   categoryName?: string;
   componentName?: string;
   name?: string;
+  previewLayout?: 'center' | 'stretch';
   requiredParams?: Array<string>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   proto?: (...args: any[]) => ReactElement<any, any> | null | void;
@@ -43,28 +44,51 @@ export const Variant: React.FC<PropsWithChildren<VariantProps>> = ({
   categoryName,
   componentName,
   name,
+  previewLayout,
 }) => {
   return (
     <VariantRoute
       categoryName={categoryName}
       componentName={componentName}
       variantName={name}
+      previewLayout={previewLayout}
     >
       <ErrorBoundary componentName={componentName}>{children}</ErrorBoundary>
     </VariantRoute>
   );
 };
 
-export const Palette: React.FC<PropsWithChildren<unknown>> = ({children}) => {
+function addFullWindowClassToParents(curNode: HTMLElement | null) {
+  if(curNode === null) return;
+
+  curNode.classList.add(styles.fullWindow);
+
+  if(curNode === document.body) return;
+
+  addFullWindowClassToParents(curNode.parentElement);
+}
+
+function removeFullWindowClassFromParents(curNode: HTMLElement | null) {
+  if(curNode === null) return;
+
+  curNode.classList.remove(styles.fullWindow);
+
+  if(curNode === document.body) return;
+
+  removeFullWindowClassFromParents(curNode.parentElement);
+}
+
+export const Palette = ({children}: PropsWithChildren<{}>) => {
+  const [paletteNode, setPaletteNode] = useState<HTMLDivElement | null>(null);
+
   useLayoutEffect(() => {
-    document.body.classList.add(styles.bodyPaletteStyles);
-
+    if(paletteNode !== null) addFullWindowClassToParents(paletteNode);
     return () => {
-      document.body.classList.remove(styles.bodyPaletteStyles);
-    };
-  }, []);
+      if(paletteNode !== null) removeFullWindowClassFromParents(paletteNode);
+    }
+  }, [paletteNode]);
 
-  return <div className={styles.palette}>{children}</div>;
+  return <div ref={setPaletteNode}>{children}</div>;
 };
 
 function getTransformedCategoryChildren(
