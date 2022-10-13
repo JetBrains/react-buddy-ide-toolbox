@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0-dev.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/compare/@react-buddy/ide-toolbox@2.2.1-dev.0...@react-buddy/ide-toolbox@2.3.0-dev.0) (2022-10-13)
+
+
+### Features
+
+* add fullScreen mode to Variant and remove viewport width and height [#36](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/issues/36) ([c8cfb3b](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/commit/c8cfb3bcb988004362673ec2b42cf56e3a7addb8))
+
+
+
+
+
 ## [2.2.1](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/compare/@react-buddy/ide-toolbox@2.2.1-dev.0...@react-buddy/ide-toolbox@2.2.1) (2022-08-10)
 
 **Note:** Version bump only for package @react-buddy/ide-toolbox
