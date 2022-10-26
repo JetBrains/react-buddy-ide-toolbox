@@ -8,7 +8,8 @@
   "files": [
     "dist/",
     "palette.tsx",
-    "rb-metadata.json"
+    "rb-metadata.json",
+    "LICENSE"
   ],
   "dependencies": {
     "@react-buddy/ide-toolbox": "^2.3.0-dev.0"

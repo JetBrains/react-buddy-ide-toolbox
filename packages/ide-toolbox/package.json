@@ -6,7 +6,8 @@
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist/"
+    "dist/",
+    "LICENSE"
   ],
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0"

@@ -7,7 +7,8 @@
   "types": "dist/palette.d.ts",
   "files": [
     "dist/",
-    "palette.tsx"
+    "palette.tsx",
+    "LICENSE"
   ],
   "peerDependencies": {
     "@mui/icons-material": "^5.0.1",
