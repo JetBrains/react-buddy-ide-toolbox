@@ -853,7 +853,7 @@ import Paragraph from "antd/es/typography/Paragraph";
 import {useForm} from "antd/es/form/Form";
 
 const palette = () => (
-  <Palette>
+  <Palette embeddable>
     <Category name="Button">
       <Component name="Button" docURL="https://ant.design/components/button/">
         <Variant>

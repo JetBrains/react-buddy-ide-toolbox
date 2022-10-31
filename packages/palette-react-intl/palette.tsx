@@ -21,7 +21,7 @@ import {
 } from "react-intl";
 
 const ReactIntlPalette = () => (
-    <Palette>
+    <Palette embeddable>
       <Category name="Messages">
         <Component name="FormattedMessage">
           <Variant>
