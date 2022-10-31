@@ -78,7 +78,11 @@ function removeFullWindowClassFromParents(curNode: HTMLElement | null) {
   removeFullWindowClassFromParents(curNode.parentElement);
 }
 
-export const Palette = ({children}: PropsWithChildren<{}>) => {
+interface PaletteProps{
+  embeddable?: boolean;
+}
+
+export const Palette = ({embeddable, children}: PropsWithChildren<PaletteProps>) => {
   const [paletteNode, setPaletteNode] = useState<HTMLDivElement | null>(null);
 
   useLayoutEffect(() => {
@@ -88,7 +92,9 @@ export const Palette = ({children}: PropsWithChildren<{}>) => {
     }
   }, [paletteNode]);
 
-  return <div ref={setPaletteNode}>{children}</div>;
+  return embeddable
+    ? <>{children}</>
+    : <div ref={setPaletteNode}>{children}</div>;
 };
 
 function getTransformedCategoryChildren(

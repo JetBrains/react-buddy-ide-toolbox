@@ -102,7 +102,7 @@ import {
 } from '@mui/icons-material';
 
 export default () => (
-  <Palette>
+  <Palette embeddable>
     <Category name="Layout">
       <Component name="Box">
         <Variant>
