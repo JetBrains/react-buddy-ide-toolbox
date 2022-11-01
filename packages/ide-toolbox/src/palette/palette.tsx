@@ -1,14 +1,64 @@
-import React, {PropsWithChildren, ReactElement, useLayoutEffect, useState} from 'react';
+import React, {CSSProperties, PropsWithChildren, ReactElement, useContext} from 'react';
 import {VariantRoute} from './variant-route';
 import {ReactBuddyErrorBoundary} from '../react-buddy-error-boundary/react-buddy-error-boundary';
-import styles from './palette.module.scss';
 
-export type CategoryProps = {
+interface WithStyles {
+  style?: CSSProperties | undefined;
+  className?: string | undefined;
+}
+
+interface PaletteProps extends WithStyles {
+  embeddable?: boolean;
+}
+export const Palette = ({style, className, embeddable, children}: PropsWithChildren<PaletteProps>) => {
+  return embeddable
+    ? <>{children}</>
+    : <div style={style} className={className}>{children}</div>;
+};
+
+const CategoryContext = React.createContext<{
+  categoryClassName?: string | undefined;
+  categoryStyle?: CSSProperties | undefined;
+}>({});
+export const useCategoryContext = () => useContext(CategoryContext);
+interface CategoryProps extends WithStyles {
   name: string;
   children: JSX.Element | JSX.Element[];
 };
+export const Category: React.FC<CategoryProps> = ({
+  children,
+  name,
+  className,
+  style
+}) => {
+  return (
+    <CategoryContext.Provider value={{categoryClassName: className, categoryStyle: style}}>
+      {getTransformedCategoryChildren({
+        children,
+        categoryName: name,
+      })}
+    </CategoryContext.Provider>
+  );
+};
+interface GetTransformedCategoryChildrenParams {
+  children: JSX.Element | JSX.Element[];
+  categoryName: string;
+}
+function getTransformedCategoryChildren({
+  children,
+  categoryName,
+}: GetTransformedCategoryChildrenParams) {
+  return React.Children.map(children, (child) => {
+    return React.cloneElement(child, {categoryName});
+  });
+}
 
-export type ComponentProps = {
+const ComponentContext = React.createContext<{
+  componentClassName?: string | undefined;
+  componentStyle?: CSSProperties | undefined;
+}>({});
+export const useComponentContext = () => useContext(ComponentContext);
+interface ComponentProps extends WithStyles {
   categoryName?: string;
   name: string;
   children: JSX.Element | JSX.Element[];
@@ -16,8 +66,47 @@ export type ComponentProps = {
   subComponents?: JSX.Element | JSX.Element[];
   docURL?: string;
 };
+export const Component: React.FC<ComponentProps> = ({
+  children,
+  categoryName,
+  name,
+  className,
+  style,
+}) => {
+  return (
+    <ComponentContext.Provider value={{componentClassName: className, componentStyle: style}}>
+      {getTransformedComponentChildren({
+        children,
+        componentName: name,
+        categoryName,
+      })}
+    </ComponentContext.Provider>
+  );
+};
+interface GetTransformedComponentChildrenParams{
+  children: JSX.Element | JSX.Element[],
+  componentName: string,
+  categoryName?: string,
+}
+function getTransformedComponentChildren({
+    children,
+    componentName,
+    categoryName,
+}: GetTransformedComponentChildrenParams) {
+  return React.Children.map(children, (child) => {
+    return React.cloneElement(child, {
+      categoryName,
+      componentName,
+    });
+  });
+}
 
-export type VariantProps = {
+const VariantContext = React.createContext<{
+  variantClassName?: string | undefined;
+  variantStyle?: CSSProperties | undefined;
+}>({});
+export const useVariantContext = () => useContext(VariantContext);
+interface VariantProps extends WithStyles {
   categoryName?: string;
   componentName?: string;
   name?: string;
@@ -27,91 +116,25 @@ export type VariantProps = {
   proto?: (...args: any[]) => ReactElement<any, any> | null | void;
   docURL?: string;
 };
-
-export const Category: React.FC<CategoryProps> = ({children, name}) => {
-  return <>{getTransformedCategoryChildren(children, name)}</>;
-};
-export const Component: React.FC<ComponentProps> = ({
-  children,
-  categoryName,
-  name,
-}) => {
-  return <>{getTransformedComponentChildren(children, name, categoryName)}</>;
-};
-
 export const Variant: React.FC<PropsWithChildren<VariantProps>> = ({
   children,
   categoryName,
   componentName,
   name,
   previewLayout,
+  className,
+  style,
 }) => {
   return (
-    <VariantRoute
-      categoryName={categoryName}
-      componentName={componentName}
-      variantName={name}
-      previewLayout={previewLayout}
-    >
-      <ReactBuddyErrorBoundary componentName={componentName}>{children}</ReactBuddyErrorBoundary>
-    </VariantRoute>
+    <VariantContext.Provider value={{variantClassName: className, variantStyle: style}}>
+      <VariantRoute
+        previewLayout={previewLayout}
+        variantName={name}
+        categoryName={categoryName}
+        componentName={componentName}
+      >
+        <ReactBuddyErrorBoundary componentName={componentName}>{children}</ReactBuddyErrorBoundary>
+      </VariantRoute>
+    </VariantContext.Provider>
   );
 };
-
-function addFullWindowClassToParents(curNode: HTMLElement | null) {
-  if(curNode === null) return;
-
-  curNode.classList.add(styles.fullWindow);
-
-  if(curNode === document.body) return;
-
-  addFullWindowClassToParents(curNode.parentElement);
-}
-
-function removeFullWindowClassFromParents(curNode: HTMLElement | null) {
-  if(curNode === null) return;
-
-  curNode.classList.remove(styles.fullWindow);
-
-  if(curNode === document.body) return;
-
-  removeFullWindowClassFromParents(curNode.parentElement);
-}
-
-interface PaletteProps{
-  embeddable?: boolean;
-}
-
-export const Palette = ({embeddable, children}: PropsWithChildren<PaletteProps>) => {
-  const [paletteNode, setPaletteNode] = useState<HTMLDivElement | null>(null);
-
-  useLayoutEffect(() => {
-    if(paletteNode !== null) addFullWindowClassToParents(paletteNode);
-    return () => {
-      if(paletteNode !== null) removeFullWindowClassFromParents(paletteNode);
-    }
-  }, [paletteNode]);
-
-  return embeddable
-    ? <>{children}</>
-    : <div ref={setPaletteNode}>{children}</div>;
-};
-
-function getTransformedCategoryChildren(
-  children: JSX.Element | JSX.Element[],
-  categoryName: string,
-) {
-  return React.Children.map(children, (child) => {
-    return React.cloneElement(child, {categoryName});
-  });
-}
-
-function getTransformedComponentChildren(
-  children: JSX.Element | JSX.Element[],
-  componentName: string,
-  categoryName?: string,
-) {
-  return React.Children.map(children, (child) => {
-    return React.cloneElement(child, {categoryName, componentName});
-  });
-}
