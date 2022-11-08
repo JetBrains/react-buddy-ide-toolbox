@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0-dev.1](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/compare/@react-buddy/ide-toolbox@2.3.0-dev.0...@react-buddy/ide-toolbox@2.3.0-dev.1) (2022-11-08)
+
+
+### Bug Fixes
+
+* centred variant content goes outside preview window [#36](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/issues/36) ([a1d948b](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/commit/a1d948bcc070baba7fc8f90c3c466420e50ad8ef))
+
+
+### Features
+
+* add embeddable prop to Palette [#43](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/issues/43) ([ad49ad5](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/commit/ad49ad52a80cf287c28ba5ccb344f237d4cfa417))
+* add styles to Palette elements [#44](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/issues/44) ([71511dd](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/commit/71511ddff2a6e8b147440b15a0267b5645632f63))
+
+
+
+
+
 # [2.3.0-dev.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/compare/@react-buddy/ide-toolbox@2.2.1-dev.0...@react-buddy/ide-toolbox@2.3.0-dev.0) (2022-10-13)
 
 

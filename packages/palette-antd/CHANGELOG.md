@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.2.0-dev.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/compare/@react-buddy/palette-antd@4.1.3-dev.0...@react-buddy/palette-antd@4.2.0-dev.0) (2022-11-08)
+
+
+### Features
+
+* add embeddable prop to Palette [#43](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/issues/43) ([ad49ad5](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/commit/ad49ad52a80cf287c28ba5ccb344f237d4cfa417))
+
+
+
+
+
 ## [4.1.3-dev.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/compare/@react-buddy/palette-antd@4.1.2-dev.0...@react-buddy/palette-antd@4.1.3-dev.0) (2022-10-13)
 
 
