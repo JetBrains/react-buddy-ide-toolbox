@@ -10,10 +10,12 @@
     "palette.tsx",
     "LICENSE"
   ],
+  "dependencies": {
+    "@react-buddy/ide-toolbox": "^2.3.0-dev.1"
+  },
   "peerDependencies": {
     "@mui/icons-material": "^5.0.1",
     "@mui/material": "^5.0.1",
-    "@react-buddy/ide-toolbox": "^2.0.0",
     "react": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
