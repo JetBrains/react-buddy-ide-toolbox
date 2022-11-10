@@ -1,5 +1,5 @@
 import React, {useLayoutEffect, useMemo, useState} from 'react';
-import { classnames } from '../util/classnames';
+import { classNames } from '../util/classNames';
 import {useRoute, PALETTE_PATH} from '../routing/routing';
 import { useCategoryContext, useComponentContext, useVariantContext } from './palette';
 import styles from './variant-route.module.scss';
@@ -50,7 +50,7 @@ export const VariantRoute: React.FC<VariantRouteProps> = ({
         <div
           className={
             previewLayout === 'center'
-              ? classnames(styles.variantRouteCenter, variantClassName)
+              ? classNames(styles.variantRouteCenter, variantClassName)
               : variantClassName
           }
           style={variantStyle}
@@ -67,21 +67,17 @@ function getPaletteItemPath(names: Array<string | null | undefined>): string {
 }
 
 function addFullWindowClassToParents(curNode: HTMLElement | null) {
-  if(curNode === null) return;
+  if(curNode === null || curNode === document as unknown) return;
 
-  curNode.classList.add(styles.fullWindow);
-
-  if(curNode === document.body) return;
+  curNode.className = classNames(styles.fullWindow, curNode.className);
 
   addFullWindowClassToParents(curNode.parentElement);
 }
 
 function removeFullWindowClassFromParents(curNode: HTMLElement | null) {
-  if(curNode === null) return;
+  if(curNode === null || curNode === document as unknown) return;
 
   curNode.classList.remove(styles.fullWindow);
-
-  if(curNode === document.body) return;
 
   removeFullWindowClassFromParents(curNode.parentElement);
 }
