@@ -1,5 +1,5 @@
 export function classNames(...classNames: (string | undefined | null)[]) {
-  const splittedClassNamesWIthoutNullable = classNames.flatMap(className => className ? className.split(' ') : []);
-  const uniqClassNames = [...new Set(splittedClassNamesWIthoutNullable)];
+  const splittedClassNamesWithoutNullable = classNames.flatMap(className => className ? className.split(' ') : []);
+  const uniqClassNames = [...new Set(splittedClassNamesWithoutNullable)];
   return uniqClassNames.join(' ');
 };
