@@ -1,12 +1,14 @@
-import React, {useLayoutEffect, useMemo, useState} from 'react';
+import React, {CSSProperties, PropsWithChildren, ReactElement, useContext, useLayoutEffect, useMemo, useState} from 'react';
 import { classNames } from '../util/classNames';
 import {useRoute, PALETTE_PATH} from '../routing/routing';
-import { useCategoryContext, useComponentContext, useVariantContext } from './palette';
-import styles from './variant-route.module.scss';
+import { useCategoryContext } from '../category/category';
+import { useComponentContext } from '../component/component';
+import { ReactBuddyErrorBoundary } from '../react-buddy-error-boundary/react-buddy-error-boundary';
+import styles from './variant.module.scss';
 
 const DEFAULT_VARIANT_NAME = 'DEFAULT_VARIANT';
 
-export interface VariantRouteProps {
+interface VariantRouteProps {
   categoryName?: string;
   componentName?: string;
   variantName?: string;
@@ -14,7 +16,7 @@ export interface VariantRouteProps {
   requiredParams?: Array<string>;
 };
 
-export const VariantRoute: React.FC<VariantRouteProps> = ({
+const VariantRoute: React.FC<VariantRouteProps> = ({
   categoryName,
   componentName,
   variantName = DEFAULT_VARIANT_NAME,
@@ -65,6 +67,46 @@ export const VariantRoute: React.FC<VariantRouteProps> = ({
 function getPaletteItemPath(names: Array<string | null | undefined>): string {
   return PALETTE_PATH + '/' + names.filter((name) => name != null).join('/');
 }
+
+const VariantContext = React.createContext<{
+  variantClassName?: string | undefined;
+  variantStyle?: CSSProperties | undefined;
+}>({});
+const useVariantContext = () => useContext(VariantContext);
+interface VariantProps {
+  style?: CSSProperties | undefined;
+  className?: string | undefined;
+  categoryName?: string;
+  componentName?: string;
+  name?: string;
+  previewLayout?: 'center' | 'stretch';
+  requiredParams?: Array<string>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  proto?: (...args: any[]) => ReactElement<any, any> | null | void;
+  docURL?: string;
+};
+export const Variant: React.FC<PropsWithChildren<VariantProps>> = ({
+  children,
+  categoryName,
+  componentName,
+  name,
+  previewLayout,
+  className,
+  style,
+}) => {
+  return (
+    <VariantContext.Provider value={{variantClassName: className, variantStyle: style}}>
+      <VariantRoute
+        previewLayout={previewLayout}
+        variantName={name}
+        categoryName={categoryName}
+        componentName={componentName}
+      >
+        <ReactBuddyErrorBoundary componentName={componentName}>{children}</ReactBuddyErrorBoundary>
+      </VariantRoute>
+    </VariantContext.Provider>
+  );
+};
 
 function addFullWindowClassToParents(curNode: HTMLElement | null) {
   if(curNode === null || curNode === document as unknown) return;
