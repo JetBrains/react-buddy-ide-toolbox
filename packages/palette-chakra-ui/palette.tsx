@@ -143,7 +143,7 @@ import {AddIcon, CheckIcon, ChevronDownIcon, EmailIcon, ExternalLinkIcon, Search
 
 
 const ChakraUIPalette = () => (
-  <Palette>
+  <Palette embeddable>
     <Category name="Layout">
       <Component name="Box" docURL="https://chakra-ui.com/docs/components/box">
         <Variant>

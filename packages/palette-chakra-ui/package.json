@@ -1,16 +1,17 @@
 {
   "name": "@react-buddy/palette-chakra-ui",
-  "version": "2.1.1",
+  "version": "2.2.0-dev.2",
   "description": "Palette of ChakraUI components",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/palette.d.ts",
   "files": [
     "dist/",
-    "palette.tsx"
+    "palette.tsx",
+    "LICENSE"
   ],
   "dependencies": {
-    "@react-buddy/ide-toolbox": "^2.2.1"
+    "@react-buddy/ide-toolbox": "^2.3.0-dev.3"
   },
   "peerDependencies": {
     "@chakra-ui/icons": "^1.1.7",

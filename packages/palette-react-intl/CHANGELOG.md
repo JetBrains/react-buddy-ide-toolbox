@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.2.0-dev.2](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-react-intl/compare/@react-buddy/palette-react-intl@5.2.0-dev.1...@react-buddy/palette-react-intl@5.2.0-dev.2) (2022-11-11)
+
+**Note:** Version bump only for package @react-buddy/palette-react-intl
+
+
+
+
+
+# [5.2.0-dev.1](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-react-intl/compare/@react-buddy/palette-react-intl@5.2.0-dev.0...@react-buddy/palette-react-intl@5.2.0-dev.1) (2022-11-08)
+
+**Note:** Version bump only for package @react-buddy/palette-react-intl
+
+
+
+
+
+# [5.2.0-dev.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-react-intl/compare/@react-buddy/palette-react-intl@5.1.2-dev.0...@react-buddy/palette-react-intl@5.2.0-dev.0) (2022-11-08)
+
+
+### Features
+
+* add embeddable prop to Palette [#43](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-react-intl/issues/43) ([ad49ad5](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-react-intl/commit/ad49ad52a80cf287c28ba5ccb344f237d4cfa417))
+
+
+
+
+
+## [5.1.2-dev.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-react-intl/compare/@react-buddy/palette-react-intl@5.1.1-dev.0...@react-buddy/palette-react-intl@5.1.2-dev.0) (2022-10-13)
+
+**Note:** Version bump only for package @react-buddy/palette-react-intl
+
+
+
+
+
 ## [5.1.1](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-react-intl/compare/@react-buddy/palette-react-intl@5.1.1-dev.0...@react-buddy/palette-react-intl@5.1.1) (2022-08-10)
 
 **Note:** Version bump only for package @react-buddy/palette-react-intl

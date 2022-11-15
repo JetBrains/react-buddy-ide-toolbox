@@ -1,12 +1,13 @@
 {
   "name": "@react-buddy/ide-toolbox",
-  "version": "2.2.1",
+  "version": "2.3.0-dev.3",
   "description": "React IDE toolbox",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist/"
+    "dist/",
+    "LICENSE"
   ],
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0"

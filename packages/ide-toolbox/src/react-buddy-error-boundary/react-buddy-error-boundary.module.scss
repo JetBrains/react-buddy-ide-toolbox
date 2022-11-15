@@ -1,0 +1,18 @@
+.errorMessageContainer {
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fff;
+}
+
+.errorMessageTitle {
+  color: #d32f2f;
+}
+
+.errorMessageStack {
+  color: #a9a9a9;
+  font-size: 0.8rem;
+  width: 100%;
+  overflow-x: scroll;
+}
