@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-chakra-ui/compare/@react-buddy/palette-chakra-ui@2.2.0-dev.2...@react-buddy/palette-chakra-ui@2.2.0) (2022-11-15)
+
+**Note:** Version bump only for package @react-buddy/palette-chakra-ui
+
+
+
+
+
 # [2.2.0-dev.2](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-chakra-ui/compare/@react-buddy/palette-chakra-ui@2.2.0-dev.1...@react-buddy/palette-chakra-ui@2.2.0-dev.2) (2022-11-11)
 
 **Note:** Version bump only for package @react-buddy/palette-chakra-ui
