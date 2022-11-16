@@ -5,57 +5,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.3.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/compare/@react-buddy/ide-toolbox@2.3.0-dev.3...@react-buddy/ide-toolbox@2.3.0) (2022-11-15)
 
-**Note:** Version bump only for package @react-buddy/ide-toolbox
 
+### Features
 
-
-
-
-# [2.3.0-dev.3](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/compare/@react-buddy/ide-toolbox@2.3.0-dev.2...@react-buddy/ide-toolbox@2.3.0-dev.3) (2022-11-11)
-
+* add `fullScreen` mode to `Variant` and remove viewport width and height [#36](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/issues/36) ([c8cfb3b](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/commit/c8cfb3bcb988004362673ec2b42cf56e3a7addb8))
 
 ### Bug Fixes
 
 * add fullWindow class from Component to html element [#36](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/issues/36) ([81853c8](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/commit/81853c820b5e73e968bf1805ec337f50ead8987e))
-
-
-
-
-
-# [2.3.0-dev.2](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/compare/@react-buddy/ide-toolbox@2.3.0-dev.1...@react-buddy/ide-toolbox@2.3.0-dev.2) (2022-11-08)
-
-**Note:** Version bump only for package @react-buddy/ide-toolbox
-
-
-
-
-
-# [2.3.0-dev.1](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/compare/@react-buddy/ide-toolbox@2.3.0-dev.0...@react-buddy/ide-toolbox@2.3.0-dev.1) (2022-11-08)
-
-
-### Bug Fixes
-
 * centred variant content goes outside preview window [#36](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/issues/36) ([a1d948b](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/commit/a1d948bcc070baba7fc8f90c3c466420e50ad8ef))
-
-
-### Features
-
 * add embeddable prop to Palette [#43](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/issues/43) ([ad49ad5](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/commit/ad49ad52a80cf287c28ba5ccb344f237d4cfa417))
 * add styles to Palette elements [#44](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/issues/44) ([71511dd](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/commit/71511ddff2a6e8b147440b15a0267b5645632f63))
-
-
-
-
-
-# [2.3.0-dev.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/compare/@react-buddy/ide-toolbox@2.2.1-dev.0...@react-buddy/ide-toolbox@2.3.0-dev.0) (2022-10-13)
-
-
-### Features
-
-* add fullScreen mode to Variant and remove viewport width and height [#36](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/issues/36) ([c8cfb3b](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/commit/c8cfb3bcb988004362673ec2b42cf56e3a7addb8))
-
-
-
 
 
 ## [2.2.1](https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox/compare/@react-buddy/ide-toolbox@2.2.1-dev.0...@react-buddy/ide-toolbox@2.2.1) (2022-08-10)
