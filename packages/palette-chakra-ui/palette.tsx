@@ -517,18 +517,18 @@ const ChakraUIPalette = () => (
         </Variant>
       </Component>
       <Component name="Divider" docURL="https://chakra-ui.com/docs/components/divider">
-        <Variant name="horizontal">
-          <Divider orientation='horizontal'/>
+        <Variant>
+          <Divider />
         </Variant>
-        <Variant name="vertical">
+        <Variant name="vertical" style={{ height: '100%' }}>
           <Divider orientation='vertical'/>
         </Variant>
       </Component>
       <Component name="Kbd" docURL="https://chakra-ui.com/docs/components/kbd">
         <Variant>
-                    <span>
-                        <Kbd>shift</Kbd> + <Kbd>H</Kbd>
-                    </span>
+          <span>
+            <Kbd>shift</Kbd> + <Kbd>H</Kbd>
+          </span>
         </Variant>
       </Component>
       <Component name="List" docURL="https://chakra-ui.com/docs/components/list" subComponents={[<ListItem/>]}>
@@ -746,7 +746,7 @@ const ChakraUIPalette = () => (
         </Variant>
       </Component>
       <Component name="Skeleton" docURL="https://chakra-ui.com/docs/components/skeleton">
-        <Variant>
+        <Variant previewLayout="stretch">
           <Stack>
             <Skeleton height='20px'/>
             <Skeleton height='20px'/>
@@ -978,7 +978,7 @@ const ChakraUIPalette = () => (
     </Category>
     <Category name="Disclosure">
       <Component name="Accordion" docURL="https://chakra-ui.com/docs/components/accordion">
-        <Variant>
+        <Variant previewLayout="stretch">
           <Accordion>
             <AccordionItem>
               <h2>
