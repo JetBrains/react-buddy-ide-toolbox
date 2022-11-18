@@ -984,20 +984,20 @@ const palette = () => (
     </Category>
     <Category name="Layout">
       <Component name="Grid" docURL="https://ant.design/components/grid/">
-        <Variant name="two cols">
+        <Variant name="two cols" previewLayout="stretch">
           <Row>
             <Col span={12}>col-12</Col>
             <Col span={12}>col-12</Col>
           </Row>
         </Variant>
-        <Variant name="three cols">
+        <Variant name="three cols" previewLayout="stretch">
           <Row>
             <Col span={8}>col-8</Col>
             <Col span={8}>col-8</Col>
             <Col span={8}>col-8</Col>
           </Row>
         </Variant>
-        <Variant name="four cols">
+        <Variant name="four cols" previewLayout="stretch">
           <Row>
             <Col span={6}>col-6</Col>
             <Col span={6}>col-6</Col>
@@ -1244,7 +1244,7 @@ const palette = () => (
         </Variant>
       </Component>
       <Component name="Slider" docURL="https://ant.design/components/slider/">
-        <Variant>
+        <Variant previewLayout="stretch">
           <Slider defaultValue={30}/>
         </Variant>
       </Component>
@@ -1481,8 +1481,12 @@ const palette = () => (
           </Card>
         </Variant>
       </Component>
-      <Component name="Carousel" docURL="https://ant.design/components/carousel/">
-        <Variant>
+      <Component
+        name="Carousel"
+        docURL="https://ant.design/components/carousel/"
+        style={{background: '#364d79'}}
+      >
+        <Variant previewLayout="stretch">
           <Carousel>
             <div>
               <h3>1</h3>
@@ -2564,23 +2568,61 @@ const palette = () => (
             <Timeline.Item color="red">Step 2</Timeline.Item>
           </Timeline>
         </Variant>
-        <Variant name="mode left">
+        <Variant name="mode left" previewLayout="stretch">
           <Timeline mode="left">
             <Timeline.Item label="2015-09-01">Step 1</Timeline.Item>
             <Timeline.Item label="2015-09-01 09:12:11">Step 2</Timeline.Item>
           </Timeline>
         </Variant>
-        <Variant name="mode right">
+        <Variant name="mode right" previewLayout="stretch">
           <Timeline mode="right">
             <Timeline.Item label="2015-09-01">Step 1</Timeline.Item>
             <Timeline.Item label="2015-09-01 09:12:11">Step 2</Timeline.Item>
           </Timeline>
         </Variant>
-        <Variant name="mode alternate">
+        <Variant name="mode alternate" previewLayout="stretch">
           <Timeline mode="alternate">
             <Timeline.Item label="2015-09-01">Step 1</Timeline.Item>
             <Timeline.Item label="2015-09-01 09:12:11">Step 2</Timeline.Item>
           </Timeline>
+          <Menu
+            defaultSelectedKeys={["1"]}
+            defaultOpenKeys={["sub1"]}
+            mode={"horizontal"}
+          >
+            <SubMenu key="sub1" icon={<MailOutlined/>} title="Navigation One">
+              <Menu.ItemGroup key="g1" title="Item 1">
+                <Menu.Item key="1">Option 1</Menu.Item>
+                <Menu.Item key="2">Option 2</Menu.Item>
+              </Menu.ItemGroup>
+              <Menu.ItemGroup key="g2" title="Item 2">
+                <Menu.Item key="3">Option 3</Menu.Item>
+                <Menu.Item key="4">Option 4</Menu.Item>
+              </Menu.ItemGroup>
+            </SubMenu>
+            <SubMenu
+              key="sub2"
+              icon={<AppstoreOutlined/>}
+              title="Navigation Two"
+            >
+              <Menu.Item key="5">Option 5</Menu.Item>
+              <Menu.Item key="6">Option 6</Menu.Item>
+              <SubMenu key="sub3" title="Submenu">
+                <Menu.Item key="7">Option 7</Menu.Item>
+                <Menu.Item key="8">Option 8</Menu.Item>
+              </SubMenu>
+            </SubMenu>
+            <SubMenu
+              key="sub4"
+              icon={<SettingOutlined/>}
+              title="Navigation Three"
+            >
+              <Menu.Item key="9">Option 9</Menu.Item>
+              <Menu.Item key="10">Option 10</Menu.Item>
+              <Menu.Item key="11">Option 11</Menu.Item>
+              <Menu.Item key="12">Option 12</Menu.Item>
+            </SubMenu>
+          </Menu>
         </Variant>
         <Variant name="with icon">
           <Timeline>
@@ -2995,7 +3037,6 @@ const palette = () => (
         <Variant name="horizontal">
           <Menu
             defaultSelectedKeys={["1"]}
-            defaultOpenKeys={["sub1"]}
             mode={"horizontal"}
           >
             <SubMenu key="sub1" icon={<MailOutlined/>} title="Navigation One">
@@ -7629,14 +7670,14 @@ export function FormProto() {
     <Form
       form={form}
       name="basic"
-      labelCol={{span: 8}}
-      wrapperCol={{span: 16}}
+      labelCol={{ span: 8 }}
+      wrapperCol={{ span: 16 }}
       layout="horizontal"
-      initialValues={{remember: true}}
+      initialValues={{ remember: true }}
       onFinish={onFormFinish}
       onFinishFailed={onFormFinishFailed}
     >
-      <Form.Item wrapperCol={{offset: 8, span: 16}}>
+      <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
         <Button type="primary" htmlType="submit">
           Submit
         </Button>
