@@ -1,33 +1,22 @@
 import React from 'react';
-import {Category, Component, Variant, Palette} from '@react-buddy/ide-toolbox';
 import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  Alert,
-  AppBar,
-  Autocomplete,
-  Avatar,
-  Backdrop,
-  Badge,
+  Category,
+  Component,
+  Variant,
+  Palette,
+} from '@react-buddy/ide-toolbox';
+import {
+  Accordion, AccordionDetails, AccordionSummary,
+  Alert, AppBar,
+  Autocomplete, Avatar, Backdrop, Badge,
   BottomNavigation,
   BottomNavigationAction,
   Box,
   Breadcrumbs,
   Button,
-  ButtonGroup,
-  Card,
-  CardActions,
-  CardContent,
-  Checkbox,
-  Chip,
-  CircularProgress,
-  Container,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
+  ButtonGroup, Card, CardActions, CardContent,
+  Checkbox, Chip, CircularProgress,
+  Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle,
   Divider,
   Drawer,
   Fab,
@@ -39,66 +28,34 @@ import {
   IconButton,
   ImageList,
   ImageListItem,
-  InputLabel,
-  LinearProgress,
+  InputLabel, LinearProgress,
   Link,
   List,
-  ListItem,
-  ListItemButton,
+  ListItem, ListItemButton,
   ListItemIcon,
   ListItemText,
-  MenuItem,
-  MenuList,
-  Pagination,
-  Paper,
+  MenuItem, MenuList, Pagination, Paper,
   Radio,
   RadioGroup,
   Rating,
-  Select,
-  Skeleton,
-  Slider,
-  Snackbar,
-  SpeedDial,
-  SpeedDialAction,
-  SpeedDialIcon,
-  Stack,
-  Step,
-  StepLabel,
-  Stepper,
-  Switch,
-  Tab,
-  Tabs,
+  Select, Skeleton,
+  Slider, Snackbar, SpeedDial, SpeedDialAction, SpeedDialIcon,
+  Stack, Step, StepLabel, Stepper,
+  Switch, Tab, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Tabs,
   TextField,
   ToggleButton,
-  ToggleButtonGroup,
-  Toolbar,
-  Tooltip,
-  Typography,
+  ToggleButtonGroup, Toolbar, Tooltip,
+  Typography
 } from '@mui/material';
 import {
-  Add,
-  Cloud,
-  ContentCopy,
-  ContentCut,
-  ContentPaste,
-  Delete,
-  Drafts,
-  Edit,
-  ExpandMore,
+  Add, Cloud, ContentCopy, ContentCut, ContentPaste,
+  Delete, Drafts,
+  Edit, ExpandMore,
   Favorite,
   FavoriteBorder,
-  FormatAlignCenter,
-  FormatAlignJustify,
+  FormatAlignCenter, FormatAlignJustify,
   FormatAlignLeft,
-  FormatAlignRight,
-  Inbox,
-  LocationOn,
-  Mail,
-  Menu,
-  Print,
-  Restore,
-  Save,
-  Share,
+  FormatAlignRight, Inbox, LocationOn, Mail, Menu, Print, Restore, Save, Share
 } from '@mui/icons-material';
 
 export default () => (
@@ -106,15 +63,15 @@ export default () => (
     <Category name="Layout">
       <Component name="Box">
         <Variant>
-          <Box></Box>
+          <Box>Content</Box>
         </Variant>
       </Component>
       <Component name="Container">
         <Variant>
-          <Container maxWidth="sm"></Container>
+          <Container maxWidth="sm">Content</Container>
         </Variant>
         <Variant name="fixed">
-          <Container fixed></Container>
+          <Container fixed>Content</Container>
         </Variant>
       </Component>
       <Component name="Stack">
@@ -129,7 +86,7 @@ export default () => (
           <Stack
             my={1}
             direction="row"
-            divider={<Divider orientation="vertical" flexItem />}
+            divider={<Divider orientation="vertical" flexItem/>}
             spacing={2}
           >
             <Box sx={{border: '1px dashed grey'}}>Item 1</Box>
@@ -142,16 +99,16 @@ export default () => (
         <Variant>
           <Grid container spacing={2}>
             <Grid item xs={6} md={8}>
-              <Box>xs=6 md=8</Box>
+              <Paper>xs=6 md=8</Paper>
             </Grid>
             <Grid item xs={6} md={4}>
-              <Box>xs=6 md=4</Box>
+              <Paper>xs=6 md=4</Paper>
             </Grid>
             <Grid item xs={6} md={4}>
-              <Box>xs=6 md=4</Box>
+              <Paper>xs=6 md=4</Paper>
             </Grid>
             <Grid item xs={6} md={8}>
-              <Box>xs=6 md=8</Box>
+              <Paper>xs=6 md=8</Paper>
             </Grid>
           </Grid>
         </Variant>
@@ -163,7 +120,7 @@ export default () => (
               <img
                 src={`https://images.unsplash.com/photo-1551963831-b3b1ca40c98e`}
                 srcSet={`https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                alt={'Breakfast'}
+                alt={"Breakfast"}
                 loading="lazy"
               />
             </ImageListItem>
@@ -171,7 +128,7 @@ export default () => (
               <img
                 src={`https://images.unsplash.com/photo-1522770179533-24471fcdba45`}
                 srcSet={`https://images.unsplash.com/photo-1522770179533-24471fcdba45?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                alt={'Camera'}
+                alt={"Camera"}
                 loading="lazy"
               />
             </ImageListItem>
@@ -182,101 +139,83 @@ export default () => (
     <Category name="Typography">
       <Component name="h1">
         <Variant>
-          <Typography variant="h1" gutterBottom component="h1">
-            Heading 1
-          </Typography>
+          <Typography variant="h1" gutterBottom component="h1">Heading 1</Typography>
         </Variant>
       </Component>
       <Component name="h2">
         <Variant>
-          <Typography variant="h2" gutterBottom component="h2">
-            Heading 2
-          </Typography>
+          <Typography variant="h2" gutterBottom component="h2">Heading 2</Typography>
         </Variant>
       </Component>
       <Component name="h3">
         <Variant>
-          <Typography variant="h3" gutterBottom component="h3">
-            Heading 3
-          </Typography>
+          <Typography variant="h3" gutterBottom component="h3">Heading 3</Typography>
         </Variant>
       </Component>
       <Component name="h4">
         <Variant>
-          <Typography variant="h4" gutterBottom component="h4">
-            Heading 4
-          </Typography>
+          <Typography variant="h4" gutterBottom component="h4">Heading 4</Typography>
         </Variant>
       </Component>
       <Component name="h5">
         <Variant>
-          <Typography variant="h5" gutterBottom component="h5">
-            Heading 5
-          </Typography>
+          <Typography variant="h5" gutterBottom component="h5">Heading 5</Typography>
         </Variant>
       </Component>
       <Component name="h6">
         <Variant>
-          <Typography variant="h6" gutterBottom component="h6">
-            Heading 6
-          </Typography>
+          <Typography variant="h6" gutterBottom component="h6">Heading 6</Typography>
         </Variant>
       </Component>
       <Component name="subtitle1">
         <Variant>
           <Typography variant="subtitle1" gutterBottom component="div">
-            subtitle1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Quos blanditiis tenetur
+            subtitle1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+            blanditiis tenetur
           </Typography>
         </Variant>
       </Component>
       <Component name="subtitle2">
         <Variant>
           <Typography variant="subtitle2" gutterBottom component="div">
-            subtitle2. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Quos blanditiis tenetur
+            subtitle2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+            blanditiis tenetur
           </Typography>
         </Variant>
       </Component>
       <Component name="body1">
         <Variant>
           <Typography variant="body1" gutterBottom>
-            body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore
-            consectetur, neque doloribus, cupiditate numquam dignissimos laborum
-            fugiat deleniti? Eum quasi quidem quibusdam.
+            body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+            blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur,
+            neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum
+            quasi quidem quibusdam.
           </Typography>
         </Variant>
       </Component>
       <Component name="body2">
         <Variant>
           <Typography variant="body2" gutterBottom>
-            body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore
-            consectetur, neque doloribus, cupiditate numquam dignissimos laborum
-            fugiat deleniti? Eum quasi quidem quibusdam.
+            body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+            blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur,
+            neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum
+            quasi quidem quibusdam.
           </Typography>
         </Variant>
       </Component>
       <Component name="button (typography)">
         <Variant>
-          <Typography variant="button" display="block" gutterBottom>
-            button text
-          </Typography>
+          <Typography variant="button" display="block" gutterBottom>button text</Typography>
         </Variant>
       </Component>
       <Component name="caption">
         <Variant>
-          <Typography variant="caption" display="block" gutterBottom>
-            caption text
-          </Typography>
+          <Typography variant="caption" display="block" gutterBottom>caption text</Typography>
         </Variant>
       </Component>
       <Component name="overline">
         <Variant>
-          <Typography variant="overline" display="block" gutterBottom>
-            overline text
-          </Typography>
+          <Typography variant="overline" display="block" gutterBottom>overline text</Typography>
         </Variant>
       </Component>
     </Category>
@@ -287,7 +226,7 @@ export default () => (
             disablePortal
             options={[]}
             sx={{width: 300}}
-            renderInput={(params) => <TextField {...params} label="Movie" />}
+            renderInput={(params) => <TextField {...params} label="Movie"/>}
           />
         </Variant>
       </Component>
@@ -296,9 +235,7 @@ export default () => (
           <Button variant="text">Text</Button>
         </Variant>
         <Variant name="contained">
-          <Button variant="contained" sx={{my: 2}}>
-            Contained
-          </Button>
+          <Button variant="contained" sx={{my: 2}}>Contained</Button>
         </Variant>
         <Variant name="outlined">
           <Button variant="outlined">Outlined</Button>
@@ -307,26 +244,23 @@ export default () => (
       <Component name="IconButton">
         <Variant name="add">
           <IconButton aria-label="add">
-            <Add />
+            <Add/>
           </IconButton>
         </Variant>
         <Variant name="edit">
           <IconButton aria-label="edit">
-            <Edit />
+            <Edit/>
           </IconButton>
         </Variant>
         <Variant name="delete">
           <IconButton aria-label="delete">
-            <Delete />
+            <Delete/>
           </IconButton>
         </Variant>
       </Component>
       <Component name="Button Group">
         <Variant name="contained">
-          <ButtonGroup
-            variant="contained"
-            aria-label="outlined primary button group"
-          >
+          <ButtonGroup variant="contained" aria-label="outlined primary button group">
             <Button>One</Button>
             <Button>Two</Button>
             <Button>Three</Button>
@@ -350,20 +284,17 @@ export default () => (
       <Component name="Checkbox">
         <Variant>
           <FormGroup>
-            <FormControlLabel
-              control={<Checkbox defaultChecked />}
-              label="Label"
-            />
+            <FormControlLabel control={<Checkbox defaultChecked/>} label="Label"/>
           </FormGroup>
         </Variant>
         <Variant name="icon">
-          <Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
+          <Checkbox icon={<FavoriteBorder/>} checkedIcon={<Favorite/>}/>
         </Variant>
       </Component>
       <Component name="Floating action button">
         <Variant>
           <Fab color="primary" aria-label="add">
-            <Add />
+            <Add/>
           </Fab>
         </Variant>
       </Component>
@@ -376,33 +307,17 @@ export default () => (
               defaultValue="summer"
               name="radio-buttons-group"
             >
-              <FormControlLabel
-                value="summer"
-                control={<Radio />}
-                label="Summer"
-              />
-              <FormControlLabel
-                value="autumn"
-                control={<Radio />}
-                label="Autumn"
-              />
-              <FormControlLabel
-                value="winter"
-                control={<Radio />}
-                label="Winter"
-              />
-              <FormControlLabel
-                value="spring"
-                control={<Radio />}
-                label="Spring"
-              />
+              <FormControlLabel value="summer" control={<Radio/>} label="Summer"/>
+              <FormControlLabel value="autumn" control={<Radio/>} label="Autumn"/>
+              <FormControlLabel value="winter" control={<Radio/>} label="Winter"/>
+              <FormControlLabel value="spring" control={<Radio/>} label="Spring"/>
             </RadioGroup>
           </FormControl>
         </Variant>
       </Component>
       <Component name="Rating">
         <Variant>
-          <Rating name="simple-controlled" />
+          <Rating name="simple-controlled"/>
         </Variant>
       </Component>
       <Component name="Select">
@@ -423,31 +338,28 @@ export default () => (
       </Component>
       <Component name="Slider">
         <Variant>
-          <Slider defaultValue={30} aria-label="Slider" />
+          <Slider defaultValue={30} aria-label="Slider"/>
         </Variant>
       </Component>
       <Component name="Switch">
         <Variant>
-          <Switch />
+          <Switch/>
         </Variant>
         <Variant name="with label">
           <FormGroup>
-            <FormControlLabel
-              control={<Switch defaultChecked />}
-              label="Label"
-            />
+            <FormControlLabel control={<Switch defaultChecked/>} label="Label"/>
           </FormGroup>
         </Variant>
       </Component>
       <Component name="TextField">
         <Variant name="outlined">
-          <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+          <TextField id="outlined-basic" label="Outlined" variant="outlined"/>
         </Variant>
         <Variant name="filled">
-          <TextField id="filled-basic" label="Filled" variant="filled" />
+          <TextField id="filled-basic" label="Filled" variant="filled"/>
         </Variant>
         <Variant name="standard">
-          <TextField id="standard-basic" label="Standard" variant="standard" />
+          <TextField id="standard-basic" label="Standard" variant="standard"/>
         </Variant>
         <Variant name="select">
           <TextField
@@ -456,25 +368,32 @@ export default () => (
             label="Select"
             helperText="Please select your currency"
           >
-            <MenuItem value="dollar">dollar</MenuItem>
-            <MenuItem value="euro">euro</MenuItem>
+            <MenuItem value="dollar">
+              dollar
+            </MenuItem>
+            <MenuItem value="euro">
+              euro
+            </MenuItem>
           </TextField>
         </Variant>
       </Component>
       <Component name="ToggleButtonGroup">
         <Variant>
-          <ToggleButtonGroup exclusive aria-label="text alignment">
+          <ToggleButtonGroup
+            exclusive
+            aria-label="text alignment"
+          >
             <ToggleButton value="left" aria-label="left aligned">
-              <FormatAlignLeft />
+              <FormatAlignLeft/>
             </ToggleButton>
             <ToggleButton value="center" aria-label="centered">
-              <FormatAlignCenter />
+              <FormatAlignCenter/>
             </ToggleButton>
             <ToggleButton value="right" aria-label="right aligned">
-              <FormatAlignRight />
+              <FormatAlignRight/>
             </ToggleButton>
             <ToggleButton value="justify" aria-label="justified" disabled>
-              <FormatAlignJustify />
+              <FormatAlignJustify/>
             </ToggleButton>
           </ToggleButtonGroup>
         </Variant>
@@ -483,10 +402,12 @@ export default () => (
     <Category name="Navigation">
       <Component name="BottomNavigation">
         <Variant>
-          <BottomNavigation showLabels>
-            <BottomNavigationAction label="Recents" icon={<Restore />} />
-            <BottomNavigationAction label="Favorites" icon={<Favorite />} />
-            <BottomNavigationAction label="Nearby" icon={<LocationOn />} />
+          <BottomNavigation
+            showLabels
+          >
+            <BottomNavigationAction label="Recents" icon={<Restore/>}/>
+            <BottomNavigationAction label="Favorites" icon={<Favorite/>}/>
+            <BottomNavigationAction label="Nearby" icon={<LocationOn/>}/>
           </BottomNavigation>
         </Variant>
       </Component>
@@ -496,7 +417,11 @@ export default () => (
             <Link underline="hover" color="inherit" href="#">
               Home
             </Link>
-            <Link underline="hover" color="inherit" href="#products">
+            <Link
+              underline="hover"
+              color="inherit"
+              href="#products"
+            >
               Products
             </Link>
             <Typography color="text.primary">Item</Typography>
@@ -505,7 +430,7 @@ export default () => (
       </Component>
       <Component name="Drawer">
         <Variant>
-          <Drawer open={true} variant={'persistent'}>
+          <Drawer open={true} variant={"persistent"}>
             <List>
               <ListItem>
                 <ListItemText>Item1</ListItemText>
@@ -524,10 +449,13 @@ export default () => (
       </Component>
       <Component name="Menu">
         <Variant>
+          <MenuList></MenuList>
+        </Variant>
+        <Variant name="example">
           <MenuList>
             <MenuItem>
               <ListItemIcon>
-                <ContentCut fontSize="small" />
+                <ContentCut fontSize="small"/>
               </ListItemIcon>
               <ListItemText>Cut</ListItemText>
               <Typography variant="body2" color="text.secondary">
@@ -536,7 +464,7 @@ export default () => (
             </MenuItem>
             <MenuItem>
               <ListItemIcon>
-                <ContentCopy fontSize="small" />
+                <ContentCopy fontSize="small"/>
               </ListItemIcon>
               <ListItemText>Copy</ListItemText>
               <Typography variant="body2" color="text.secondary">
@@ -545,17 +473,17 @@ export default () => (
             </MenuItem>
             <MenuItem>
               <ListItemIcon>
-                <ContentPaste fontSize="small" />
+                <ContentPaste fontSize="small"/>
               </ListItemIcon>
               <ListItemText>Paste</ListItemText>
               <Typography variant="body2" color="text.secondary">
                 ⌘V
               </Typography>
             </MenuItem>
-            <Divider />
+            <Divider/>
             <MenuItem>
               <ListItemIcon>
-                <Cloud fontSize="small" />
+                <Cloud fontSize="small"/>
               </ListItemIcon>
               <ListItemText>Web Clipboard</ListItemText>
             </MenuItem>
@@ -564,7 +492,7 @@ export default () => (
       </Component>
       <Component name="Pagination">
         <Variant>
-          <Pagination count={10} />
+          <Pagination count={10}/>
         </Variant>
       </Component>
       <Component name="SpeedDial">
@@ -572,23 +500,19 @@ export default () => (
           <SpeedDial
             ariaLabel="SpeedDial basic example"
             sx={{position: 'absolute', bottom: 16, right: 16}}
-            icon={<SpeedDialIcon />}
-          >
+            icon={<SpeedDialIcon/>}>
             <SpeedDialAction
               key={'Save'}
-              icon={<Save />}
-              tooltipTitle={'Save'}
-            />
+              icon={<Save/>}
+              tooltipTitle={'Save'}/>
             <SpeedDialAction
               key={'Share'}
-              icon={<Share />}
-              tooltipTitle={'Share'}
-            />
+              icon={<Share/>}
+              tooltipTitle={'Share'}/>
             <SpeedDialAction
               key={'Print'}
-              icon={<Print />}
-              tooltipTitle={'Print'}
-            />
+              icon={<Print/>}
+              tooltipTitle={'Print'}/>
           </SpeedDial>
         </Variant>
       </Component>
@@ -607,12 +531,16 @@ export default () => (
           </Stepper>
         </Variant>
       </Component>
-      <Component name="Tabs">
+      <Component name="Tabs" subComponents={[<Tab label={"Label"}/>]}>
         <Variant>
           <Tabs value={0} aria-label="basic tabs example">
-            <Tab label="Item One" />
-            <Tab label="Item Two" />
-            <Tab label="Item Three" />
+          </Tabs>
+        </Variant>
+        <Variant name="example">
+          <Tabs value={0} aria-label="basic tabs example">
+            <Tab label="Item One"/>
+            <Tab label="Item Two"/>
+            <Tab label="Item Three"/>
           </Tabs>
         </Variant>
       </Component>
@@ -626,21 +554,21 @@ export default () => (
       <Component name="Badge">
         <Variant>
           <Badge color="secondary" badgeContent={1}>
-            <Mail />
+            <Mail/>
           </Badge>
         </Variant>
       </Component>
       <Component name="Chip">
         <Variant>
-          <Chip label="Chip Filled" />
+          <Chip label="Chip Filled"/>
         </Variant>
-        <Variant name="filled">
-          <Chip label="Chip Outlined" variant="outlined" />
+        <Variant name="outlined">
+          <Chip label="Chip Outlined" variant="outlined"/>
         </Variant>
       </Component>
       <Component name="Divider">
-        <Variant>
-          <Divider />
+        <Variant previewLayout="stretch" style={{padding: 10}}>
+          <Divider/>
         </Variant>
       </Component>
       <Component name="List">
@@ -649,20 +577,44 @@ export default () => (
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <Inbox />
+                  <Inbox/>
                 </ListItemIcon>
-                <ListItemText primary="Inbox" />
+                <ListItemText primary="Inbox"/>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <Drafts />
+                  <Drafts/>
                 </ListItemIcon>
-                <ListItemText primary="Drafts" />
+                <ListItemText primary="Drafts"/>
               </ListItemButton>
             </ListItem>
           </List>
+        </Variant>
+      </Component>
+      <Component name="Table">
+        <Variant>
+          <TableContainer component={Paper}>
+            <Table aria-label="simple table">
+              <TableHead>
+                <TableRow>
+                  <TableCell>Label 1</TableCell>
+                  <TableCell>Label 2</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                <TableRow>
+                  <TableCell>value 1</TableCell>
+                  <TableCell>value 2</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>value 1</TableCell>
+                  <TableCell>value 2</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </TableContainer>
         </Variant>
       </Component>
       <Component name="Tooltip">
@@ -679,17 +631,13 @@ export default () => (
           <Alert severity="error">This is an error alert — check it out!</Alert>
         </Variant>
         <Variant name="warning">
-          <Alert severity="warning">
-            This is a warning alert — check it out!
-          </Alert>
+          <Alert severity="warning">This is a warning alert — check it out!</Alert>
         </Variant>
         <Variant name="info">
           <Alert severity="info">This is an info alert — check it out!</Alert>
         </Variant>
         <Variant name="success">
-          <Alert severity="success">
-            This is a success alert — check it out!
-          </Alert>
+          <Alert severity="success">This is a success alert — check it out!</Alert>
         </Variant>
       </Component>
       <Component name="Backdrop">
@@ -699,8 +647,16 @@ export default () => (
           </Backdrop>
         </Variant>
       </Component>
-      <Component name="Dialog">
+      <Component name="Dialog" subComponents={[
+        <DialogTitle></DialogTitle>,
+        <DialogContent></DialogContent>,
+        <DialogActions></DialogActions>
+      ]}>
         <Variant>
+          <Dialog open={true}>
+          </Dialog>
+        </Variant>
+        <Variant name="template">
           <Dialog
             open={true}
             aria-labelledby="alert-dialog-title"
@@ -711,14 +667,15 @@ export default () => (
             </DialogTitle>
             <DialogContent>
               <DialogContentText id="alert-dialog-description">
-                Let Google help apps determine location. This means sending
-                anonymous location data to Google, even when no apps are
-                running.
+                Let Google help apps determine location. This means sending anonymous
+                location data to Google, even when no apps are running.
               </DialogContentText>
             </DialogContent>
             <DialogActions>
               <Button>Disagree</Button>
-              <Button autoFocus>Agree</Button>
+              <Button autoFocus>
+                Agree
+              </Button>
             </DialogActions>
           </Dialog>
         </Variant>
@@ -727,7 +684,7 @@ export default () => (
         <Variant name="circular">
           <CircularProgress />
         </Variant>
-        <Variant name="linear">
+        <Variant name="linear" previewLayout="stretch" style={{padding: 10}}>
           <LinearProgress />
         </Variant>
       </Component>
@@ -743,10 +700,10 @@ export default () => (
           <Skeleton variant="text" />
         </Variant>
         <Variant name="circular">
-          <Skeleton variant="circular" />
+          <Skeleton variant="circular" width={40} height={40} />
         </Variant>
         <Variant name="rectangular">
-          <Skeleton variant="rectangular" />
+          <Skeleton variant="rectangular" width={210} height={60} />
         </Variant>
       </Component>
       <Component name="Snackbar">
@@ -773,9 +730,8 @@ export default () => (
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                  eget.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                  malesuada lacus ex, sit amet blandit leo lobortis eget.
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -789,9 +745,8 @@ export default () => (
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                  eget.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                  malesuada lacus ex, sit amet blandit leo lobortis eget.
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -807,11 +762,11 @@ export default () => (
                 edge="start"
                 color="inherit"
                 aria-label="menu"
-                sx={{mr: 2}}
+                sx={{ mr: 2 }}
               >
                 <Menu />
               </IconButton>
-              <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                 News
               </Typography>
               <Button color="inherit">Login</Button>
@@ -819,21 +774,23 @@ export default () => (
           </AppBar>
         </Variant>
       </Component>
-      <Component name="Card">
+      <Component name="Card" subComponents={[
+        <CardContent></CardContent>,
+        <CardActions></CardActions>
+      ]}>
         <Variant>
+          <Card></Card>
+        </Variant>
+        <Variant name={"template"}>
           <Card variant="outlined">
             <CardContent>
-              <Typography
-                sx={{fontSize: 14}}
-                color="text.secondary"
-                gutterBottom
-              >
+              <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                 Word of the Day
               </Typography>
               <Typography variant="h5" component="div">
                 benevolent
               </Typography>
-              <Typography sx={{mb: 1.5}} color="text.secondary">
+              <Typography sx={{ mb: 1.5 }} color="text.secondary">
                 adjective
               </Typography>
               <Typography variant="body2">
@@ -852,29 +809,8 @@ export default () => (
         <Variant>
           <Paper>elevation 0</Paper>
         </Variant>
-        <Variant name="elevation 1">
-          <Paper elevation={1}>elevation 1</Paper>
-        </Variant>
-        <Variant name="elevation 2">
-          <Paper elevation={2}>elevation 2</Paper>
-        </Variant>
-        <Variant name="elevation 3">
-          <Paper elevation={3}>elevation 3</Paper>
-        </Variant>
-        <Variant name="elevation 4">
-          <Paper elevation={4}>elevation 4</Paper>
-        </Variant>
-        <Variant name="elevation 6">
-          <Paper elevation={6}>elevation 6</Paper>
-        </Variant>
         <Variant name="elevation 8">
           <Paper elevation={8}>elevation 8</Paper>
-        </Variant>
-        <Variant name="elevation 12">
-          <Paper elevation={12}>elevation 12</Paper>
-        </Variant>
-        <Variant name="elevation 16">
-          <Paper elevation={16}>elevation 16</Paper>
         </Variant>
         <Variant name="elevation 24">
           <Paper elevation={24}>elevation 24</Paper>
