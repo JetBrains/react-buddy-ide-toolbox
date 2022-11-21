@@ -1,6 +1,6 @@
 {
   "name": "@react-buddy/palette-chakra-ui",
-  "version": "2.3.0-dev.0",
+  "version": "2.3.0-dev.1",
   "description": "Palette of ChakraUI components",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
