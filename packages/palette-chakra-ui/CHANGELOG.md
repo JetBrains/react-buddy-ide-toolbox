@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0-dev.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-chakra-ui/compare/@react-buddy/palette-chakra-ui@2.2.0...@react-buddy/palette-chakra-ui@2.3.0-dev.0) (2022-11-21)
+
+
+### Bug Fixes
+
+* incorrect entrypoints in palettes ([343efbf](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-chakra-ui/commit/343efbf0a572a9607d620e5ce3ad905dcc01b03a))
+
+
+### Features
+
+* changes in chakra palette [#53](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-chakra-ui/issues/53): ([eb39a28](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-chakra-ui/commit/eb39a28de7ad8b06aa6bd80f0b96f4f87c2d2ece))
+
+
+
+
+
 # [2.2.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-chakra-ui/compare/@react-buddy/palette-chakra-ui@2.2.0-dev.2...@react-buddy/palette-chakra-ui@2.2.0) (2022-11-15)
 
 ### Features

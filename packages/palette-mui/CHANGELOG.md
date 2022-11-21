@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0-dev.1](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mui/compare/@react-buddy/palette-mui@1.3.0...@react-buddy/palette-mui@5.0.0-dev.1) (2022-11-21)
+
+
+### Bug Fixes
+
+* incorrect entrypoints in palettes ([343efbf](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mui/commit/343efbf0a572a9607d620e5ce3ad905dcc01b03a))
+* mui palette major version should follow supported lib version [#65](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mui/issues/65) ([a506fa6](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mui/commit/a506fa60ff0c9358f7d2af1614f5985c0733f0bd))
+
+
+### Features
+
+* add documentation links to mui palette [#52](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mui/issues/52) ([18ec42f](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mui/commit/18ec42fd4566eca54fde5f31f798a5213863cb8c))
+* changes in mui palette [#51](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mui/issues/51): ([c21a733](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mui/commit/c21a733b6694d4e9b60726773743b4473d96a1d3))
+
+
+
+
+
 # [1.3.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mui/compare/@react-buddy/palette-mui@1.3.0-dev.2...@react-buddy/palette-mui@1.3.0) (2022-11-15)
 
 ### Features
