@@ -1,0 +1,45 @@
+{
+  "name": "@react-buddy/palette-mantine",
+  "version": "2.2.0-dev.2",
+  "description": "Palette of Mantine components",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/palette.d.ts",
+  "files": [
+    "dist/",
+    "palette.tsx",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@react-buddy/ide-toolbox": "^2.3.0"
+  },
+  "peerDependencies": {
+    "@mantine/core": "^5.7.2",
+    "@mantine/form": "^5.7.2",
+    "react": "^17.0.0 || ^18.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@types/react": "^17.0.3",
+    "rollup": "^2.53.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "~4.5.5"
+  },
+  "scripts": {
+    "compile": "npm run clean && rollup -c",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mantine"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Haulmont <info@haulmont.com>",
+  "license": "Apache-2.0"
+}
