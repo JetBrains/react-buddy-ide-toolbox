@@ -6,6 +6,7 @@ import {
   Palette,
 } from "@react-buddy/ide-toolbox";
 import {
+  AppShell,
   Grid,
   SimpleGrid,
   Text,
@@ -98,19 +99,39 @@ import {
   TransferList,
   TransferListData,
   Rating,
+  Header,
+  Navbar,
+  Portal,
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
 
 export default () => (
   <Palette embeddable>
     <Category name="Layout">
+      <Component name="AppShell" docURL="https://mantine.dev/core/app-shell/">
+        <Variant>
+          <AppShell
+              padding="md"
+              navbar={<Navbar width={{ base: 300 }} height={500} p="xs">Navbar content</Navbar>}
+              header={<Header height={60} p="xs">Header content</Header>}
+              styles={(theme) => ({
+                main: { backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0] },
+              })}
+          >
+            Your application here
+          </AppShell>
+        </Variant>
+      </Component>
       <Component
         name="AspectRatio"
         docURL="https://mantine.dev/core/aspect-ratio/"
       >
         <Variant previewLayout="stretch">
-          <AspectRatio ratio={3 / 2} sx={{ maxWidth: 100 }} mx="auto">
-            <Image alt="Panda" style={{ backgroundColor: "red" }} />
+          <AspectRatio ratio={3 / 2} sx={{ maxWidth: 200 }} mx="auto">
+            <Image
+              alt="Panda"
+              src="https://images.unsplash.com/photo-1527118732049-c88155f2107c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80"
+            />
           </AspectRatio>
         </Variant>
       </Component>
@@ -242,8 +263,26 @@ export default () => (
         </Variant>
       </Component>
       <Component name="Stack" docURL="https://mantine.dev/core/stack/">
-        <Variant>
-          <Stack>1 2 3</Stack>
+        <Variant previewLayout="stretch">
+          <Stack>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </Stack>
+        </Variant>
+        <Variant name="with spacing" previewLayout="stretch">
+          <Stack spacing="sm">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </Stack>
+        </Variant>
+        <Variant name="centred" previewLayout="stretch" style={{height: '100%'}}>
+          <Stack align="center" justify="center" style={{height: '100%'}}>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </Stack>
         </Variant>
       </Component>
     </Category>
@@ -392,7 +431,7 @@ export default () => (
           <Autocomplete
             label="Your label"
             // Your custom item component with data properties
-            itemComponent={({ value, label }) => <div>{label}</div>}
+            itemComponent={({ value, label, ...otherProps }) => <div {...otherProps}>{label}</div>}
             data={[
               {
                 value: "value1",
@@ -404,7 +443,7 @@ export default () => (
               },
               {
                 value: "value3",
-                label: "Label2",
+                label: "Label3",
               },
             ]}
           />
@@ -617,7 +656,7 @@ export default () => (
       </Component>
       <Component
         name="Input.Wrapper"
-        docURL="https://mantine.dev/core/input/#inputwrapper"
+        docURL="https://mantine.dev/core/input/#inputwrapper-component"
       >
         <Variant>
           <Input.Wrapper label="Your label" description="Your description">
@@ -866,7 +905,7 @@ export default () => (
             ]}
           />
         </Variant>
-        <Variant name="labelAlwaysOn" previewLayout="stretch">
+        <Variant name="labelAlwaysOn" previewLayout="stretch" style={{paddingTop: 35, paddingLeft: 10, paddingRight: 10,}}>
           <RangeSlider
             labelAlwaysOn
             marks={[
@@ -939,8 +978,8 @@ export default () => (
         </Variant>
         <Variant name="itemComponent">
           <Select
-            itemComponent={({ value, label, image, name }) => (
-              <div>{label}</div>
+            itemComponent={({ value, label, image, name, ...otherProps }) => (
+              <div {...otherProps}>{label}</div>
             )}
             data={[
               {
@@ -999,7 +1038,7 @@ export default () => (
         </Variant>
       </Component>
       <Component name="Slider" docURL="https://mantine.dev/core/slider/">
-        <Variant>
+        <Variant previewLayout="stretch">
           <Slider
             marks={[
               { value: 20, label: "20%" },
@@ -1008,7 +1047,7 @@ export default () => (
             ]}
           />
         </Variant>
-        <Variant name="color">
+        <Variant name="color" previewLayout="stretch">
           <Slider
             color="red"
             marks={[
@@ -1018,7 +1057,7 @@ export default () => (
             ]}
           />
         </Variant>
-        <Variant name="disabled">
+        <Variant name="disabled" previewLayout="stretch">
           <Slider
             disabled
             marks={[
@@ -1028,7 +1067,11 @@ export default () => (
             ]}
           />
         </Variant>
-        <Variant name="labelAlwaysOn">
+        <Variant name="labelAlwaysOn" previewLayout="stretch" style={{
+          paddingTop: 35,
+          paddingLeft: 10,
+          paddingRight: 10,
+        }}>
           <Slider
             labelAlwaysOn
             marks={[
@@ -1338,7 +1381,7 @@ export default () => (
         </Variant>
       </Component>
       <Component name="Image" docURL="https://mantine.dev/core/image/">
-        <Variant requiredParams={["src"]}>
+        <Variant>
           <Image
             width={200}
             height={80}
@@ -1402,11 +1445,9 @@ export default () => (
             <Timeline.Item title="Point1" bullet={<CheckIcon />}>
               Text
             </Timeline.Item>
-
             <Timeline.Item title="Point2" bullet={<CheckIcon />}>
               Text
             </Timeline.Item>
-
             <Timeline.Item
               title="Point3"
               bullet={<CheckIcon />}
@@ -1414,7 +1455,6 @@ export default () => (
             >
               Text
             </Timeline.Item>
-
             <Timeline.Item title="Point4" bullet={<CheckIcon />}>
               Text
             </Timeline.Item>
@@ -1530,7 +1570,7 @@ export default () => (
             <Popover.Dropdown>Content</Popover.Dropdown>
           </Popover>
         </Variant>
-        <Variant name="width=target">
+        <Variant name="width target">
           <Popover width="target" position="bottom" withArrow shadow="md">
             <Popover.Target>
               <Button sx={{ width: 280 }}>Toggle popover</Button>
@@ -2001,6 +2041,9 @@ export default () => (
           </Paper>
         </Variant>
       </Component>
+      <Component name="Portal">
+        <Variant proto={PortalProto} />
+      </Component>
       <Component
         name="ScrollArea"
         docURL="https://mantine.dev/core/scroll-area/"
@@ -2436,5 +2479,23 @@ function DrawerProto() {
       </Drawer>
       <Button onClick={() => setOpened(true)}>Open Drawer</Button>
     </>
+  );
+}
+
+function PortalProto() {
+  const [opened, setOpened] = useState(false);
+
+  return (
+      <div style={{ position: 'relative', zIndex: 1 }}>
+        {opened && (
+            <Portal>
+              <div>Your modal content</div>
+            </Portal>
+        )}
+
+        <button onClick={() => setOpened(true)} type="button">
+          Open modal
+        </button>
+      </div>
   );
 }
