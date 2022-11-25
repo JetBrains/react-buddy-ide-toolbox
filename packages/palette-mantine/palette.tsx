@@ -1,10 +1,5 @@
-import React, { useCallback, useState } from "react";
-import {
-  Category,
-  Component,
-  Variant,
-  Palette,
-} from "@react-buddy/ide-toolbox";
+import React, {useCallback, useState} from 'react';
+import {Category, Component, Variant, Palette} from '@react-buddy/ide-toolbox';
 import {
   AppShell,
   Grid,
@@ -102,8 +97,8 @@ import {
   Header,
   Navbar,
   Portal,
-} from "@mantine/core";
-import { useForm } from "@mantine/form";
+} from '@mantine/core';
+import {useForm} from '@mantine/form';
 
 export default () => (
   <Palette embeddable>
@@ -111,12 +106,25 @@ export default () => (
       <Component name="AppShell" docURL="https://mantine.dev/core/app-shell/">
         <Variant>
           <AppShell
-              padding="md"
-              navbar={<Navbar width={{ base: 300 }} height={500} p="xs">Navbar content</Navbar>}
-              header={<Header height={60} p="xs">Header content</Header>}
-              styles={(theme) => ({
-                main: { backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0] },
-              })}
+            padding="md"
+            navbar={
+              <Navbar width={{base: 300}} height={500} p="xs">
+                Navbar content
+              </Navbar>
+            }
+            header={
+              <Header height={60} p="xs">
+                Header content
+              </Header>
+            }
+            styles={(theme) => ({
+              main: {
+                backgroundColor:
+                  theme.colorScheme === 'dark'
+                    ? theme.colors.dark[8]
+                    : theme.colors.gray[0],
+              },
+            })}
           >
             Your application here
           </AppShell>
@@ -127,7 +135,7 @@ export default () => (
         docURL="https://mantine.dev/core/aspect-ratio/"
       >
         <Variant previewLayout="stretch">
-          <AspectRatio ratio={3 / 2} sx={{ maxWidth: 200 }} mx="auto">
+          <AspectRatio ratio={3 / 2} sx={{maxWidth: 200}} mx="auto">
             <Image
               alt="Panda"
               src="https://images.unsplash.com/photo-1527118732049-c88155f2107c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80"
@@ -137,7 +145,7 @@ export default () => (
       </Component>
       <Component name="Center" docURL="https://mantine.dev/core/center/">
         <Variant>
-          <Center style={{ width: 400, height: 200 }}>
+          <Center style={{width: 400, height: 200}}>
             <div>All elements inside Center are centered</div>
           </Center>
         </Variant>
@@ -165,38 +173,38 @@ export default () => (
           </Grid>
         </Variant>
         <Variant name="with gutter">
-          <Grid gutter="sm" style={{ width: "100%" }}>
+          <Grid gutter="sm" style={{width: '100%'}}>
             <Grid.Col span={4}>
               <div
                 style={{
-                  width: "100%",
-                  height: "100px",
-                  backgroundColor: "red",
+                  width: '100%',
+                  height: '100px',
+                  backgroundColor: 'red',
                 }}
               />
             </Grid.Col>
             <Grid.Col span={4}>
               <div
                 style={{
-                  width: "100%",
-                  height: "100px",
-                  backgroundColor: "red",
+                  width: '100%',
+                  height: '100px',
+                  backgroundColor: 'red',
                 }}
               />
             </Grid.Col>
             <Grid.Col span={4}>
               <div
                 style={{
-                  width: "100%",
-                  height: "100px",
-                  backgroundColor: "red",
+                  width: '100%',
+                  height: '100px',
+                  backgroundColor: 'red',
                 }}
               />
             </Grid.Col>
             <CopyButton value="https://mantine.dev">
-              {({ copied, copy }) => (
-                <Button color={copied ? "teal" : "blue"} onClick={copy}>
-                  {copied ? "Copied url" : "Copy url"}
+              {({copied, copy}) => (
+                <Button color={copied ? 'teal' : 'blue'} onClick={copy}>
+                  {copied ? 'Copied url' : 'Copy url'}
                 </Button>
               )}
             </CopyButton>
@@ -226,7 +234,7 @@ export default () => (
         <Variant>
           <MediaQuery
             query="(max-width: 1200px) and (min-width: 800px)"
-            styles={{ fontSize: 20, "&:hover": { backgroundColor: "silver" } }}
+            styles={{fontSize: 20, '&:hover': {backgroundColor: 'silver'}}}
           >
             <Text>(max-width: 1200px) and (min-width: 800px) breakpoints</Text>
           </MediaQuery>
@@ -241,9 +249,9 @@ export default () => (
             cols={4}
             spacing="lg"
             breakpoints={[
-              { maxWidth: 980, cols: 3, spacing: "md" },
-              { maxWidth: 755, cols: 2, spacing: "sm" },
-              { maxWidth: 600, cols: 1, spacing: "sm" },
+              {maxWidth: 980, cols: 3, spacing: 'md'},
+              {maxWidth: 755, cols: 2, spacing: 'sm'},
+              {maxWidth: 600, cols: 1, spacing: 'sm'},
             ]}
           >
             <div>Column 1</div>
@@ -277,7 +285,11 @@ export default () => (
             <div>3</div>
           </Stack>
         </Variant>
-        <Variant name="centred" previewLayout="stretch" style={{height: '100%'}}>
+        <Variant
+          name="centred"
+          previewLayout="stretch"
+          style={{height: '100%'}}
+        >
           <Stack align="center" justify="center" style={{height: '100%'}}>
             <div>1</div>
             <div>2</div>
@@ -369,9 +381,9 @@ export default () => (
       >
         <Variant>
           <CopyButton value="https://mantine.dev">
-            {({ copied, copy }) => (
-              <Button color={copied ? "teal" : "blue"} onClick={copy}>
-                {copied ? "Copied url" : "Copy url"}
+            {({copied, copy}) => (
+              <Button color={copied ? 'teal' : 'blue'} onClick={copy}>
+                {copied ? 'Copied url' : 'Copy url'}
               </Button>
             )}
           </CopyButton>
@@ -403,47 +415,49 @@ export default () => (
             label="Your label"
             description="Your description"
             placeholder="Pick one"
-            data={["value1", "value2", "value3"]}
+            data={['value1', 'value2', 'value3']}
           />
         </Variant>
         <Variant name="filled">
           <Autocomplete
             label="Your label"
             variant="filled"
-            data={["value1", "value2", "value3"]}
+            data={['value1', 'value2', 'value3']}
           />
         </Variant>
         <Variant name="unstyled">
           <Autocomplete
             label="Your label"
             variant="unstyled"
-            data={["value1", "value2", "value3"]}
+            data={['value1', 'value2', 'value3']}
           />
         </Variant>
         <Variant name="disabled">
           <Autocomplete
             label="Your label"
             disabled
-            data={["value1", "value2", "value3"]}
+            data={['value1', 'value2', 'value3']}
           />
         </Variant>
         <Variant name="with object data">
           <Autocomplete
             label="Your label"
             // Your custom item component with data properties
-            itemComponent={({ value, label, ...otherProps }) => <div {...otherProps}>{label}</div>}
+            itemComponent={({value, label, ...otherProps}) => (
+              <div {...otherProps}>{label}</div>
+            )}
             data={[
               {
-                value: "value1",
-                label: "Label1",
+                value: 'value1',
+                label: 'Label1',
               },
               {
-                value: "value2",
-                label: "Label2",
+                value: 'value2',
+                label: 'Label2',
               },
               {
-                value: "value3",
-                label: "Label3",
+                value: 'value3',
+                label: 'Label3',
               },
             ]}
           />
@@ -452,14 +466,14 @@ export default () => (
           <Autocomplete
             label="Your label"
             error="Error message"
-            data={["value1", "value2", "value3"]}
+            data={['value1', 'value2', 'value3']}
           />
         </Variant>
         <Variant name="with icon">
           <Autocomplete
             label="Your label"
             icon={<CheckIcon />}
-            data={["value1", "value2", "value3"]}
+            data={['value1', 'value2', 'value3']}
           />
         </Variant>
       </Component>
@@ -518,7 +532,7 @@ export default () => (
             label="Your label"
             format="hex"
             swatchesPerRow={10}
-            swatches={["#ff0000", "#00ff00", "#0000ff"]}
+            swatches={['#ff0000', '#00ff00', '#0000ff']}
           />
         </Variant>
         <Variant name="without display">
@@ -527,7 +541,7 @@ export default () => (
             withPicker={false}
             format="hex"
             swatchesPerRow={10}
-            swatches={["#ff0000", "#00ff00", "#0000ff"]}
+            swatches={['#ff0000', '#00ff00', '#0000ff']}
           />
         </Variant>
         <Variant name="disallowInput">
@@ -569,7 +583,7 @@ export default () => (
           <ColorPicker
             format="hex"
             swatchesPerRow={10}
-            swatches={["#ff0000", "#00ff00", "#0000ff"]}
+            swatches={['#ff0000', '#00ff00', '#0000ff']}
           />
         </Variant>
         <Variant name="without picker">
@@ -577,7 +591,7 @@ export default () => (
             withPicker={false}
             format="hex"
             swatchesPerRow={10}
-            swatches={["#ff0000", "#00ff00", "#0000ff"]}
+            swatches={['#ff0000', '#00ff00', '#0000ff']}
           />
         </Variant>
         <Variant name="HueSlider" previewLayout="stretch">
@@ -698,17 +712,17 @@ export default () => (
           <MultiSelect
             label="Your label"
             placeholder="Your placeholder"
-            data={["value1", "value2", "value3"]}
+            data={['value1', 'value2', 'value3']}
           />
         </Variant>
         <Variant name="group items">
           <MultiSelect
             label="Your label"
             data={[
-              { value: "value1", label: "Value1", group: "group1" },
-              { value: "value2", label: "Value2", group: "group1" },
-              { value: "value3", label: "Value3", group: "group2" },
-              { value: "value4", label: "Value4", group: "group2" },
+              {value: 'value1', label: 'Value1', group: 'group1'},
+              {value: 'value2', label: 'Value2', group: 'group1'},
+              {value: 'value3', label: 'Value3', group: 'group2'},
+              {value: 'value4', label: 'Value4', group: 'group2'},
             ]}
           />
         </Variant>
@@ -716,10 +730,10 @@ export default () => (
           <MultiSelect
             label="Your label"
             data={[
-              { value: "value1", label: "Value1" },
-              { value: "value2", label: "Value2", disabled: true },
-              { value: "value3", label: "Value3" },
-              { value: "value4", label: "Value4", disabled: true },
+              {value: 'value1', label: 'Value1'},
+              {value: 'value2', label: 'Value2', disabled: true},
+              {value: 'value3', label: 'Value3'},
+              {value: 'value4', label: 'Value4', disabled: true},
             ]}
           />
         </Variant>
@@ -733,27 +747,27 @@ export default () => (
             label="Your label"
             description="Your description"
             placeholder="Your placeholder"
-            data={["value1", "value2", "value3"]}
+            data={['value1', 'value2', 'value3']}
           />
         </Variant>
         <Variant name="disabled">
           <NativeSelect
             label="Your label"
-            data={["value1", "value2", "value3"]}
+            data={['value1', 'value2', 'value3']}
             disabled
           />
         </Variant>
         <Variant name="with error">
           <NativeSelect
             label="Your label"
-            data={["value1", "value2", "value3"]}
+            data={['value1', 'value2', 'value3']}
             error="Error message"
           />
         </Variant>
         <Variant name="with icon">
           <NativeSelect
             label="Your label"
-            data={["value1", "value2", "value3"]}
+            data={['value1', 'value2', 'value3']}
             icon={<CheckIcon />}
           />
         </Variant>
@@ -787,7 +801,7 @@ export default () => (
         <Variant name="with formatter">
           <NumberInput
             label="Your label"
-            formatter={(value) => (value ? `$ ${value}` : "")}
+            formatter={(value) => (value ? `$ ${value}` : '')}
           />
         </Variant>
         <Variant name="with icon">
@@ -879,9 +893,9 @@ export default () => (
         <Variant previewLayout="stretch">
           <RangeSlider
             marks={[
-              { value: 20, label: "20%" },
-              { value: 50, label: "50%" },
-              { value: 80, label: "80%" },
+              {value: 20, label: '20%'},
+              {value: 50, label: '50%'},
+              {value: 80, label: '80%'},
             ]}
           />
         </Variant>
@@ -889,9 +903,9 @@ export default () => (
           <RangeSlider
             color="red"
             marks={[
-              { value: 20, label: "20%" },
-              { value: 50, label: "50%" },
-              { value: 80, label: "80%" },
+              {value: 20, label: '20%'},
+              {value: 50, label: '50%'},
+              {value: 80, label: '80%'},
             ]}
           />
         </Variant>
@@ -899,19 +913,23 @@ export default () => (
           <RangeSlider
             disabled
             marks={[
-              { value: 20, label: "20%" },
-              { value: 50, label: "50%" },
-              { value: 80, label: "80%" },
+              {value: 20, label: '20%'},
+              {value: 50, label: '50%'},
+              {value: 80, label: '80%'},
             ]}
           />
         </Variant>
-        <Variant name="labelAlwaysOn" previewLayout="stretch" style={{paddingTop: 35, paddingLeft: 10, paddingRight: 10,}}>
+        <Variant
+          name="labelAlwaysOn"
+          previewLayout="stretch"
+          style={{paddingTop: 35, paddingLeft: 10, paddingRight: 10}}
+        >
           <RangeSlider
             labelAlwaysOn
             marks={[
-              { value: 20, label: "20%" },
-              { value: 50, label: "50%" },
-              { value: 80, label: "80%" },
+              {value: 20, label: '20%'},
+              {value: 50, label: '50%'},
+              {value: 80, label: '80%'},
             ]}
           />
         </Variant>
@@ -923,23 +941,23 @@ export default () => (
         <Variant>
           <SegmentedControl
             data={[
-              { label: "value1", value: "Value1", disabled: true },
-              { label: "value2", value: "Value2" },
-              { label: "value3", value: "Value3" },
+              {label: 'value1', value: 'Value1', disabled: true},
+              {label: 'value2', value: 'Value2'},
+              {label: 'value3', value: 'Value3'},
             ]}
           />
         </Variant>
         <Variant name="fullWidth">
-          <SegmentedControl fullWidth data={["value1", "value2", "value3"]} />
+          <SegmentedControl fullWidth data={['value1', 'value2', 'value3']} />
         </Variant>
         <Variant name="vertical">
           <SegmentedControl
             orientation="vertical"
-            data={["value1", "value2", "value3"]}
+            data={['value1', 'value2', 'value3']}
           />
         </Variant>
         <Variant name="color">
-          <SegmentedControl color="red" data={["value1", "value2", "value3"]} />
+          <SegmentedControl color="red" data={['value1', 'value2', 'value3']} />
         </Variant>
       </Component>
       <Component name="Select" docURL="https://mantine.dev/core/select/">
@@ -949,9 +967,9 @@ export default () => (
             description="Your description"
             placeholder="Your placeholder"
             data={[
-              { label: "value1", value: "Value1", disabled: true },
-              { label: "value2", value: "Value2" },
-              { label: "value3", value: "Value3" },
+              {label: 'value1', value: 'Value1', disabled: true},
+              {label: 'value2', value: 'Value2'},
+              {label: 'value3', value: 'Value3'},
             ]}
           />
         </Variant>
@@ -959,40 +977,40 @@ export default () => (
           <Select
             label="Your label"
             variant="filled"
-            data={["value1", "value2", "value3"]}
+            data={['value1', 'value2', 'value3']}
           />
         </Variant>
         <Variant name="unstyled">
           <Select
             label="Your label"
             variant="unstyled"
-            data={["value1", "value2", "value3"]}
+            data={['value1', 'value2', 'value3']}
           />
         </Variant>
         <Variant name="disabled">
           <Select
             label="Your label"
             disabled
-            data={["value1", "value2", "value3"]}
+            data={['value1', 'value2', 'value3']}
           />
         </Variant>
         <Variant name="itemComponent">
           <Select
-            itemComponent={({ value, label, image, name, ...otherProps }) => (
+            itemComponent={({value, label, image, name, ...otherProps}) => (
               <div {...otherProps}>{label}</div>
             )}
             data={[
               {
-                value: "value1",
-                label: "Value1",
-                image: "image1",
-                name: "name1",
+                value: 'value1',
+                label: 'Value1',
+                image: 'image1',
+                name: 'name1',
               },
               {
-                value: "value2",
-                label: "Value2",
-                image: "image2",
-                name: "name2",
+                value: 'value2',
+                label: 'Value2',
+                image: 'image2',
+                name: 'name2',
               },
             ]}
           />
@@ -1002,23 +1020,23 @@ export default () => (
             label="Your label"
             searchable
             nothingFound="No options"
-            data={["value1", "value2", "value3"]}
+            data={['value1', 'value2', 'value3']}
           />
         </Variant>
         <Variant name="clearable">
           <Select
             label="Your label"
             clearable
-            data={["value1", "value2", "value3"]}
+            data={['value1', 'value2', 'value3']}
           />
         </Variant>
         <Variant name="group items">
           <Select
             label="Your label"
             data={[
-              { label: "value1", value: "Value1", group: "group1" },
-              { label: "value2", value: "Value2", group: "group1" },
-              { label: "value3", value: "Value3", group: "group2" },
+              {label: 'value1', value: 'Value1', group: 'group1'},
+              {label: 'value2', value: 'Value2', group: 'group1'},
+              {label: 'value3', value: 'Value3', group: 'group2'},
             ]}
           />
         </Variant>
@@ -1026,14 +1044,14 @@ export default () => (
           <Select
             label="Your label"
             error="Error message"
-            data={["value1", "value2", "value3"]}
+            data={['value1', 'value2', 'value3']}
           />
         </Variant>
         <Variant name="with icon">
           <Select
             label="Your label"
             icon={<CheckIcon />}
-            data={["value1", "value2", "value3"]}
+            data={['value1', 'value2', 'value3']}
           />
         </Variant>
       </Component>
@@ -1041,9 +1059,9 @@ export default () => (
         <Variant previewLayout="stretch">
           <Slider
             marks={[
-              { value: 20, label: "20%" },
-              { value: 50, label: "50%" },
-              { value: 80, label: "80%" },
+              {value: 20, label: '20%'},
+              {value: 50, label: '50%'},
+              {value: 80, label: '80%'},
             ]}
           />
         </Variant>
@@ -1051,9 +1069,9 @@ export default () => (
           <Slider
             color="red"
             marks={[
-              { value: 20, label: "20%" },
-              { value: 50, label: "50%" },
-              { value: 80, label: "80%" },
+              {value: 20, label: '20%'},
+              {value: 50, label: '50%'},
+              {value: 80, label: '80%'},
             ]}
           />
         </Variant>
@@ -1061,23 +1079,27 @@ export default () => (
           <Slider
             disabled
             marks={[
-              { value: 20, label: "20%" },
-              { value: 50, label: "50%" },
-              { value: 80, label: "80%" },
+              {value: 20, label: '20%'},
+              {value: 50, label: '50%'},
+              {value: 80, label: '80%'},
             ]}
           />
         </Variant>
-        <Variant name="labelAlwaysOn" previewLayout="stretch" style={{
-          paddingTop: 35,
-          paddingLeft: 10,
-          paddingRight: 10,
-        }}>
+        <Variant
+          name="labelAlwaysOn"
+          previewLayout="stretch"
+          style={{
+            paddingTop: 35,
+            paddingLeft: 10,
+            paddingRight: 10,
+          }}
+        >
           <Slider
             labelAlwaysOn
             marks={[
-              { value: 20, label: "20%" },
-              { value: 50, label: "50%" },
-              { value: 80, label: "80%" },
+              {value: 20, label: '20%'},
+              {value: 50, label: '50%'},
+              {value: 80, label: '80%'},
             ]}
           />
         </Variant>
@@ -1205,11 +1227,11 @@ export default () => (
         <Variant name="active">
           <NavLink label="Your label" active />
         </Variant>
-        <Variant name="react-router" requiredParams={["to"]}>
+        <Variant name="react-router" requiredParams={['to']}>
           <NavLink
             label="Your label"
             // component={Link}
-            active={location.pathname === "/url"}
+            active={location.pathname === '/url'}
           />
         </Variant>
         <Variant name="nested">
@@ -1352,7 +1374,7 @@ export default () => (
           <Badge variant="dot">Badge</Badge>
         </Variant>
         <Variant name="gradient">
-          <Badge variant="gradient" gradient={{ from: "red", to: "blue" }}>
+          <Badge variant="gradient" gradient={{from: 'red', to: 'blue'}}>
             Badge
           </Badge>
         </Variant>
@@ -1434,7 +1456,7 @@ export default () => (
           </ThemeIcon>
         </Variant>
         <Variant name="gradient">
-          <ThemeIcon variant="gradient" gradient={{ from: "blue", to: "red" }}>
+          <ThemeIcon variant="gradient" gradient={{from: 'blue', to: 'red'}}>
             <CheckIcon />
           </ThemeIcon>
         </Variant>
@@ -1465,7 +1487,7 @@ export default () => (
     <Category name="Overlays">
       <Component name="Affix" docURL="https://mantine.dev/core/affix/">
         <Variant>
-          <Affix position={{ bottom: 20, right: 20 }}>Content</Affix>
+          <Affix position={{bottom: 20, right: 20}}>Content</Affix>
         </Variant>
       </Component>
       <Component name="Dialog" docURL="https://mantine.dev/core/dialog/">
@@ -1495,7 +1517,7 @@ export default () => (
       >
         <Variant>
           {/* Note that position: relative is required */}
-          <div style={{ width: 400, height: 200, position: "relative" }}>
+          <div style={{width: 400, height: 200, position: 'relative'}}>
             <LoadingOverlay visible={true} overlayBlur={2} />
             Content
           </div>
@@ -1541,7 +1563,7 @@ export default () => (
             style={{
               width: 200,
               height: 100,
-              position: "relative",
+              position: 'relative',
             }}
           >
             <Overlay opacity={0.6} color="#000" zIndex={5} />
@@ -1553,7 +1575,7 @@ export default () => (
             style={{
               width: 200,
               height: 100,
-              position: "relative",
+              position: 'relative',
             }}
           >
             <Overlay opacity={0.6} color="#000" blur={2} />
@@ -1573,7 +1595,7 @@ export default () => (
         <Variant name="width target">
           <Popover width="target" position="bottom" withArrow shadow="md">
             <Popover.Target>
-              <Button sx={{ width: 280 }}>Toggle popover</Button>
+              <Button sx={{width: 280}}>Toggle popover</Button>
             </Popover.Target>
             <Popover.Dropdown>Content</Popover.Dropdown>
           </Popover>
@@ -1638,7 +1660,7 @@ export default () => (
           </Highlight>
         </Variant>
         <Variant name="multiple">
-          <Highlight highlight={["this", "that"]}>
+          <Highlight highlight={['this', 'that']}>
             Highlight this and also that
           </Highlight>
         </Variant>
@@ -1790,7 +1812,7 @@ export default () => (
         <Variant name="gradient">
           <Text
             variant="gradient"
-            gradient={{ from: "indigo", to: "cyan", deg: 45 }}
+            gradient={{from: 'indigo', to: 'cyan', deg: 45}}
           >
             Text with gradient
           </Text>
@@ -1835,9 +1857,7 @@ export default () => (
       <Component name="TypographyStylesProvider">
         <Variant>
           <TypographyStylesProvider>
-            <div
-              dangerouslySetInnerHTML={{ __html: "<p>Your html here</p>" }}
-            />
+            <div dangerouslySetInnerHTML={{__html: '<p>Your html here</p>'}} />
           </TypographyStylesProvider>
         </Variant>
       </Component>
@@ -1904,38 +1924,38 @@ export default () => (
       </Component>
       <Component name="Progress" docURL="https://mantine.dev/core/progress/">
         <Variant>
-          <Progress value={50} style={{ width: "100%" }} />
+          <Progress value={50} style={{width: '100%'}} />
         </Variant>
         <Variant name="striped">
-          <Progress value={50} striped style={{ width: "100%" }} />
+          <Progress value={50} striped style={{width: '100%'}} />
         </Variant>
         <Variant name="animate">
-          <Progress value={50} animate style={{ width: "100%" }} />
+          <Progress value={50} animate style={{width: '100%'}} />
         </Variant>
         <Variant name="sections">
           <Progress
             sections={[
               {
                 value: 25,
-                color: "pink",
-                label: "Label1",
-                tooltip: "Tooltip1",
+                color: 'pink',
+                label: 'Label1',
+                tooltip: 'Tooltip1',
               },
               {
                 value: 25,
-                color: "grape",
-                label: "Label2",
-                tooltip: "Tooltip2",
+                color: 'grape',
+                label: 'Label2',
+                tooltip: 'Tooltip2',
               },
               {
                 value: 25,
-                color: "violet",
-                label: "Label3",
-                tooltip: "Tooltip3",
+                color: 'violet',
+                label: 'Label3',
+                tooltip: 'Tooltip3',
               },
             ]}
             size={24}
-            style={{ width: "100%" }}
+            style={{width: '100%'}}
           />
         </Variant>
       </Component>
@@ -1947,9 +1967,9 @@ export default () => (
           <RingProgress
             label="Your label"
             sections={[
-              { value: 40, color: "cyan", tooltip: "tooltip1" },
-              { value: 15, color: "orange", tooltip: "tooltip2" },
-              { value: 15, color: "grape", tooltip: "tooltip3" },
+              {value: 40, color: 'cyan', tooltip: 'tooltip1'},
+              {value: 15, color: 'orange', tooltip: 'tooltip2'},
+              {value: 15, color: 'grape', tooltip: 'tooltip3'},
             ]}
           />
         </Variant>
@@ -1958,9 +1978,9 @@ export default () => (
             label="Your label"
             roundCaps
             sections={[
-              { value: 40, color: "cyan" },
-              { value: 15, color: "orange" },
-              { value: 15, color: "grape" },
+              {value: 40, color: 'cyan'},
+              {value: 15, color: 'orange'},
+              {value: 15, color: 'grape'},
             ]}
           />
         </Variant>
@@ -1981,7 +2001,7 @@ export default () => (
     <Category name="Miscellaneous">
       <Component name="Box" docURL="https://mantine.dev/core/box/">
         <Variant>
-          <Box sx={(theme) => ({ backgroundColor: theme.colors.gray[0] })}>
+          <Box sx={(theme) => ({backgroundColor: theme.colors.gray[0]})}>
             Content
           </Box>
         </Variant>
@@ -1991,27 +2011,23 @@ export default () => (
       </Component>
       <Component name="Divider" docURL="https://mantine.dev/core/divider/">
         <Variant>
-          <Divider my="sm" style={{ width: "100%" }} />
+          <Divider my="sm" style={{width: '100%'}} />
         </Variant>
         <Variant name="dashed">
-          <Divider my="sm" variant="dashed" style={{ width: "100%" }} />
+          <Divider my="sm" variant="dashed" style={{width: '100%'}} />
         </Variant>
         <Variant name="dotted">
-          <Divider my="sm" variant="dotted" style={{ width: "100%" }} />
+          <Divider my="sm" variant="dotted" style={{width: '100%'}} />
         </Variant>
         <Variant name="label left">
-          <Divider
-            my="xs"
-            label="Label on the left"
-            style={{ width: "100%" }}
-          />
+          <Divider my="xs" label="Label on the left" style={{width: '100%'}} />
         </Variant>
         <Variant name="label center">
           <Divider
             my="xs"
             label="Label in the center"
             labelPosition="center"
-            style={{ width: "100%" }}
+            style={{width: '100%'}}
           />
         </Variant>
         <Variant name="label right">
@@ -2019,7 +2035,7 @@ export default () => (
             my="xs"
             label="Label on the right"
             labelPosition="right"
-            style={{ width: "100%" }}
+            style={{width: '100%'}}
           />
         </Variant>
         <Variant name="vertical">
@@ -2049,7 +2065,7 @@ export default () => (
         docURL="https://mantine.dev/core/scroll-area/"
       >
         <Variant>
-          <ScrollArea style={{ height: 80 }}>
+          <ScrollArea style={{height: 80}}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -2060,7 +2076,7 @@ export default () => (
           </ScrollArea>
         </Variant>
         <Variant name="offsetScrollbars">
-          <ScrollArea style={{ height: 80 }} offsetScrollbars>
+          <ScrollArea style={{height: 80}} offsetScrollbars>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -2071,7 +2087,7 @@ export default () => (
           </ScrollArea>
         </Variant>
         <Variant name="Autosize">
-          <ScrollArea.Autosize maxHeight={100} sx={{ maxWidth: 200 }} mx="auto">
+          <ScrollArea.Autosize maxHeight={100} sx={{maxWidth: 200}} mx="auto">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -2125,20 +2141,20 @@ function FormProto() {
 function FormExampleProto() {
   const form = useForm({
     initialValues: {
-      email: "",
+      email: '',
       boolean: false,
       object: {
         number: 0,
       },
     },
     validate: {
-      email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
     },
   });
 
   const handleError = (errors: typeof form.errors) => {
     if (errors.email) {
-      console.error("Please provide a valid email");
+      console.error('Please provide a valid email');
     }
   };
 
@@ -2151,15 +2167,15 @@ function FormExampleProto() {
       onSubmit={form.onSubmit(handleSubmit, handleError)}
       onReset={form.onReset}
     >
-      <TextInput withAsterisk label="Email" {...form.getInputProps("email")} />
+      <TextInput withAsterisk label="Email" {...form.getInputProps('email')} />
 
       <Checkbox
         mt="md"
         label="Boolean"
-        {...form.getInputProps("boolean", { type: "checkbox" })}
+        {...form.getInputProps('boolean', {type: 'checkbox'})}
       />
 
-      <NumberInput label="Number" {...form.getInputProps("object.number")} />
+      <NumberInput label="Number" {...form.getInputProps('object.number')} />
 
       <Button type="submit">Submit</Button>
       <Button type="reset">Reset</Button>
@@ -2170,20 +2186,20 @@ function FormExampleProto() {
 function TransferListProto() {
   const [data, setData] = useState<TransferListData>([
     [
-      { value: "react", label: "React" },
-      { value: "ng", label: "Angular" },
-      { value: "next", label: "Next.js" },
-      { value: "blitz", label: "Blitz.js" },
-      { value: "gatsby", label: "Gatsby.js" },
-      { value: "vue", label: "Vue" },
-      { value: "jq", label: "jQuery" },
+      {value: 'react', label: 'React'},
+      {value: 'ng', label: 'Angular'},
+      {value: 'next', label: 'Next.js'},
+      {value: 'blitz', label: 'Blitz.js'},
+      {value: 'gatsby', label: 'Gatsby.js'},
+      {value: 'vue', label: 'Vue'},
+      {value: 'jq', label: 'jQuery'},
     ],
     [
-      { value: "sv", label: "Svelte" },
-      { value: "rw", label: "Redwood" },
-      { value: "np", label: "NumPy" },
-      { value: "dj", label: "Django" },
-      { value: "fl", label: "Flask" },
+      {value: 'sv', label: 'Svelte'},
+      {value: 'rw', label: 'Redwood'},
+      {value: 'np', label: 'NumPy'},
+      {value: 'dj', label: 'Django'},
+      {value: 'fl', label: 'Flask'},
     ],
   ]);
 
@@ -2193,7 +2209,7 @@ function TransferListProto() {
       onChange={setData}
       searchPlaceholder="Search..."
       nothingFound="Nothing here"
-      titles={["Frameworks", "Libraries"]}
+      titles={['Frameworks', 'Libraries']}
       breakpoint="sm"
     />
   );
@@ -2201,7 +2217,7 @@ function TransferListProto() {
 
 function BurgerProto() {
   const [opened, setOpened] = useState(false);
-  const title = opened ? "Close" : "Open";
+  const title = opened ? 'Close' : 'Open';
 
   return (
     <Burger
@@ -2233,23 +2249,23 @@ function FileButtonMultipleProto() {
 
 function TransitionProto(
   transition:
-    | "fade"
-    | "skew-up"
-    | "skew-down"
-    | "rotate-right"
-    | "rotate-left"
-    | "slide-down"
-    | "slide-up"
-    | "slide-right"
-    | "slide-left"
-    | "scale-y"
-    | "scale-x"
-    | "scale"
-    | "pop"
-    | "pop-top-left"
-    | "pop-top-right"
-    | "pop-bottom-left"
-    | "pop-bottom-right"
+    | 'fade'
+    | 'skew-up'
+    | 'skew-down'
+    | 'rotate-right'
+    | 'rotate-left'
+    | 'slide-down'
+    | 'slide-up'
+    | 'slide-right'
+    | 'slide-left'
+    | 'scale-y'
+    | 'scale-x'
+    | 'scale'
+    | 'pop'
+    | 'pop-top-left'
+    | 'pop-top-right'
+    | 'pop-bottom-left'
+    | 'pop-bottom-right',
 ) {
   const [opened, setOpened] = useState(false);
 
@@ -2262,32 +2278,32 @@ function TransitionProto(
 
 function TransitionHoverDemoProto(
   transition:
-    | "fade"
-    | "skew-up"
-    | "skew-down"
-    | "rotate-right"
-    | "rotate-left"
-    | "slide-down"
-    | "slide-up"
-    | "slide-right"
-    | "slide-left"
-    | "scale-y"
-    | "scale-x"
-    | "scale"
-    | "pop"
-    | "pop-top-left"
-    | "pop-top-right"
-    | "pop-bottom-left"
-    | "pop-bottom-right"
+    | 'fade'
+    | 'skew-up'
+    | 'skew-down'
+    | 'rotate-right'
+    | 'rotate-left'
+    | 'slide-down'
+    | 'slide-up'
+    | 'slide-right'
+    | 'slide-left'
+    | 'scale-y'
+    | 'scale-x'
+    | 'scale'
+    | 'pop'
+    | 'pop-top-left'
+    | 'pop-top-right'
+    | 'pop-bottom-left'
+    | 'pop-bottom-right',
 ) {
   const [opened, setOpened] = useState(false);
 
   return (
     <div
       style={{
-        position: "relative",
-        display: "flex",
-        justifyContent: "center",
+        position: 'relative',
+        display: 'flex',
+        justifyContent: 'center',
       }}
     >
       <Badge
@@ -2302,9 +2318,9 @@ function TransitionHoverDemoProto(
             shadow="md"
             style={{
               ...styles,
-              position: "absolute",
+              position: 'absolute',
               bottom: 0,
-              transform: "translateY(100%)",
+              transform: 'translateY(100%)',
             }}
           >
             {transition}
@@ -2376,7 +2392,7 @@ function FocusTrapProto() {
   return (
     <>
       <Button onClick={toggleActive}>
-        {active ? "Deactivate" : "Activate"} focus trap
+        {active ? 'Deactivate' : 'Activate'} focus trap
       </Button>
 
       <FocusTrap active={active}>
@@ -2486,16 +2502,16 @@ function PortalProto() {
   const [opened, setOpened] = useState(false);
 
   return (
-      <div style={{ position: 'relative', zIndex: 1 }}>
-        {opened && (
-            <Portal>
-              <div>Your modal content</div>
-            </Portal>
-        )}
+    <div style={{position: 'relative', zIndex: 1}}>
+      {opened && (
+        <Portal>
+          <div>Your modal content</div>
+        </Portal>
+      )}
 
-        <button onClick={() => setOpened(true)} type="button">
-          Open modal
-        </button>
-      </div>
+      <button onClick={() => setOpened(true)} type="button">
+        Open modal
+      </button>
+    </div>
   );
 }
