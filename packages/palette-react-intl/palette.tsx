@@ -230,7 +230,6 @@ export default () => (
         <Variant name="format number" proto={UseIntlFormatNumberProto} />
         <Variant name="format date" proto={UseIntlFormatDateProto} />
         <Variant name="format time" proto={UseIntlFormatTimeProto} />
-        <Variant name="format date time range" proto={UseIntlFormatTimeProto} />
         <Variant name="format list" proto={UseIntlFormatListProto} />
       </Component>
     </Category>
