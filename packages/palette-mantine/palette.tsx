@@ -1859,7 +1859,10 @@ export default () => (
           </Title>
         </Variant>
       </Component>
-      <Component name="TypographyStylesProvider">
+      <Component
+        name="TypographyStylesProvider"
+        docURL="https://mantine.dev/core/typography-styles-provider/"
+      >
         <Variant>
           <TypographyStylesProvider>
             <div
@@ -2068,7 +2071,7 @@ export default () => (
           </Paper>
         </Variant>
       </Component>
-      <Component name="Portal">
+      <Component name="Portal" docURL="https://mantine.dev/core/portal/">
         <Variant proto={PortalProto} />
       </Component>
       <Component
