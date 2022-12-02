@@ -5,23 +5,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [5.0.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mantine/compare/@react-buddy/palette-mantine@5.0.0-dev.3...@react-buddy/palette-mantine@5.0.0) (2022-11-29)
 
-**Note:** Version bump only for package @react-buddy/palette-mantine
-
-
-
-
-
-# [5.0.0-dev.2](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mantine/compare/@react-buddy/palette-mantine@5.0.0-dev.1...@react-buddy/palette-mantine@5.0.0-dev.2) (2022-11-21)
-
-**Note:** Version bump only for package @react-buddy/palette-mantine
-
-
-
-
-
-# 5.0.0-dev.1 (2022-11-21)
-
-
 ### Features
 
-* init mantine palette package [#39](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mantine/issues/39) ([f4b3a28](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mantine/commit/f4b3a284d110dd8a0e707ae8417c04d817abaf4a))
+* init Mantine palette package [#39](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mantine/issues/39) ([f4b3a28](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mantine/commit/f4b3a284d110dd8a0e707ae8417c04d817abaf4a))

@@ -5,28 +5,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [4.3.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/compare/@react-buddy/palette-antd@4.3.0-dev.1...@react-buddy/palette-antd@4.3.0) (2022-11-29)
 
-**Note:** Version bump only for package @react-buddy/palette-antd
-
-
-
-
-
-# [4.3.0-dev.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/compare/@react-buddy/palette-antd@4.2.0...@react-buddy/palette-antd@4.3.0-dev.0) (2022-11-21)
-
 
 ### Bug Fixes
 
 * incorrect entrypoints in palettes ([343efbf](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/commit/343efbf0a572a9607d620e5ce3ad905dcc01b03a))
 
-
 ### Features
 
 * add documentation links for icons in antd palette [#57](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/issues/57) ([de90f14](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/commit/de90f140aea77c1ab22d88da9a16204847960cb7))
 * changes in antd palette [#56](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/issues/56): ([3e20804](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/commit/3e20804dedbf59cdac8218e10c384a8919583fe6))
-
-
-
-
+  - use stretch layout for `Carousel`, `Grid`, `Slider` and `Timeline`
+  - remove defaultOpenKeys in `Menu` (horizontal)
+  - make `Carousel` background dark
 
 # [4.2.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/compare/@react-buddy/palette-antd@4.2.0-dev.2...@react-buddy/palette-antd@4.2.0) (2022-11-15)
 
