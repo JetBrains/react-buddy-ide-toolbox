@@ -1,6 +1,6 @@
 {
   "name": "@react-buddy/palette-mantine",
-  "version": "5.0.0",
+  "version": "5.7.0",
   "description": "Palette of Mantine components",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
