@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.20.1](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-react-intl/compare/@react-buddy/palette-react-intl@5.3.0...@react-buddy/palette-react-intl@5.20.1) (2022-12-20)
+
+**Note:** Version bump only for package @react-buddy/palette-react-intl
+
+
+
+
+
 # [5.3.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-react-intl/compare/@react-buddy/palette-react-intl@5.3.0-dev.2...@react-buddy/palette-react-intl@5.3.0) (2022-11-29)
 
 ### Bug Fixes

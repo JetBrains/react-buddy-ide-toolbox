@@ -1,6 +1,6 @@
 {
   "name": "@react-buddy/palette-antd",
-  "version": "4.18.0",
+  "version": "4.18.1",
   "description": "React Buddy Ant Design palette",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
