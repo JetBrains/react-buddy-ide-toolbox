@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "lib": ["es2017", "dom"],
+    "module": "esnext",
+    "outDir": "dist",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "declaration": true,
+    "declarationDir": "dist",
+    "rootDir": "./",
+    "sourceMap": true,
+    "inlineSources": true,
+    "experimentalDecorators": true
+  },
+  "files": ["palette.tsx"],
+  "exclude": ["node_modules", "dist"]
+}
