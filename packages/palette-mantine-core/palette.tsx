@@ -107,7 +107,7 @@ import {
 } from "@mantine/core";
 
 export default () => (
-  <Palette>
+  <Palette embeddable>
     <Category name="Layout">
       <Component name="AppShell" docURL="https://mantine.dev/core/app-shell/">
         <Variant>

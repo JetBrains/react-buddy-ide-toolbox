@@ -9,7 +9,7 @@ import { useForm, isEmail } from "@mantine/form";
 import { Button, Checkbox, NumberInput, TextInput } from "@mantine/core";
 
 export default () => (
-  <Palette>
+  <Palette embeddable>
     <Category name="form">
       <Component name="form" docURL="https://mantine.dev/form/use-form/">
         <Variant proto={FormProto} />
