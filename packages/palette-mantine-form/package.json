@@ -35,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mantine"
+    "url": "https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-mantine-form"
   },
   "publishConfig": {
     "access": "public"
