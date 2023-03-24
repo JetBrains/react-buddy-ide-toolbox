@@ -847,10 +847,8 @@ import {
   Anchor,
   TreeSelect,
   Transfer,
-  QRCode,
   FloatButton,
   ConfigProvider,
-  Watermark,
   Segmented,
   TourProps,
   Tour,
@@ -1311,21 +1309,11 @@ export default () => (
           <Mentions
             style={{ width: '100%' }}
             defaultValue="@afc163"
-            options={[
-              {
-                value: 'afc163',
-                label: 'afc163',
-              },
-              {
-                value: 'zombieJ',
-                label: 'zombieJ',
-              },
-              {
-                value: 'yesmeck',
-                label: 'yesmeck',
-              },
-            ]}
-          />
+          >
+            <Mentions.Option value="afc163">afc163</Mentions.Option>
+            <Mentions.Option value="zombieJ">zombieJ</Mentions.Option>
+            <Mentions.Option value="yesmeck">yesmeck</Mentions.Option>
+          </Mentions>
         </Variant>
         <Variant name="with Form.Item">
           <Form.Item
@@ -1341,102 +1329,51 @@ export default () => (
               }
             }]}
           >
-            <Mentions
-              options={[
-                {
-                  value: 'afc163',
-                  label: 'afc163',
-                },
-                {
-                  value: 'zombieJ',
-                  label: 'zombieJ',
-                },
-                {
-                  value: 'yesmeck',
-                  label: 'yesmeck',
-                },
-              ]}
-            />
+            <Mentions>
+              <Mentions.Option value="afc163">afc163</Mentions.Option>
+              <Mentions.Option value="zombieJ">zombieJ</Mentions.Option>
+              <Mentions.Option value="yesmeck">yesmeck</Mentions.Option>
+            </Mentions>
           </Form.Item>
         </Variant>
         <Variant name="placement">
-          <Mentions
-            placement="top"
-            options={[
-              {
-                value: 'afc163',
-                label: 'afc163',
-              },
-              {
-                value: 'zombieJ',
-                label: 'zombieJ',
-              },
-              {
-                value: 'yesmeck',
-                label: 'yesmeck',
-              },
-            ]}
-          />
+          <Mentions placement="top">
+            <Mentions.Option value="afc163">afc163</Mentions.Option>
+            <Mentions.Option value="zombieJ">zombieJ</Mentions.Option>
+            <Mentions.Option value="yesmeck">yesmeck</Mentions.Option>
+          </Mentions>
         </Variant>
         <Variant name="disabled">
           <Mentions
             placeholder="this is disabled Mentions"
             disabled
-            options={[
-              {
-                value: 'afc163',
-                label: 'afc163',
-              },
-              {
-                value: 'zombieJ',
-                label: 'zombieJ',
-              },
-              {
-                value: 'yesmeck',
-                label: 'yesmeck',
-              },
-            ]}
-          />
+            defaultValue="afc163"
+          >
+            <Mentions.Option value="afc163">afc163</Mentions.Option>
+            <Mentions.Option value="zombieJ">zombieJ</Mentions.Option>
+            <Mentions.Option value="yesmeck">yesmeck</Mentions.Option>
+          </Mentions>
         </Variant>
-        <Variant name="disabled">
+        <Variant name="readOnly">
           <Mentions
             placeholder="this is readOnly Mentions"
             readOnly
-            options={[
-              {
-                value: 'afc163',
-                label: 'afc163',
-              },
-              {
-                value: 'zombieJ',
-                label: 'zombieJ',
-              },
-              {
-                value: 'yesmeck',
-                label: 'yesmeck',
-              },
-            ]}
-          />
+            defaultValue="afc163"
+          >
+            <Mentions.Option value="afc163">afc163</Mentions.Option>
+            <Mentions.Option value="zombieJ">zombieJ</Mentions.Option>
+            <Mentions.Option value="yesmeck">yesmeck</Mentions.Option>
+          </Mentions>
         </Variant>
         <Variant name="status">
           <Mentions
             defaultValue="@afc163"
             status="error"
-            options={[
-              {
-                value: 'afc163',
-                label: 'afc163',
-              },
-              {
-                value: 'zombieJ',
-                label: 'zombieJ',
-              },
-              {
-                value: 'yesmeck',
-                label: 'yesmeck',
-              },
-            ]}
-          />
+          >
+            <Mentions.Option value="afc163">afc163</Mentions.Option>
+            <Mentions.Option value="zombieJ">zombieJ</Mentions.Option>
+            <Mentions.Option value="yesmeck">yesmeck</Mentions.Option>
+          </Mentions>
         </Variant>
       </Component>
       <Component name="Radio" docURL="https://ant.design/components/radio/">
@@ -1673,7 +1610,6 @@ export default () => (
         <Variant name="avatar">
           <Upload
             name="avatar"
-            listType="picture-circle"
             className="avatar-uploader"
             showUploadList={false}
             onChange={(info) => {
@@ -2348,37 +2284,6 @@ export default () => (
           >
             <Button>RT</Button>
           </Popover>
-        </Variant>
-      </Component>
-      <Component name="QRCode" docURL="https://ant.design/components/qrcode">
-        <Variant>
-          <QRCode value="https://ant.design/" />
-        </Variant>
-        <Variant name="status">
-          <QRCode status="loading" value="https://ant.design/" />
-        </Variant>
-        <Variant name="custom size">
-          <QRCode
-            errorLevel="H"
-            size={200}
-            iconSize={50}
-            value="https://ant.design/"
-            icon="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
-          />
-        </Variant>
-        <Variant name="custom color">
-          <QRCode
-            errorLevel="H"
-            color="red"
-            value="https://ant.design/"
-          />
-        </Variant>
-        <Variant name="with icon">
-          <QRCode
-            errorLevel="H"
-            value="https://ant.design/"
-            icon="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
-          />
         </Variant>
       </Component>
       <Component
@@ -3230,37 +3135,10 @@ export default () => (
     <Category name="Navigation">
       <Component name="Anchor" docURL="https://ant.design/components/anchor">
         <Variant>
-          <Anchor
-            items={[
-              {
-                key: 'part-1',
-                href: '#part-1',
-                title: 'Part 1',
-              },
-              {
-                key: 'part-2',
-                href: '#part-2',
-                title: 'Part 2',
-              }
-            ]}
-          />
-        </Variant>
-        <Variant name="horizontal">
-          <Anchor
-            direction="horizontal"
-            items={[
-              {
-                key: 'part-1',
-                href: '#part-1',
-                title: 'Part 1',
-              },
-              {
-                key: 'part-2',
-                href: '#part-2',
-                title: 'Part 2',
-              }
-            ]}
-          />
+          <Anchor>
+            <Anchor.Link href="#part-1" title="Part 1" />
+            <Anchor.Link href="#part-2" title="Part 2" />
+          </Anchor>
         </Variant>
       </Component>
       <Component
@@ -4226,40 +4104,6 @@ export default () => (
         </Variant>
         <Variant name="BackTop" docURL="https://ant.design/components/float-button#components-float-button-demo-back-top">
           <FloatButton.BackTop />
-        </Variant>
-      </Component>
-      <Component name="Watermark">
-        <Variant previewLayout="stretch">
-          <Watermark content="Ant Design">
-            <div style={{ height: 400 }} />
-          </Watermark>
-        </Variant>
-        <Variant name="multi-line" previewLayout="stretch">
-          <Watermark content={['Ant Design', 'Happy Working']}>
-            <div style={{ height: 400 }} />
-          </Watermark>
-        </Variant>
-        <Variant name="rotate" previewLayout="stretch">
-          <Watermark content="Ant Design" rotate={0}>
-            <div style={{ height: 400 }} />
-          </Watermark>
-        </Variant>
-        <Variant name="custom font" previewLayout="stretch">
-          <Watermark content="Ant Design" font={{
-            color: `red`,
-            fontSize: 10,
-          }}>
-            <div style={{ height: 400 }} />
-          </Watermark>
-        </Variant>
-        <Variant name="with image" previewLayout="stretch">
-          <Watermark
-            height={30}
-            width={130}
-            image="https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*lkAoRbywo0oAAAAAAAAAAAAADrJ8AQ/original"
-          >
-            <div style={{ height: 400 }} />
-          </Watermark>
         </Variant>
       </Component>
       <Component name="Segmented" docURL="https://ant.design/components/segmented">
@@ -10359,12 +10203,6 @@ function TourProto() {
     {
       title: 'Upload File',
       description: 'Put your files here.',
-      cover: (
-        <img
-          alt="tour.png"
-          src="https://user-images.githubusercontent.com/5378891/197385811-55df8480-7ff4-44bd-9d43-a7dade598d70.png"
-        />
-      ),
       target: () => ref1.current,
     },
     {
