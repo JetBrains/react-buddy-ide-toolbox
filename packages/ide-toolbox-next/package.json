@@ -1,6 +1,6 @@
 {
   "name": "@react-buddy/ide-toolbox-next",
-  "version": "2.4.0",
+  "version": "2.4.1-dev.0",
   "description": "React Buddy preview support for Next.js apps",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -14,7 +14,7 @@
     "react": "^17.0.0 || ^18.0.0"
   },
   "dependencies": {
-    "@react-buddy/ide-toolbox": "^2.3.1"
+    "@react-buddy/ide-toolbox": "^2.4.0-dev.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^20.0.0",
