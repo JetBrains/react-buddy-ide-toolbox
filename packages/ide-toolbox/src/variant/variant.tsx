@@ -14,7 +14,7 @@ interface VariantRouteProps {
   variantName?: string;
   previewLayout?: 'center' | 'stretch';
   requiredParams?: Array<string>;
-};
+}
 
 const VariantRoute: React.FC<VariantRouteProps> = ({
   categoryName,
@@ -72,7 +72,9 @@ const VariantContext = React.createContext<{
   variantClassName?: string | undefined;
   variantStyle?: CSSProperties | undefined;
 }>({});
+
 const useVariantContext = () => useContext(VariantContext);
+
 interface VariantProps {
   style?: CSSProperties | undefined;
   className?: string | undefined;
@@ -84,7 +86,9 @@ interface VariantProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   proto?: (...args: any[]) => ReactElement<any, any> | null | void;
   docURL?: string;
-};
+  previewImagePath?: string;
+}
+
 export const Variant: React.FC<PropsWithChildren<VariantProps>> = ({
   children,
   categoryName,

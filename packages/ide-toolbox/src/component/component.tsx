@@ -14,7 +14,8 @@ interface ComponentProps {
   defaultProps?: {};
   subComponents?: JSX.Element | JSX.Element[];
   docURL?: string;
-};
+  previewImagePath?: string;
+}
 export const Component: React.FC<ComponentProps> = ({
   children,
   categoryName,
