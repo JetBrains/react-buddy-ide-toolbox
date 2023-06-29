@@ -6,6 +6,8 @@
     "npm": ">=7"
   },
   "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "compile": "lerna run compile",
     "commit": "node node_modules/commitizen/bin/git-cz",
     "lint": "eslint packages/ --fix-dry-run",
     "lint:write": "eslint packages/ --fix",
