@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.3.1](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/compare/@react-buddy/palette-antd@5.3.1-dev.2...@react-buddy/palette-antd@5.3.1) (2023-07-05)
+
+**Note:** Version bump only for package @react-buddy/palette-antd
+
+
+
+
+
 # [5.3.0](https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd/compare/@react-buddy/palette-antd@5.0.0...@react-buddy/palette-antd@5.3.0) (2023-04-06)
 
 
