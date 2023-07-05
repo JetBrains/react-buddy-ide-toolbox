@@ -13,8 +13,11 @@
     "lint:write": "eslint packages/ --fix",
     "format": "npm run prettier:fix && npm run lint:write",
     "prettier:fix": "prettier packages --write",
+    "publish:prepare": "lerna run prepublishOnly",
     "publish:versions": "lerna version -m 'chore: bump versions' --no-push --conventional-commits --conventional-graduate",
-    "publish:prerelease-versions": "lerna version -m 'chore: bump versions (prerelease)' --no-push --conventional-commits --no-changelog --conventional-prerelease --preid dev"
+    "publish:prerelease-versions": "lerna version -m 'chore: bump versions (prerelease)' --no-push --conventional-commits --no-changelog --conventional-prerelease --preid dev",
+    "publish:dev": "lerna publish from-package --dist-tag dev --yes --no-verify-access --no-git-reset",
+    "publish:release": "lerna publish from-package --yes --no-verify-access --no-git-reset"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
