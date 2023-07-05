@@ -1,6 +1,6 @@
 {
   "name": "@react-buddy/palette-mui",
-  "version": "5.0.2-dev.0",
+  "version": "5.0.2-dev.1",
   "description": "React Buddy Material UI palette",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -11,7 +11,7 @@
     "LICENSE"
   ],
   "dependencies": {
-    "@react-buddy/ide-toolbox": "^2.4.0-dev.0"
+    "@react-buddy/ide-toolbox": "^2.4.0-dev.1"
   },
   "peerDependencies": {
     "@mui/icons-material": "^5.0.1",
