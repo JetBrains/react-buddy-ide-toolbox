@@ -1,5 +1,5 @@
 {
-  "name": "@react-buddy/ide-toolbox",
+  "name": "@amplicode/ide-toolbox",
   "version": "2.4.0",
   "description": "React IDE toolbox",
   "main": "dist/index.js",
@@ -21,7 +21,7 @@
     "rollup": "^2.53.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.0",
-    "rollup-plugin-typescript2": "^0.30.0",
+    "rollup-plugin-typescript2": "^0.31.0",
     "sass": "^1.38.2",
     "ts-jest": "^26.4.4",
     "tslint": "^5.18.0",
@@ -42,11 +42,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-buddy/ide-toolbox/tree/master/packages/ide-toolbox"
+    "url": "https://github.com/amplicode/ide-toolbox/tree/master/packages/ide-toolbox"
   },
   "publishConfig": {
     "access": "public"
   },
-  "author": "Haulmont <info@haulmont.com>",
+  "author": "Amplicode team",
   "license": "Apache-2.0"
 }

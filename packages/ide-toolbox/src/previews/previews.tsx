@@ -34,7 +34,7 @@ export const Previews: React.FC<Props> = ({
       enableToolsPanel(toolsPanelStatus);
     };
 
-    window.reactBuddyHistoryPush = historyPush;
+    window.amplicodeHistoryPush = historyPush;
     window.cefQuery?.({request: 'event:react-toolbox-initialized'});
   }, []);
 

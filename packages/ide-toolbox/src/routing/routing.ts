@@ -1,7 +1,7 @@
 import {useState, useCallback, useEffect} from 'react';
 import {escapeRegExp} from './utils';
 
-export const PALETTE_PATH = '/REACT_BUDDY_PALETTE';
+export const PALETTE_PATH = '/AMPLICODE_PALETTE';
 export const URL_CHANGE_EVENT = 'urlchange';
 
 export type RouteProps = {

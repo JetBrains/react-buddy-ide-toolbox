@@ -1,7 +1,7 @@
 import React, {useCallback} from 'react';
 import {RoutePreview} from '../routing/route-preview';
 import {PropsModifier, ToolsPropsModifier, PropsEditInfo} from '@types';
-import {ReactBuddyErrorBoundary} from '../react-buddy-error-boundary/react-buddy-error-boundary';
+import {AmplicodeErrorBoundary} from '../amplicode-error-boundary/amplicode-error-boundary';
 
 interface Props {
   path: string;
@@ -28,7 +28,7 @@ export const ComponentPreview: React.FC<Props> = ({
 
   return (
     <RoutePreview path={path} exact={exact} setPropsToEdit={setPropsToEdit!}>
-      <ReactBuddyErrorBoundary>{children}</ReactBuddyErrorBoundary>
+      <AmplicodeErrorBoundary>{children}</AmplicodeErrorBoundary>
     </RoutePreview>
   );
 };
