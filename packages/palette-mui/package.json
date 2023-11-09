@@ -1,7 +1,7 @@
 {
   "name": "@amplicode/palette-mui",
   "version": "5.0.2",
-  "description": "React Buddy Material UI palette",
+  "description": "Amplicode Material UI palette",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/palette.d.ts",
