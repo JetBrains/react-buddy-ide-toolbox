@@ -3,7 +3,7 @@ import { classNames } from '../util/classNames';
 import {useRoute, PALETTE_PATH} from '../routing/routing';
 import { useCategoryContext } from '../category/category';
 import { useComponentContext } from '../component/component';
-import { ReactBuddyErrorBoundary } from '../react-buddy-error-boundary/react-buddy-error-boundary';
+import { AmplicodeErrorBoundary } from '../amplicode-error-boundary/amplicode-error-boundary';
 import styles from './variant.module.scss';
 
 const DEFAULT_VARIANT_NAME = 'DEFAULT_VARIANT';
@@ -106,7 +106,7 @@ export const Variant: React.FC<PropsWithChildren<VariantProps>> = ({
         categoryName={categoryName}
         componentName={componentName}
       >
-        <ReactBuddyErrorBoundary componentName={componentName}>{children}</ReactBuddyErrorBoundary>
+        <AmplicodeErrorBoundary componentName={componentName}>{children}</AmplicodeErrorBoundary>
       </VariantRoute>
     </VariantContext.Provider>
   );

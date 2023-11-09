@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './react-buddy-error-boundary.module.scss';
+import styles from './amplicode-error-boundary.module.scss';
 
 interface Props {
   componentName?: string;
@@ -8,7 +8,7 @@ interface Props {
 interface State {
   error: Error | null;
 }
-export class ReactBuddyErrorBoundary extends React.Component<Props, State> {
+export class AmplicodeErrorBoundary extends React.Component<Props, State> {
   state: State = {error: null};
 
   componentDidCatch(error: Error) {
