@@ -1,5 +1,5 @@
 {
-  "name": "@react-buddy/palette-react-intl",
+  "name": "@amplicode/palette-react-intl",
   "version": "5.20.2",
   "description": "Palette of react-intl components",
   "main": "dist/index.js",
@@ -11,7 +11,7 @@
     "LICENSE"
   ],
   "dependencies": {
-    "@react-buddy/ide-toolbox": "^2.4.0"
+    "@amplicode/ide-toolbox": "^2.4.0"
   },
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0",
@@ -24,7 +24,7 @@
     "rollup": "^2.53.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.30.0",
+    "rollup-plugin-typescript2": "^0.31.0",
     "typescript": "~4.5.5"
   },
   "scripts": {
@@ -34,11 +34,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-react-intl"
+    "url": "https://github.com/amplicode/ide-toolbox/tree/master/packages/palette-react-intl"
   },
   "publishConfig": {
     "access": "public"
   },
-  "author": "Haulmont <info@haulmont.com>",
+  "author": "Amplicode team",
   "license": "Apache-2.0"
 }

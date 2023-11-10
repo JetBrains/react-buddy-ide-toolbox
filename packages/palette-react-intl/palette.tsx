@@ -4,7 +4,7 @@ import {
   Component,
   Variant,
   Palette,
-} from "@react-buddy/ide-toolbox";
+} from "@amplicode/ide-toolbox";
 import {
   FormattedDate,
   FormattedDateParts,
