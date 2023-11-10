@@ -5,7 +5,7 @@ import {
   Component,
   Palette,
   Variant,
-} from "@react-buddy/ide-toolbox";
+} from "@amplicode/ide-toolbox";
 import {
   AndroidOutlined,
   AppleOutlined,

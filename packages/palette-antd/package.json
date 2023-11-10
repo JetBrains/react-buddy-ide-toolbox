@@ -1,7 +1,7 @@
 {
-  "name": "@react-buddy/palette-antd",
+  "name": "@amplicode/palette-antd",
   "version": "5.3.1",
-  "description": "React Buddy Ant Design palette",
+  "description": "Amplicode Ant Design palette",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/palette.d.ts",
@@ -12,7 +12,7 @@
     "LICENSE"
   ],
   "dependencies": {
-    "@react-buddy/ide-toolbox": "^2.4.0"
+    "@amplicode/ide-toolbox": "^2.4.0"
   },
   "peerDependencies": {
     "@ant-design/icons": "^5.1.4",
@@ -26,7 +26,7 @@
     "rollup": "^2.53.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.30.0",
+    "rollup-plugin-typescript2": "^0.31.0",
     "typescript": "~4.2.4"
   },
   "scripts": {
@@ -36,11 +36,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-buddy/ide-toolbox/tree/master/packages/palette-antd"
+    "url": "https://github.com/amplicode/ide-toolbox/tree/master/packages/palette-antd"
   },
   "publishConfig": {
     "access": "public"
   },
-  "author": "Haulmont <info@haulmont.com>",
+  "author": "Amplicode team",
   "license": "Apache-2.0"
 }
