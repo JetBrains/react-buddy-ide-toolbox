@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "target": "es2017",
-    "lib": ["es2017", "dom"],
+    "target": "es2019",
+    "lib": ["es2019", "dom"],
     "module": "esnext",
     "outDir": "dist",
     "jsx": "react",

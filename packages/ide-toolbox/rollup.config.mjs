@@ -1,9 +1,12 @@
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import typescript from 'rollup-plugin-typescript2';
+import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss';
-import packageJson from './package.json';
+import transformPathsModule from 'typescript-transform-paths';
+
+const transformPaths = transformPathsModule.default ?? transformPathsModule;
+import packageJson from './package.json' with {type: 'json'};
 
 export default {
   input: 'src/index.ts',
@@ -23,17 +26,19 @@ export default {
     peerDepsExternal({
       includeDependencies: true,
     }),
-    resolve(),
+    resolve({
+      extensions: ['.ts', '.tsx', '.mjs', '.js', '.jsx', '.json'],
+    }),
     commonjs(),
     typescript({
-      typescript: require('ttypescript'),
-      tsconfigDefaults: {
-        compilerOptions: {
-          plugins: [
-            {transform: 'typescript-transform-paths'},
-            {transform: 'typescript-transform-paths', afterDeclarations: true},
-          ],
-        },
+      tsconfig: './tsconfig.json',
+      transformers: {
+        before: [
+          {type: 'program', factory: (program) => transformPaths(program)},
+        ],
+        afterDeclarations: [
+          {type: 'program', factory: (program) => transformPaths(program, {afterDeclarations: true})},
+        ],
       },
     }),
     postcss({
