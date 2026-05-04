@@ -5,8 +5,8 @@ import {useRoute, PALETTE_PATH, historyPush} from '../routing/routing';
 import styles from './previews.module.scss';
 
 interface Props {
-  palette?: JSX.Element | null;
-  children?: JSX.Element | JSX.Element[];
+  palette?: React.JSX.Element | null;
+  children?: React.JSX.Element | React.JSX.Element[];
 }
 
 export const Previews: React.FC<Props> = ({
@@ -22,7 +22,7 @@ export const Previews: React.FC<Props> = ({
 
   const childrenWithSetProps = useMemo(() => {
     return children
-      ? React.Children.map(children, (child: JSX.Element) => {
+      ? React.Children.map(children, (child: React.JSX.Element) => {
           return React.cloneElement(child, {setToolsPropsToEdit});
         })
       : null;

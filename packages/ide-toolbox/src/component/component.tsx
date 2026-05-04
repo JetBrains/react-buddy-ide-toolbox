@@ -10,9 +10,9 @@ interface ComponentProps {
   className?: string | undefined;
   categoryName?: string;
   name: string;
-  children: JSX.Element | JSX.Element[];
-  defaultProps?: {};
-  subComponents?: JSX.Element | JSX.Element[];
+  children: React.JSX.Element | React.JSX.Element[];
+  defaultProps?: object;
+  subComponents?: React.JSX.Element | React.JSX.Element[];
   docURL?: string;
   previewImagePath?: string;
 }
@@ -34,7 +34,7 @@ export const Component: React.FC<ComponentProps> = ({
   );
 };
 interface GetTransformedComponentChildrenParams{
-  children: JSX.Element | JSX.Element[],
+  children: React.JSX.Element | React.JSX.Element[],
   componentName: string,
   categoryName?: string,
 }

@@ -19,7 +19,7 @@ export interface NoSsrProps {
    */
   fallback?: React.ReactNode;
 }
-export function NoSsr(props: NoSsrProps): JSX.Element {
+export function NoSsr(props: NoSsrProps): React.JSX.Element {
   const { children, defer = false, fallback = null } = props;
   const [mountedState, setMountedState] = useState(false);
 
@@ -31,6 +31,7 @@ export function NoSsr(props: NoSsrProps): JSX.Element {
 
   useEffect(() => {
     if (defer) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setMountedState(true);
     }
   }, [defer]);

@@ -11,7 +11,7 @@ interface DevBootstrapProps {
 }
 
 interface DevSupportProps {
-  children: JSX.Element;
+  children: React.JSX.Element;
   ComponentPreviews: React.FC;
   useInitialHook?: () => InitialHookStatus;
   devmode?: boolean;

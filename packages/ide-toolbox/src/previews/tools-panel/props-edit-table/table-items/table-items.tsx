@@ -22,18 +22,18 @@ export const TableItems: React.FC<Props> = ({toolsPropsToEdit}) => {
   useEffect(() => {
     let propsValuesFromData = {};
 
-    propsEditInfo
-      ? Object.entries(propsEditInfo).map(([propName, propEditInfo]) => {
-          const propValue = Array.isArray(propEditInfo.data)
-            ? propEditInfo.data[0]
-            : propEditInfo.data;
+    if (propsEditInfo) {
+      Object.entries(propsEditInfo).map(([propName, propEditInfo]) => {
+        const propValue = Array.isArray(propEditInfo.data)
+          ? propEditInfo.data[0]
+          : propEditInfo.data;
 
-          propsValuesFromData = {
-            ...propsValuesFromData,
-            [propName]: propValue,
-          };
-        })
-      : null;
+        propsValuesFromData = {
+          ...propsValuesFromData,
+          [propName]: propValue,
+        };
+      })
+    }
 
     updateProps?.({
       ...props,
@@ -117,7 +117,7 @@ export const TableItems: React.FC<Props> = ({toolsPropsToEdit}) => {
 
       try {
         updatedPropValue = JSON.parse(propValue);
-      } catch (e) {
+      } catch {
         alert(`Property ${propName} has incorrect value to object parse`);
         return;
       }
@@ -154,7 +154,7 @@ export const TableItems: React.FC<Props> = ({toolsPropsToEdit}) => {
   );
 
   const renderTableItems = useCallback(() => {
-    let items: JSX.Element[] = [];
+    let items: React.JSX.Element[] = [];
 
     const itemsWithoutInfo =
       props &&
