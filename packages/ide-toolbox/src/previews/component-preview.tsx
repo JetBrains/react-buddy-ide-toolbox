@@ -5,7 +5,7 @@ import {ReactBuddyErrorBoundary} from '../react-buddy-error-boundary/react-buddy
 
 interface Props {
   path: string;
-  children: JSX.Element;
+  children: React.JSX.Element;
   propsEditInfo?: PropsEditInfo;
   setToolsPropsToEdit?: (toolsPropsModifier: ToolsPropsModifier) => void;
   exact?: boolean;

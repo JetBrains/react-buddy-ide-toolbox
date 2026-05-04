@@ -28,7 +28,9 @@ export const RoutePreview: React.FC<RoutePreviewProps> = ({
     }
 
     return () => {
-      isMatchPath ? null : setModifiedProps(null);
+      if (!isMatchPath) {
+        setModifiedProps(null);
+      }
     };
   }, [isMatchPath]);
 

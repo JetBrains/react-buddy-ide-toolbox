@@ -1,3 +1,4 @@
+import type React from 'react';
 import {useState, useCallback, useEffect} from 'react';
 import {escapeRegExp} from './utils';
 
@@ -7,7 +8,7 @@ export const URL_CHANGE_EVENT = 'urlchange';
 export type RouteProps = {
   path: string;
   exact?: boolean;
-  children: JSX.Element;
+  children: React.JSX.Element;
 };
 
 export const useRoute = (path: string, exact?: boolean) => {

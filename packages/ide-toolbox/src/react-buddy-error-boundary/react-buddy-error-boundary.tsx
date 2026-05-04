@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropsWithChildren} from 'react';
 import styles from './react-buddy-error-boundary.module.scss';
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 interface State {
   error: Error | null;
 }
-export class ReactBuddyErrorBoundary extends React.Component<Props, State> {
+export class ReactBuddyErrorBoundary extends React.Component<PropsWithChildren<Props>, State> {
   state: State = {error: null};
 
   componentDidCatch(error: Error) {

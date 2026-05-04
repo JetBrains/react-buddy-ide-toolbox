@@ -9,7 +9,7 @@ interface CategoryProps {
   style?: CSSProperties | undefined;
   className?: string | undefined;
   name: string;
-  children: JSX.Element | JSX.Element[];
+  children: React.JSX.Element | React.JSX.Element[];
 };
 export const Category: React.FC<CategoryProps> = ({
   children,
@@ -27,7 +27,7 @@ export const Category: React.FC<CategoryProps> = ({
   );
 };
 interface GetTransformedCategoryChildrenParams {
-  children: JSX.Element | JSX.Element[];
+  children: React.JSX.Element | React.JSX.Element[];
   categoryName: string;
 }
 function getTransformedCategoryChildren({

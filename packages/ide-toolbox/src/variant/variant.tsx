@@ -16,7 +16,7 @@ interface VariantRouteProps {
   requiredParams?: Array<string>;
 }
 
-const VariantRoute: React.FC<VariantRouteProps> = ({
+const VariantRoute: React.FC<PropsWithChildren<VariantRouteProps>> = ({
   categoryName,
   componentName,
   variantName = DEFAULT_VARIANT_NAME,
